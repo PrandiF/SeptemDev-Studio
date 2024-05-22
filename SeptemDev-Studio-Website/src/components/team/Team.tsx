@@ -34,7 +34,7 @@ function Team() {
       <div className="bg-gradient-to-t from-transparent to-[#e5e7eb] flex w-full items-end h-8 z-10 absolute"></div>
 
       <div
-        className="flex mt-1 justify-center"
+        className="flex mt-12 justify-center"
         data-aos="fade"
         data-aos-duration="1600"
       >
@@ -52,12 +52,11 @@ function Team() {
         data-aos-duration="1600"
         data-aos-delay="300"
       >
-        Conocé al equipo que estará acompañandote en cada paso del camino. Franco,
-        Lucas y Camila son expertos apasionados que se dedican a brindarte el
-        mejor servicio y atención personalizada. Están acá para escucharte,
-        entender tus necesidades y trabajar juntos para lograr tus objetivos.
-        ¡Estamos emocionados de conocerte y comenzar esta emocionante aventura
-        juntos!
+        Conocé al equipo que estará acompañandote en cada paso del camino.
+        Franco, Lucas y Camila son expertos apasionados que se dedican a
+        brindarte el mejor servicio y atención personalizada. Están acá para
+        escucharte, entender tus necesidades y trabajar juntos para lograr tus
+        objetivos. ¡Estamos emocionados de conocerte y comenzar esta aventura!
       </p>
       <div className="w-full h-full items-start justify-center z-10 mt-20 flex gap-4">
         <TeamCard
@@ -66,24 +65,29 @@ function Team() {
           description="Alto capo, juega re bien al basquet"
           picture={franPic}
           portfolio="https://mi-portfolio-fp.netlify.app/"
-          data_aos_duration="1500"
-          data_aos_delay="200"
+          data_aos="fade-right"
+          data_aos_duration="1700"
+          data_aos_delay="400"
         />
+
         <TeamCard
           name="Lucas Glave"
           position="Co-Founder"
           description="Un poco menos capo que el de al lado"
           picture={lucasPic}
-          data_aos_duration="1500"
-          data_aos_delay="500"
+          data_aos="fade-up"
+          data_aos_duration="1700"
+          data_aos_delay="700"
         />
+
         <TeamCard
           name="Camila Rojas"
           position="Comunity Manager"
           description="Se mando unos logos medio pelo"
           picture={camilaPic}
-          data_aos_duration="1500"
-          data_aos_delay="800"
+          data_aos="fade-left"
+          data_aos_duration="1700"
+          data_aos_delay="400"
         />
       </div>
     </div>

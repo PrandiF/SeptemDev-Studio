@@ -32,7 +32,11 @@ function About() {
       /> */}
       <div className="bg-gradient-to-t from-transparent to-[#e5e7eb] flex w-full items-end h-8 z-10 absolute"></div>
 
-      <div className="relative flex justify-center" data-aos="fade" data-aos-duration="1600">
+      <div
+        className="relative flex justify-center"
+        data-aos="fade"
+        data-aos-duration="1600"
+      >
         <h3 className=" text-azulado font-roboto font-extrabold text-[8rem] opacity-15 tracking-widest drop-shadow-3xl">
           NOSOTROS
         </h3>
@@ -40,7 +44,6 @@ function About() {
           Descubrí quienes somos
         </p>
       </div>
-
 
       <div
         className="flex gap-4 items-start w-[80%] h-full my-0 mx-auto p-24"
@@ -54,6 +57,7 @@ function About() {
         objetivos en realidad y construir juntos el éxito que merecés. Descubrí
         cómo podemos convertir tus objetivos en realidad y construir juntos el
         éxito que merecés."
+            data_aos="fade"
             data_aos_duration="1600"
             data_aos_delay="200"
           />
@@ -64,6 +68,7 @@ function About() {
         objetivos en realidad y construir juntos el éxito que merecés. Descubrí
         cómo podemos convertir tus objetivos en realidad y construir juntos el
         éxito que merecés."
+            data_aos="fade"
             data_aos_duration="1600"
             data_aos_delay="400"
           />
@@ -76,6 +81,7 @@ function About() {
         objetivos en realidad y construir juntos el éxito que merecés. Descubrí
         cómo podemos convertir tus objetivos en realidad y construir juntos el
         éxito que merecés."
+            data_aos="fade"
             data_aos_duration="1600"
             data_aos_delay="300"
           />

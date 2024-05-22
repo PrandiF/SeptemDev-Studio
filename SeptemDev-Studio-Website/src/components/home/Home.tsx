@@ -56,7 +56,7 @@ function Home() {
               spy={true}
               smooth={true}
               duration={700}
-              className="bg-beige hover:bg-transparent hover:scale-110 hover:border hover:border-beige hover:text-beige transform duration-300 px-6 py-3 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
+              className="w-24 h-10 bg-beige hover:bg-transparent hover:scale-105 hover:border hover:border-beige hover:text-beige transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
             >
               Consulta
             </Link>
@@ -65,7 +65,7 @@ function Home() {
               spy={true}
               smooth={true}
               duration={700}
-              className="bg-gris px-4 hover:bg-grisHover hover:scale-110 transform duration-300 text-azulado rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
+              className="w-24 h-10 bg-gris hover:bg-grisHover hover:scale-105 transform duration-300 text-azulado rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
             >
               Reunión
             </Link>

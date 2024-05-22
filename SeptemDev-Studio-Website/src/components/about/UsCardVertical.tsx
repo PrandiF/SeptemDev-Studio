@@ -3,6 +3,7 @@ type CardVertical = {
   content: string;
   data_aos_duration: string;
   data_aos_delay: string;
+  data_aos: string
 };
 
 import { useEffect } from "react";
@@ -16,6 +17,7 @@ function UsCardVertical({
   content,
   data_aos_delay,
   data_aos_duration,
+  data_aos
 }: CardVertical) {
   useEffect(() => {
     AOS.init();
@@ -23,7 +25,7 @@ function UsCardVertical({
   return (
     <div
       className="w-full h-full rounded-lg z-10 p-4 bg-[#78767635] backdrop-filter backdrop-blur shadow-2xl"
-      data-aos="fade-up"
+      data-aos={data_aos}
       data-aos-deration={data_aos_duration}
       data-aos-delay={data_aos_delay}
     >

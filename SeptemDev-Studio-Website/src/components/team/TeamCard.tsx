@@ -9,9 +9,10 @@ type CardProps = {
   position: string;
   description?: string;
   picture?: HTMLImageElement | string;
-  data_aos_duration: string;
-  data_aos_delay: string;
+  data_aos_duration?: string;
+  data_aos_delay?: string;
   portfolio?: string;
+  data_aos?: string
 };
 
 function TeamCard({
@@ -19,6 +20,7 @@ function TeamCard({
   position,
   description,
   picture,
+  data_aos,
   data_aos_duration,
   data_aos_delay,
   portfolio,
@@ -40,7 +42,7 @@ function TeamCard({
           backgroundSize: "cover",
           zIndex: "10",
         }}
-        data-aos="fade-up"
+        data-aos={data_aos}
         data-aos-duration={data_aos_duration}
         data-aos-delay={data_aos_delay}
       >

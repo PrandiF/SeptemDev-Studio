@@ -7,20 +7,22 @@ type ServiceCardProps = {
   title: string;
   description: string;
   img?: string;
+  data_aos?: string;
   data_aos_delay?: string;
 };
 
-function ServiceCard({ title, description, img }: ServiceCardProps) {
+function ServiceCard({ title, description, img, data_aos, data_aos_delay }: ServiceCardProps) {
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
-    <div
-      className="w-[18%] h-[95%] p-4 bg-slate-400 bg-opacity-20 backdrop-blur-sm mb-5 rounded-xl shadow-xl hover:-translate-y-2 hover:border-8 hover:border-azuladoHover hover:shadow-2xl cursor-pointer transform duration-300"
-
+    <div className="w-[18%] h-[85%]" data-aos={data_aos} data-aos-duration="1600" data-aos-delay={data_aos_delay}>
+      <div
+      className="w-full h-full p-4 bg-slate-400 bg-opacity-20 backdrop-blur-sm  rounded-xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transform duration-300"
+      
     >
-      <img src={img} className="w-[60%] flex m-auto" alt={title} />
+      <img src={img} className="w-[40%] flex m-auto" alt={title} />
       <h3 className="text-azulado font-roboto text-center text-2xl font-bold">
         {title}
       </h3>
@@ -28,6 +30,8 @@ function ServiceCard({ title, description, img }: ServiceCardProps) {
         {description}
       </p>
     </div>
+    </div>
+    
   );
 }
 

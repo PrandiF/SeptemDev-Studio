@@ -11,7 +11,7 @@ function Footer() {
         </div>
         <div className="border border-azulado z-10 w-0 h-[10rem]" />
         <p className="font-roboto text-azulado">
-          Copyright © SeptemDev Studio | Políticas de Privacidad
+          Copyright © SeptemDev Studio | <a target="e_blank" className="text-beige cursor-pointer hover:underline">Políticas de Privacidad</a> 
         </p>
         <div className="border border-azulado z-10 w-0 h-[10rem]" />
         <div className="flex mr-28 justify-center items-center">
