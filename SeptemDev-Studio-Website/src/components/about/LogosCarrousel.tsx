@@ -1,0 +1,75 @@
+import { useEffect, useRef } from "react";
+
+interface LogoCarouselProps {
+  logos: string[]; // Array de URLs de los logos
+}
+
+function LogoCarousel({ logos }: LogoCarouselProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  let timer: ReturnType<typeof setTimeout> | null = null;
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const container = containerRef.current;
+
+    const handleScroll = () => {
+      if (!container) return;
+
+      if (container.scrollLeft >= container.scrollWidth / 2) {
+        container.scrollLeft = 0;
+      } else if (container.scrollLeft === 0) {
+        container.scrollLeft = container.scrollWidth / 2;
+      }
+    };
+
+    const scroll = () => {
+      timer = setTimeout(() => {
+        container.scrollLeft -= 2;
+        handleScroll();
+        scroll();
+      }, 30); // Velocidad de desplazamiento
+    };
+
+    scroll();
+
+    // container.addEventListener("mouseover", () => {
+    //   if (timer) clearTimeout(timer);
+    // });
+
+    // container.addEventListener("mouseout", () => {
+    //   scroll();
+    // });
+
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="flex relative overflow-hidden z-10 px-4 py-3 gap-8 shadow-2xl"
+      style={{ boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.3)' }}
+    >
+      {logos.map((logo, index) => (
+        <img
+          key={index}
+          src={logo}
+          alt={`Logo ${index}`}
+          className="w-[83px] h-[83px] rounded-full flex"
+        />
+      ))}
+      {logos.map((logo, index) => (
+        <img
+          key={index + logos.length}
+          src={logo}
+          alt={`Logo ${index}`}
+          className="w-[83px] h-[83px] rounded-full flex"
+        />
+      ))}
+    </div>
+  );
+}
+
+export default LogoCarousel;
