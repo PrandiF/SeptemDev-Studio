@@ -4,8 +4,8 @@ import linke from "../../assets/linke.jpg";
 
 function Footer() {
   return (
-    <div className="relative bottom-0 left-0 w-full">
-      <div className="flex flex-col xl:flex-row items-center justify-around w-screen xl:h-[15rem] bg-[#D6D2D2]">
+    // <div className="relative top-0 left-0 w-full">
+      <div className="flex flex-col xl:flex-row items-center justify-around w-screen xl:h-[15rem] bg-[#D6D2D2] z-20">
         {/* Div para los dos iconos */}
         <div className="flex xl:hidden gap-5">
           {/* LOGO */}
@@ -75,7 +75,7 @@ function Footer() {
         </div>
         <div className="hidden border border-azulado xl:flex justify-center items-center h-[8rem] my-auto" />
       </div>
-    </div>
+    // </div>
   );
 }
 
