@@ -18,7 +18,7 @@ function Servicios() {
     <div className="w-screen min-h-screen justify-evenly bg-gray-100 relative flex flex-col">
       <Title title="SERVICIOS" comment="Que hacemos por vos?" />
       <p
-        className="text-azulado w-[70%] flex mx-auto text-center font-medium xl:text-lg text-sm"
+        className="text-azulado w-[75%] flex mx-auto text-center xl:font-medium xl:text-lg text-sm"
         data-aos="fade"
         data-aos-duration="1600"
         data-aos-delay="300"
@@ -29,7 +29,7 @@ function Servicios() {
         Estamos comprometidos en proporcionar soluciones integrales y personalizadas que satisfagan
         tus necesidades específicas y mejoren la experiencia de tus usuarios.
       </p>
-      <div className="w-full h-[50%] xl:flex  justify-evenly hidden">
+      <div className="w-full h-[50%] xl:flex justify-evenly hidden">
         <ServiceCard
           title="Diseño"
           description="
@@ -61,7 +61,7 @@ function Servicios() {
           data_aos_delay="600"
         />
       </div>
-      <div className="w-full h-full flex xl:hidden">
+      <div className="w-full h-full flex xl:hidden mb-4">
         <SwiperServices />
       </div>
     </div>

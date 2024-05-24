@@ -32,7 +32,7 @@ function Consult() {
           </div> */}
           <div className="relative flex items-center justify-center">
             <h1
-              className="hidden text-azulado z-10 xl:text-4xl text-2xl text-center font-extrabold xl:flex m-auto font-fugaz-one"
+              className="text-azulado z-10 xl:text-4xl text-2xl text-center font-extrabold xl:flex m-auto font-fugaz-one"
               data-aos="fade-up"
               data-aos-duration="1600"
               data-aos-delay="400"
@@ -41,7 +41,7 @@ function Consult() {
               PONETE EN CONTACTO...
             </h1>
             <h2
-              className="text-beige z-10 text-lg absolute top-[75%] left-[0%] font-extrabold xl:flex ml-auto font-fugaz-one hidden"
+              className="text-beige z-10 text-lg absolute top-[75%] xl:left-[0%] font-extrabold xl:flex ml-auto font-fugaz-one"
               data-aos="fade-up"
               data-aos-duration="1600"
               data-aos-delay="400"
@@ -52,7 +52,7 @@ function Consult() {
           </div>
 
           <p
-            className="text-azulado xl:font-medium xl:text-base text-sm xl:text-start text-center"
+            className="text-azulado xl:font-medium xl:text-base text-sm xl:text-start text-center w-[90%] mb-2"
             data-aos="fade"
             data-aos-duration="1600"
             data-aos-delay="400"
