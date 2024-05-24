@@ -1,22 +1,21 @@
+import LogoCarousel from './LogosCarrousel';
+import UsCardHorizontal from './UsCardHorizontal';
+import UsCardVertical from './UsCardVertical';
 
-import LogoCarousel from "./LogosCarrousel";
-import UsCardHorizontal from "./UsCardHorizontal";
-import UsCardVertical from "./UsCardVertical";
-
-import donBasilio from "../../assets/Copia de favicon.png";
-import bresh from "../../assets/bresh.jpeg";
-import motorville from "../../assets/motorville_sa_logo.jpeg";
-import bsasCars from "../../assets/bsasCars.jpg";
-import septemDev from "../../assets/Captura de pantalla 2024-04-12 a la(s) 17.51.08.png";
-import laMala from "../../assets/laMala.png";
-import salvadori from "../../assets/Copia de fav.png";
-import tacuara from "../../assets/tacuara.jpeg";
-import { useEffect } from "react";
+import donBasilio from '../../assets/Copia de favicon.png';
+import bresh from '../../assets/bresh.jpeg';
+import motorville from '../../assets/motorville_sa_logo.jpeg';
+import bsasCars from '../../assets/bsasCars.jpg';
+import septemDev from '../../assets/Captura de pantalla 2024-04-12 a la(s) 17.51.08.png';
+import laMala from '../../assets/laMala.png';
+import salvadori from '../../assets/Copia de fav.png';
+import tacuara from '../../assets/tacuara.jpeg';
+import { useEffect } from 'react';
 
 //AOS
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Title from "../Title";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Title from '../Title';
 
 function About() {
   useEffect(() => {
@@ -24,8 +23,8 @@ function About() {
   }, []);
 
   return (
-    <div className="w-screen min-h-screen flex items-center flex-col relative bg-gray-200">
-      <div className="bg-gradient-to-t from-transparent to-[#e5e7eb] flex w-full items-end h-8 z-10 absolute"></div>
+    <div className="w-screen min-h-screen flex items-center flex-col relative bg-logo">
+      <div className="bg-gradient-to-t from-transparent to-logo flex w-full items-end h-8 z-10 absolute"></div>
 
       <Title title="NOSOTROS" comment="Descubrí como trabajamos" />
 
@@ -114,7 +113,6 @@ function About() {
           />
         </div>
       </div>
-
 
       <div className="xl:flex hidden" data-aos="fade" data-aos-duration="1800" data-aos-delay="200">
         <LogoCarousel
