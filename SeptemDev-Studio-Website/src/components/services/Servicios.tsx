@@ -1,14 +1,14 @@
-import ServiceCard from "./ServiceCard";
-import mantenimientoWeb from "../../assets/mantenimientoWeb2.png";
-import redesSociales from "../../assets/redesSociales.png";
-import diseñoWeb from "../../assets/diseñoWeb.png";
+import ServiceCard from './ServiceCard';
+import mantenimientoWeb from '../../assets/mantenimientoWeb2.png';
+import redesSociales from '../../assets/redesSociales.png';
+import diseñoWeb from '../../assets/desarrolloWeb.png';
 
 //AOS
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-import Title from "../Title";
-import SwiperServices from "./SwiperServices";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import Title from '../Title';
+import SwiperServices from './SwiperServices';
 
 function Servicios() {
   useEffect(() => {
@@ -23,13 +23,11 @@ function Servicios() {
         data-aos-duration="1600"
         data-aos-delay="300"
       >
-        SeptemDev Studio ofrece una gama completa de servicios digitales
-        diseñados para potenciar tu presencia en línea y asegurar el éxito de tu
-        negocio. Entre nuestros servicios se incluyen el Diseño Web,
-        Mantenimiento de sitios, Gestión de Redes Sociales y Arreglo de Páginas
-        Web. Estamos comprometidos en proporcionar soluciones integrales y
-        personalizadas que satisfagan tus necesidades específicas y mejoren la
-        experiencia de tus usuarios.
+        SeptemDev Studio ofrece una gama completa de servicios digitales diseñados para potenciar tu
+        presencia en línea y asegurar el éxito de tu negocio. Entre nuestros servicios se incluyen
+        el Diseño Web, Mantenimiento de sitios, Gestión de Redes Sociales y Arreglo de Páginas Web.
+        Estamos comprometidos en proporcionar soluciones integrales y personalizadas que satisfagan
+        tus necesidades específicas y mejoren la experiencia de tus usuarios.
       </p>
       <div className="w-full h-[50%] xl:flex  justify-evenly hidden">
         <ServiceCard
