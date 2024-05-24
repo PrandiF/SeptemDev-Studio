@@ -116,7 +116,7 @@ function About() {
       </div>
 
 
-      <div className="xl:absolute hidden" data-aos="fade" data-aos-duration="1800" data-aos-delay="200">
+      <div className="xl:flex hidden" data-aos="fade" data-aos-duration="1800" data-aos-delay="200">
         <LogoCarousel
           logos={[
             donBasilio,
