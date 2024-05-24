@@ -26,7 +26,7 @@ export const ClientsData = [
   {
     title: "Mi Turno Web",
     img: miTurnoWeb,
-    url: "",
+    url: "https://mi-turno-web-blond.vercel.app/",
   },
   {
     title: "Odontologia",

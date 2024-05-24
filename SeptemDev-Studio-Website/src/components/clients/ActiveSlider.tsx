@@ -10,10 +10,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
-import {
-  BsFillArrowLeftSquareFill,
-  BsFillArrowRightSquareFill,
-} from "react-icons/bs";
 
 import { ClientsData } from "./ClientsData";
 
@@ -27,7 +23,7 @@ function ActiveSlider() {
     AOS.init({ duration: 1600 });
   }, []);
   return (
-    <div className="flex flex-col w-screen">
+    <div className="hidden xl:flex xl:flex-col xl:w-screen">
       {/* <h1
         className="font-roboto text-azulado drop-shadow-3xl z-10 font-bold text-2xl text-center mb-16"
         data-aos="fade-up"

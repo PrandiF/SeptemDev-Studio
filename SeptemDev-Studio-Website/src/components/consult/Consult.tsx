@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import ConsultForm from "./ConsultForm";
 import ConsultForm2 from "./ConsultForm2";
 
 import AOS from "aos";
@@ -11,26 +10,29 @@ function Consult() {
   }, []);
   return (
     <div className="w-screen h-screen relative bg-gray-100 flex justify-center items-center">
-      <div className="flex justify-evenly items-start w-full">
-        <div className="flex flex-col w-[50%] gap-8 text-start items-start">
-          <h1
-            className="text-azulado text-6xl font-extrabold flex drop-shadow-3xl font-roboto"
-            data-aos="fade"
-            data-aos-duration="1600"
-            data-aos-delay="200"
-          >
-            Ponete en contacto...
-          </h1>
-          <h3
-            className="text-azulado text-xl font-bold flex drop-shadow-3xl"
-            data-aos="fade"
-            data-aos-duration="1600"
-            data-aos-delay="300"
-          >
-            ¡Marcá la diferencia!
-          </h3>
+      <div className="flex xl:flex-row flex-col justify-evenly xl:items-start items-center w-full">
+        <div className="flex flex-col xl:w-[50%] gap-8 xl:items-start items-center">
+          <div>
+            <h1
+              className="text-azulado xl:text-6xl text-4xl font-extrabold flex font-roboto"
+              data-aos="fade"
+              data-aos-duration="1600"
+              data-aos-delay="200"
+            >
+              Ponete en contacto...
+            </h1>
+            <h3
+              className="text-beige text-xl font-bold flex xl:mr-0 xl:justify-start justify-center"
+              data-aos="fade"
+              data-aos-duration="1600"
+              data-aos-delay="300"
+            >
+              ¡Marcá la diferencia!
+            </h3>
+          </div>
+
           <p
-            className="text-azulado"
+            className="text-azulado xl:font-medium xl:text-base text-sm xl:text-start text-center"
             data-aos="fade"
             data-aos-duration="1600"
             data-aos-delay="400"

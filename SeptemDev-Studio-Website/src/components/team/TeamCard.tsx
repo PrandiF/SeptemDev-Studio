@@ -9,9 +9,10 @@ type CardProps = {
   position: string;
   description?: string;
   picture?: HTMLImageElement | string;
-  data_aos_duration: string;
-  data_aos_delay: string;
+  data_aos_duration?: string;
+  data_aos_delay?: string;
   portfolio?: string;
+  data_aos?: string
 };
 
 function TeamCard({
@@ -19,6 +20,7 @@ function TeamCard({
   position,
   description,
   picture,
+  data_aos,
   data_aos_duration,
   data_aos_delay,
   portfolio,
@@ -32,7 +34,7 @@ function TeamCard({
   return (
     <a href={portfolio} target="_blank">
       <div
-        className="w-64 h-96 rounded-lg z-10 flex relative overflow-hidden hover:cursor-pointer"
+        className="xl:w-64 w-56 xl:h-96 h-72 rounded-lg z-10 flex relative overflow-hidden hover:cursor-pointer"
         onMouseEnter={() => setMostrarContenido(true)}
         onMouseLeave={() => setMostrarContenido(false)}
         style={{
@@ -40,7 +42,7 @@ function TeamCard({
           backgroundSize: "cover",
           zIndex: "10",
         }}
-        data-aos="fade-up"
+        data-aos={data_aos}
         data-aos-duration={data_aos_duration}
         data-aos-delay={data_aos_delay}
       >
