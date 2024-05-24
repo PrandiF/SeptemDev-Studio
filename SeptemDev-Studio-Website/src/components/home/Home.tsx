@@ -31,12 +31,20 @@ function Home() {
 
         <div className="flex flex-col z-10 gap-4 mb-auto">
           <h1
-            className="text-azulado z-10 xl:text-4xl text-2xl text-center font-extrabold flex m-auto mt-32 drop-shadow-3xl font-roboto"
+            className="hidden text-azulado z-10 xl:text-4xl text-2xl text-center font-extrabold xl:flex m-auto mt-32 drop-shadow-3xl font-roboto"
             data-aos="fade-up"
             data-aos-duration="1600"
             data-aos-delay="400"
           >
             ¿Querés llevar tu negocio al siguiente nivel?
+          </h1>
+          <h1
+            className="xl:hidden text-azulado z-10 xl:text-4xl text-2xl text-center font-extrabold flex m-auto mt-32 drop-shadow-3xl font-roboto"
+            data-aos="fade-up"
+            data-aos-duration="1600"
+            data-aos-delay="400"
+          >
+            Llevá tu negocio al siguiente nivel
           </h1>
           <h1
             className="text-azulado z-10 text-4xl font-extrabold xl:flex m-auto drop-shadow-3xl font-roboto hidden"

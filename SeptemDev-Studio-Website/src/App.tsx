@@ -6,7 +6,7 @@ import Home from "./components/home/Home";
 import Team from "./components/team/Team";
 import Header from "./components/header/Header";
 import { useEffect } from "react";
-import "./index.css"
+import "./index.css";
 
 //AOS
 import AOS from "aos";
@@ -18,33 +18,31 @@ function App() {
     AOS.init({ duration: 1600 });
   }, []);
 
-  
-
   return (
-    <>
-      <div className="h-screen w-screen">
-        <Header />
-        <div id="HOME" className="h-screen">
-          <Home />
-        </div>
-        <div id="ABOUT" className="h-screen">
-          <About />
-        </div>
-        <div id="SERVICES" className="h-screen">
-          <Servicios />
-        </div>
-        <div id="CLIENTS" className="h-screen">
-          <Clients />
-        </div>
-        <div id="CONSULT" className="h-screen">
-          <Consult />
-        </div>
-        <div id="TEAM" className="h-screen">
-          <Team />
-        </div>
+    <div className="min-h-screen w-screen">
+      <Header />
+      <div id="HOME">
+        <Home />
+      </div>
+      <div id="ABOUT">
+        <About />
+      </div>
+      <div id="SERVICES">
+        <Servicios />
+      </div>
+      <div id="CLIENTS">
+        <Clients />
+      </div>
+      <div id="CONSULT">
+        <Consult />
+      </div>
+      <div id="TEAM">
+        <Team />
+      </div>
+      <div className="flex items-end">
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 

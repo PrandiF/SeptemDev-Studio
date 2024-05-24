@@ -16,8 +16,8 @@ function Team() {
     AOS.init();
   }, []);
   return (
-    <div className="xl:w-screen xl:h-screen w-full h-full flex flex-col pb-10 xl:relative absolute">
-      <div className="bg-gradient-to-t from-transparent to-[#e5e7eb] flex w-full items-end h-8 z-10 absolute"></div>
+    <div className="xl:w-screen xl:h-screen w-full min-h-screen flex flex-col pb-10 xl:relative">
+      <div className="bg-gradient-to-t from-transparent to-[#e5e7eb] flex w-full items-end h-8 z-10 absolute pt-5"></div>
       <Title title="STAFF" comment="Ellos lo harán realidad..." />
       <p
         className="text-azulado w-[70%] flex flex-col m-auto text-center font-medium xl:text-lg text:sm"
