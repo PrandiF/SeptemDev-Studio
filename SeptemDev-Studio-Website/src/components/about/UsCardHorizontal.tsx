@@ -39,7 +39,7 @@ function UsCardHorizontal({
         {title}
       </h2>
       <p
-        className="z-10 font-roboto mt-5"
+        className="z-10 font-roboto mt-5 xl:text-base text-sm"
         data-aos="fade-up"
         data-aos-duration="1600"
         data-aos-delay="650"

@@ -22,7 +22,7 @@ function ConsultForm2() {
     }
   };
   return (
-    <div className="flex w-[30%]">
+    <div className="flex xl:w-[30%] mt-5">
       {/* <div className="absolute flex flex-col w-[30%] h-[40%] items-center justify-center m-auto" data-aos="fade-up" data-aos-duration="1600"> */}
 
       <form className="z-10 flex gap-6 flex-col w-full" onSubmit={handleSubmit}>
@@ -68,16 +68,16 @@ function ConsultForm2() {
             onChange={handleCheckboxChange}
             data-aos="fade"
             data-aos-duration="1600"
-            data-aos-delay="400"
+            
           />
           <label
             htmlFor="aceptarPoliticas"
             className="text-azulado text-sm"
             data-aos="fade"
             data-aos-duration="1600"
-            data-aos-delay="400"
+           
           >
-            He leído y acepto las{" "}
+            He leído y acepto las {" "}
             <a href="" target="_blank" className="text-beige hover:underline">
               políticas de privacidad
             </a>
@@ -87,7 +87,7 @@ function ConsultForm2() {
         <div
           data-aos="fade"
           data-aos-duration="1600"
-          data-aos-delay="550"
+         
         >
           <button
             type="submit"

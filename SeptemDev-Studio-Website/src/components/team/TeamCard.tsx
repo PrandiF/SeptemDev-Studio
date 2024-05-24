@@ -34,7 +34,7 @@ function TeamCard({
   return (
     <a href={portfolio} target="_blank">
       <div
-        className="w-64 h-96 rounded-lg z-10 flex relative overflow-hidden hover:cursor-pointer"
+        className="xl:w-64 w-56 xl:h-96 h-72 rounded-lg z-10 flex relative overflow-hidden hover:cursor-pointer"
         onMouseEnter={() => setMostrarContenido(true)}
         onMouseLeave={() => setMostrarContenido(false)}
         style={{
