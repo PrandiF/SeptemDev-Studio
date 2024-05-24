@@ -1,35 +1,24 @@
 import ServiceCard from "./ServiceCard";
-import mantenimientoWeb from "../../assets/mantenimientoWeb2.png"
+import mantenimientoWeb from "../../assets/mantenimientoWeb2.png";
 import redesSociales from "../../assets/redesSociales.png";
 import diseñoWeb from "../../assets/diseñoWeb.png";
-
 
 //AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Title from "../Title";
+import SwiperServices from "./SwiperServices";
 
 function Servicios() {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-    <div className="w-screen h-screen justify-between bg-gray-100 relative flex flex-col">
-      <div
-        className="flex mt-8 justify-center"
-        data-aos="fade"
-        data-aos-duration="1600"
-      >
-        <h3 className=" text-azulado font-roboto font-extrabold text-[8.5rem] opacity-10 tracking-widest drop-shadow-3xl">
-          SERVICIOS
-        </h3>
-        <p className="absolute top-[48%] text-4xl text-azulado font-semibold z-10 italic">
-          Qué hacemos <span className="">por vos?</span>
-        </p>
-      </div>
-
+    <div className="w-screen min-h-screen justify-evenly bg-gray-100 relative flex flex-col">
+      <Title title="SERVICIOS" comment="Que hacemos por vos?" />
       <p
-        className="text-azulado w-[70%] flex mx-auto text-center font-medium text-lg"
+        className="text-azulado w-[70%] flex mx-auto text-center font-medium xl:text-lg text-sm"
         data-aos="fade"
         data-aos-duration="1600"
         data-aos-delay="300"
@@ -42,12 +31,7 @@ function Servicios() {
         personalizadas que satisfagan tus necesidades específicas y mejoren la
         experiencia de tus usuarios.
       </p>
-      <div
-        className="w-full h-[50%] flex  justify-evenly "
-        // data-aos="fade"
-        // data-aos-duration="1600"
-        // data-aos-delay="400"
-      >
+      <div className="w-full h-[50%] xl:flex  justify-evenly hidden">
         <ServiceCard
           title="Diseño"
           description="
@@ -78,6 +62,9 @@ function Servicios() {
           data_aos="fade-left"
           data_aos_delay="600"
         />
+      </div>
+      <div className="w-full h-full flex xl:hidden">
+        <SwiperServices />
       </div>
     </div>
   );

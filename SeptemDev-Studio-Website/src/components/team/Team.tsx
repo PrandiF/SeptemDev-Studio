@@ -1,4 +1,4 @@
-import imgBackground from "../../assets/fondoHome2.png";
+
 import TeamCard from "./TeamCard";
 import franPic from "../../assets/fran.jpg";
 import lucasPic from "../../assets/lucas.jpg";
@@ -9,45 +9,18 @@ import { useEffect } from "react";
 //AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Title from "../Title";
 
 function Team() {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-    <div className="w-screen h-screen flex flex-col pb-10 relative">
-      {/* <img
-        src={imgBackground}
-        alt="fondo"
-        className="absolute w-screen h-screen z-0"
-      /> */}
-      {/* <div
-        className="flex items-center justify-center m-auto  w-[30%] h-[10%] place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-[#a5a4a4e9] to-[#d5d5d5af] bg-clip-border text-white shadow-lg shadow-[#d5d5d535]"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-      >
-        <h3 className="block font-roboto text-2xl font-bold drop-shadow-2xl text-slate-100">
-          EQUIPO
-        </h3>
-      </div> */}
-
+    <div className="xl:w-screen xl:h-screen w-full h-full flex flex-col pb-10 xl:relative absolute">
       <div className="bg-gradient-to-t from-transparent to-[#e5e7eb] flex w-full items-end h-8 z-10 absolute"></div>
-
-      <div
-        className="flex mt-12 justify-center"
-        data-aos="fade"
-        data-aos-duration="1600"
-      >
-        <h3 className=" text-azulado font-roboto font-extrabold text-[8.5rem] opacity-30 tracking-widest drop-shadow-3xl">
-          STAFF
-        </h3>
-        <p className="absolute top-[50%] text-4xl text-azulado font-semibold z-10 italic">
-          Ellos lo harán realidad...
-        </p>
-      </div>
-
+      <Title title="STAFF" comment="Ellos lo harán realidad..." />
       <p
-        className="text-azulado w-[70%] flex m-auto text-center font-medium text-lg"
+        className="text-azulado w-[70%] flex flex-col m-auto text-center font-medium xl:text-lg text:sm"
         data-aos="fade"
         data-aos-duration="1600"
         data-aos-delay="300"
@@ -56,9 +29,9 @@ function Team() {
         Franco, Lucas y Camila son expertos apasionados que se dedican a
         brindarte el mejor servicio y atención personalizada. Están acá para
         escucharte, entender tus necesidades y trabajar juntos para lograr tus
-        objetivos. ¡Estamos emocionados de conocerte y comenzar esta aventura!
+        objetivos.<span className="xl:flex xl:items-center xl:justify-center hidden"> ¡Estamos emocionados de conocerte y comenzar esta aventura!</span> 
       </p>
-      <div className="w-full h-full items-start justify-center z-10 mt-20 flex gap-4">
+      <div className="w-full h-full flex items-start justify-center z-10 xl:mt-20 mt-12 flex-wrap gap-4 mx-auto">
         <TeamCard
           name="Franco Prandi"
           position="Co-Founder"

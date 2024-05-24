@@ -1,5 +1,4 @@
-import imgBackground from "../../assets/fondo2.jpg";
-// import Logos from "./Logos";
+
 import LogoCarousel from "./LogosCarrousel";
 import UsCardHorizontal from "./UsCardHorizontal";
 import UsCardVertical from "./UsCardVertical";
@@ -17,6 +16,7 @@ import { useEffect } from "react";
 //AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Title from "../Title";
 
 function About() {
   useEffect(() => {
@@ -25,28 +25,12 @@ function About() {
 
   return (
     <div className="w-screen min-h-screen flex items-center flex-col relative bg-gray-200">
-      {/* <img
-        src={imgBackground}
-        alt="fondo"
-        className="absolute w-screen min-h-screen z-0 rotate-180 bg-gradient-to-t from-transparent to-[#f6e1ce]"
-      /> */}
       <div className="bg-gradient-to-t from-transparent to-[#e5e7eb] flex w-full items-end h-8 z-10 absolute"></div>
 
-      <div
-        className="relative flex justify-center"
-        data-aos="fade"
-        data-aos-duration="1600"
-      >
-        <h3 className=" text-azulado font-roboto font-extrabold text-[8rem] opacity-15 tracking-widest drop-shadow-3xl">
-          NOSOTROS
-        </h3>
-        <p className="absolute top-[48%] text-4xl text-azulado font-semibold z-10 italic">
-          Descubrí quienes somos
-        </p>
-      </div>
+      <Title title="NOSOTROS" comment="Descubrí como trabajamos" />
 
       <div
-        className="flex gap-4 items-start w-[80%] h-full my-0 mx-auto p-24"
+        className="hidden xl:flex gap-4 items-start w-[80%] h-full my-0 mx-auto p-24"
         data-aos="fade-up"
       >
         <div className="w-[55%] h-full flex flex-col gap-4" data-aos="fade-up">
@@ -87,7 +71,52 @@ function About() {
           />
         </div>
       </div>
-      <div data-aos="fade" data-aos-duration="1800" data-aos-delay="200">
+
+      <div
+        className="xl:hidden flex flex-col gap-4 items-start w-[90%] h-full my-0 mx-auto"
+        data-aos="fade-up"
+      >
+        <div className="w-full h-full flex gap-4" data-aos="fade-up">
+          <UsCardVertical
+            title="Cómo Empezamos?"
+            content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir
+        juntos el éxito que merecés. Descubrí cómo podemos convertir tus
+        objetivos en realidad y construir juntos el éxito que merecés. Descubrí
+        cómo podemos convertir tus objetivos en realidad y construir juntos el
+        éxito que merecés."
+            data_aos="fade"
+            data_aos_duration="1600"
+            data_aos_delay="200"
+          />
+          <UsCardVertical
+            title="En qué tipo de cliente nos enfocamos?"
+            content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir
+        juntos el éxito que merecés. Descubrí cómo podemos convertir tus
+        objetivos en realidad y construir juntos el éxito que merecés. Descubrí
+        cómo podemos convertir tus objetivos en realidad y construir juntos el
+        éxito que merecés."
+            data_aos="fade"
+            data_aos_duration="1600"
+            data_aos_delay="400"
+          />
+        </div>
+        <div className="w-full h-[50%] flex items-center" data-aos="fade-up">
+          <UsCardHorizontal
+            title="Qué es SAAS?"
+            content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir
+        juntos el éxito que merecés. Descubrí cómo podemos convertir tus
+        objetivos en realidad y construir juntos el éxito que merecés. Descubrí
+        cómo podemos convertir tus objetivos en realidad y construir juntos el
+        éxito que merecés."
+            data_aos="fade"
+            data_aos_duration="1600"
+            data_aos_delay="300"
+          />
+        </div>
+      </div>
+
+
+      <div className="xl:absolute hidden" data-aos="fade" data-aos-duration="1800" data-aos-delay="200">
         <LogoCarousel
           logos={[
             donBasilio,
