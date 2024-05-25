@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 interface LogoCarouselProps {
-  logos: string[]; // Array de URLs de los logos
+  logos: string[];
 }
 
 function LogoCarousel({ logos }: LogoCarouselProps) {
@@ -28,19 +28,10 @@ function LogoCarousel({ logos }: LogoCarouselProps) {
         container.scrollLeft -= 2;
         handleScroll();
         scroll();
-      }, 30); // Velocidad de desplazamiento
+      }, 30);
     };
 
     scroll();
-
-    // container.addEventListener("mouseover", () => {
-    //   if (timer) clearTimeout(timer);
-    // });
-
-    // container.addEventListener("mouseout", () => {
-    //   scroll();
-    // });
-
     return () => {
       if (timer) clearTimeout(timer);
     };

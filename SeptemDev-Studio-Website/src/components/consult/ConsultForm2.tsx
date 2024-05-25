@@ -22,7 +22,7 @@ function ConsultForm2() {
     }
   };
   return (
-    <div className="flex xl:w-[30%] mt-5">
+    <div className="flex xl:w-[30%]">
       {/* <div className="absolute flex flex-col w-[30%] h-[40%] items-center justify-center m-auto" data-aos="fade-up" data-aos-duration="1600"> */}
 
       <form className="z-10 flex gap-6 flex-col w-full" onSubmit={handleSubmit}>
@@ -66,32 +66,19 @@ function ConsultForm2() {
             className="mr-2 cursor-pointer"
             checked={isChecked}
             onChange={handleCheckboxChange}
-            data-aos="fade"
-            data-aos-duration="1600"
-            
           />
-          <label
-            htmlFor="aceptarPoliticas"
-            className="text-azulado text-sm"
-            data-aos="fade"
-            data-aos-duration="1600"
-           
-          >
-            He leído y acepto las {" "}
+          <label htmlFor="aceptarPoliticas" className="text-azulado text-sm">
+            He leído y acepto las{" "}
             <a href="" target="_blank" className="text-beige hover:underline">
               políticas de privacidad
             </a>
             .
           </label>
         </div>
-        <div
-          data-aos="fade"
-          data-aos-duration="1600"
-         
-        >
+        <div>
           <button
             type="submit"
-            className="bg-beige hover:bg-beigeHover hover:scale-105 transform duration-100 px-8 py-2 rounded-3xl text-sm shadow-xl flex my-0 mx-auto"
+            className="w-24 h-10 bg-beige-image hover:scale-[1.02] transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer mx-auto"
           >
             Enviar
           </button>

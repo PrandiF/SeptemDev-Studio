@@ -24,13 +24,6 @@ function ActiveSlider() {
   }, []);
   return (
     <div className="hidden xl:flex xl:flex-col xl:w-screen">
-      {/* <h1
-        className="font-roboto text-azulado drop-shadow-3xl z-10 font-bold text-2xl text-center mb-16"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        Ellos confiaron en nosotros...
-      </h1> */}
       <div className="w-full overflow-hidden relative">
         <Swiper
           effect={"coverflow"}
