@@ -2,19 +2,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-
 import "swiper/css/effect-coverflow";
+import { ClientsData } from "./ClientsData";
 
 //AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-
-import {
-  BsFillArrowLeftSquareFill,
-  BsFillArrowRightSquareFill,
-} from "react-icons/bs";
-import { ClientsData } from "./ClientsData";
 
 function SwiperClientsResponsive() {
   useEffect(() => {

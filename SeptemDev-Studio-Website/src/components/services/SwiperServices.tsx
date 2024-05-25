@@ -7,13 +7,13 @@ import 'swiper/css/effect-coverflow';
 import mantenimientoWeb from '../../assets/mantenimientoWeb2.png';
 import redesSociales from '../../assets/redesSociales.png';
 import diseñoWeb from '../../assets/desarrolloWeb.png';
+import ServiceCard from './ServiceCard';
+import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from 'react-icons/bs';
 
 //AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import ServiceCard from './ServiceCard';
-import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from 'react-icons/bs';
 
 function SwiperServices() {
   useEffect(() => {

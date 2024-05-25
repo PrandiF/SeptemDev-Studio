@@ -1,17 +1,16 @@
-import logoHeader from '../../assets/logoHeader.jpg';
-import { Link } from 'react-scroll';
-//AOS
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import logoHeader from "../../assets/logoHeader.jpg";
+import { Link } from "react-scroll";
+import { IoIosMenu } from "react-icons/io";
 
-import { IoIosMenu } from 'react-icons/io';
+//AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function header() {
   useEffect(() => {
     AOS.init({ duration: 1600 });
   }, []);
-
   return (
     <div
       className="w-screen h-auto xl:fixed absolute flex items-start justify-center z-50"
@@ -76,9 +75,6 @@ function header() {
         <button className="xl:hidden flex text-azulado items-center text-3xl">
           <IoIosMenu />
         </button>
-        {/* <Link to="" spy={true} smooth={true} duration={700} className="bg-azulado hover:bg-azuladoHover w-24 h-10 text-gris rounded-3xl text-sm mr-10 shadow-xl cursor-pointer flex items-center justify-center">
-          Reunión
-        </Link> */}
       </div>
     </div>
   );

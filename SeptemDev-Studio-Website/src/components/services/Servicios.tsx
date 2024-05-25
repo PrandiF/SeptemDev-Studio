@@ -2,13 +2,14 @@ import ServiceCard from './ServiceCard';
 import mantenimientoWeb from '../../assets/mantenimientoWeb2.png';
 import redesSociales from '../../assets/redesSociales.png';
 import diseñoWeb from '../../assets/desarrolloWeb.png';
+import Title from '../Title';
+import SwiperServices from './SwiperServices';
 
 //AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import Title from '../Title';
-import SwiperServices from './SwiperServices';
+
 
 function Servicios() {
   useEffect(() => {

@@ -2,13 +2,12 @@ import TeamCard from './TeamCard';
 import franPic from '../../assets/fran.jpg';
 import lucasPic from '../../assets/lucas.jpg';
 import camilaPic from '../../assets/cami.jpg';
-
+import Title from '../Title';
 import { useEffect } from 'react';
 
 //AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Title from '../Title';
 
 function Team() {
   useEffect(() => {
@@ -29,10 +28,10 @@ function Team() {
         personalizada. Están acá para escucharte, entender tus necesidades y trabajar juntos para
         lograr tus objetivos.
         <span className="xl:flex xl:items-center xl:justify-center hidden">
-          {' '}
           ¡Estamos emocionados de conocerte y comenzar esta aventura!
         </span>
       </p>
+      {/* DESKTOP */}
       <div className="xl:hidden w-full h-full flex items-start justify-center z-10 mt-20  flex-wrap gap-4 mx-auto">
         <TeamCard
           name="Franco Prandi"
@@ -44,7 +43,6 @@ function Team() {
           data_aos_duration="1700"
           data_aos_delay="400"
         />
-
         <TeamCard
           name="Lucas Glave"
           position="Co-Founder"
@@ -54,7 +52,6 @@ function Team() {
           data_aos_duration="1700"
           data_aos_delay="700"
         />
-
         <TeamCard
           name="Camila Rojas"
           position="Comunity Manager"
@@ -78,7 +75,6 @@ function Team() {
           data_aos_duration="1700"
           data_aos_delay="400"
         />
-
         <TeamCard
           name="Lucas Glave"
           position="Co-Founder"
@@ -88,7 +84,6 @@ function Team() {
           data_aos_duration="1700"
           data_aos_delay="700"
         />
-
         <TeamCard
           name="Camila Rojas"
           position="Comunity Manager"

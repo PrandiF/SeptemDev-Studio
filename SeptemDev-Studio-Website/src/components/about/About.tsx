@@ -1,21 +1,20 @@
-import LogoCarousel from './LogosCarrousel';
-import UsCardHorizontal from './UsCardHorizontal';
-import UsCardVertical from './UsCardVertical';
-
-import donBasilio from '../../assets/Copia de favicon.png';
-import bresh from '../../assets/bresh.jpeg';
-import motorville from '../../assets/motorville_sa_logo.jpeg';
-import bsasCars from '../../assets/bsasCars.jpg';
-import septemDev from '../../assets/Captura de pantalla 2024-04-12 a la(s) 17.51.08.png';
-import laMala from '../../assets/laMala.png';
-import salvadori from '../../assets/Copia de fav.png';
-import tacuara from '../../assets/tacuara.jpeg';
-import { useEffect } from 'react';
+import LogoCarousel from "./LogosCarrousel";
+import UsCardHorizontal from "./UsCardHorizontal";
+import UsCardVertical from "./UsCardVertical";
+import donBasilio from "../../assets/Copia de favicon.png";
+import bresh from "../../assets/bresh.jpeg";
+import motorville from "../../assets/motorville_sa_logo.jpeg";
+import bsasCars from "../../assets/bsasCars.jpg";
+import septemDev from "../../assets/Captura de pantalla 2024-04-12 a la(s) 17.51.08.png";
+import laMala from "../../assets/laMala.png";
+import salvadori from "../../assets/Copia de fav.png";
+import tacuara from "../../assets/tacuara.jpeg";
+import { useEffect } from "react";
 
 //AOS
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Title from '../Title';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Title from "../Title";
 
 function About() {
   useEffect(() => {
@@ -36,10 +35,10 @@ function About() {
           <UsCardHorizontal
             title="Cómo Empezamos?"
             content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir
-        juntos el éxito que merecés. Descubrí cómo podemos convertir tus
-        objetivos en realidad y construir juntos el éxito que merecés. Descubrí
-        cómo podemos convertir tus objetivos en realidad y construir juntos el
-        éxito que merecés."
+            juntos el éxito que merecés. Descubrí cómo podemos convertir tus
+            objetivos en realidad y construir juntos el éxito que merecés. Descubrí
+            cómo podemos convertir tus objetivos en realidad y construir juntos el
+            éxito que merecés."
             data_aos="fade"
             data_aos_duration="1600"
             data_aos_delay="200"
@@ -47,10 +46,10 @@ function About() {
           <UsCardHorizontal
             title="En qué tipo de cliente nos enfocamos?"
             content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir
-        juntos el éxito que merecés. Descubrí cómo podemos convertir tus
-        objetivos en realidad y construir juntos el éxito que merecés. Descubrí
-        cómo podemos convertir tus objetivos en realidad y construir juntos el
-        éxito que merecés."
+            juntos el éxito que merecés. Descubrí cómo podemos convertir tus
+            objetivos en realidad y construir juntos el éxito que merecés. Descubrí
+            cómo podemos convertir tus objetivos en realidad y construir juntos el
+            éxito que merecés."
             data_aos="fade"
             data_aos_duration="1600"
             data_aos_delay="400"
@@ -59,11 +58,7 @@ function About() {
         <div className="w-[35%] h-full flex items-start" data-aos="fade-up">
           <UsCardVertical
             title="Qué es SAAS?"
-            content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir
-        juntos el éxito que merecés. Descubrí cómo podemos convertir tus
-        objetivos en realidad y construir juntos el éxito que merecés. Descubrí
-        cómo podemos convertir tus objetivos en realidad y construir juntos el
-        éxito que merecés."
+            content="El software como servicio (SaaS) es un modelo de entrega de software basado en la nube donde el proveedor desarrolla, mantiene y actualiza el software, poniéndolo a disposición de los clientes a través de Internet con un sistema de pago por uso. El proveedor administra todo el hardware, software y seguridad, permitiendo a los clientes reducir costos y mejorar la implementación y actualización de soluciones empresariales más rápidamente que con sistemas locales."
             data_aos="fade"
             data_aos_duration="1600"
             data_aos_delay="300"
@@ -75,14 +70,17 @@ function About() {
         className="xl:hidden flex flex-col gap-4 items-start justify-evenly w-[90%] h-full my-0 mx-auto"
         data-aos="fade-up"
       >
-        <div className="w-full h-[50%] flex flex-col items-center gap-4 mb-4" data-aos="fade-up">
-        <UsCardHorizontal
+        <div
+          className="w-full h-[50%] flex flex-col items-center gap-4 mb-4"
+          data-aos="fade-up"
+        >
+          <UsCardHorizontal
             title="Cómo Empezamos?"
             content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir
-        juntos el éxito que merecés. Descubrí cómo podemos convertir tus
-        objetivos en realidad y construir juntos el éxito que merecés. Descubrí
-        cómo podemos convertir tus objetivos en realidad y construir juntos el
-        éxito que merecés."
+            juntos el éxito que merecés. Descubrí cómo podemos convertir tus
+            objetivos en realidad y construir juntos el éxito que merecés. Descubrí
+            cómo podemos convertir tus objetivos en realidad y construir juntos el
+            éxito que merecés."
             data_aos="fade"
             data_aos_duration="1600"
             data_aos_delay="200"
@@ -90,21 +88,17 @@ function About() {
           <UsCardHorizontal
             title="En qué tipo de cliente nos enfocamos?"
             content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir
-        juntos el éxito que merecés. Descubrí cómo podemos convertir tus
-        objetivos en realidad y construir juntos el éxito que merecés. Descubrí
-        cómo podemos convertir tus objetivos en realidad y construir juntos el
-        éxito que merecés."
+            juntos el éxito que merecés. Descubrí cómo podemos convertir tus
+            objetivos en realidad y construir juntos el éxito que merecés. Descubrí
+            cómo podemos convertir tus objetivos en realidad y construir juntos el
+            éxito que merecés."
             data_aos="fade"
             data_aos_duration="1600"
             data_aos_delay="400"
           />
           <UsCardHorizontal
             title="Qué es SAAS?"
-            content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir
-        juntos el éxito que merecés. Descubrí cómo podemos convertir tus
-        objetivos en realidad y construir juntos el éxito que merecés. Descubrí
-        cómo podemos convertir tus objetivos en realidad y construir juntos el
-        éxito que merecés."
+            content="El software como servicio (SaaS) es un modelo de entrega de software basado en la nube donde el proveedor desarrolla, mantiene y actualiza el software, poniéndolo a disposición de los clientes a través de Internet con un sistema de pago por uso. El proveedor administra todo el hardware, software y seguridad, permitiendo a los clientes reducir costos y mejorar la implementación y actualización de soluciones empresariales más rápidamente que con sistemas locales."
             data_aos="fade"
             data_aos_duration="1600"
             data_aos_delay="300"
@@ -112,7 +106,12 @@ function About() {
         </div>
       </div>
 
-      <div className="xl:flex hidden" data-aos="fade" data-aos-duration="1800" data-aos-delay="200">
+      <div
+        className="xl:flex hidden"
+        data-aos="fade"
+        data-aos-duration="1800"
+        data-aos-delay="200"
+      >
         <LogoCarousel
           logos={[
             donBasilio,

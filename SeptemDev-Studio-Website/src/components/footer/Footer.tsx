@@ -4,9 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-
     <div className="flex flex-col xl:flex-row items-center justify-around xl:justify-evenly w-screen xl:h-[15rem] bg-[#D6D2D2] z-20">
-      
       {/* MOBILE */}
       <div className="flex xl:hidden p-4">
         {/* LOGO */}
@@ -15,15 +13,14 @@ function Footer() {
         </div>
         <div className="border border-azulado flex justify-center items-center h-[6.5rem] my-auto" />
         <div className="flex justify-center items-center xl:order-last text-black w-[50%] gap-3">
-          <a  href="" target="_blank">
-            <FaInstagramSquare style={{fontSize: "200%"}}/>
+          <a href="" target="_blank">
+            <FaInstagramSquare style={{ fontSize: "200%" }} />
           </a>
           <a
-            
             href="https://www.linkedin.com/company/septemdev-studio/"
             target="_blank"
           >
-            <FaLinkedin style={{fontSize: "200%"}}/>
+            <FaLinkedin style={{ fontSize: "200%" }} />
           </a>
         </div>
       </div>
@@ -32,13 +29,13 @@ function Footer() {
       {/* DESKTOP */}
       <div className="hidden xl:flex justify-center items-center xl:order-last text-black">
         <a className="text-black" href="" target="_blank">
-          <FaInstagramSquare style={{fontSize: "270%"}}/>
+          <FaInstagramSquare style={{ fontSize: "270%" }} />
         </a>
         <a
           href="https://www.linkedin.com/company/septemdev-studio/"
           target="_blank"
         >
-          <FaLinkedin style={{fontSize: "270%"}}/>
+          <FaLinkedin style={{ fontSize: "270%" }} />
         </a>
       </div>
 
@@ -65,7 +62,6 @@ function Footer() {
       </div>
       <div className="hidden border border-azulado xl:flex justify-center items-center h-[8rem] my-auto" />
     </div>
-    // </div>
   );
 }
 

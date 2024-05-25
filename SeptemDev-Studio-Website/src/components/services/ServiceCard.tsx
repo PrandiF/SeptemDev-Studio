@@ -20,7 +20,6 @@ function ServiceCard({ title, description, img, data_aos, data_aos_delay }: Serv
     <div className="xl:w-[18%] xl:h-[85%] w-[65%] h-full " data-aos={data_aos} data-aos-duration="1600" data-aos-delay={data_aos_delay}>
       <div
       className="w-full h-full p-4 bg-slate-400 bg-opacity-20 backdrop-blur-sm  rounded-xl shadow-xl xl:hover:-translate-y-2 xl:hover:shadow-2xl transform duration-300"
-      
     >
       <img src={img} className="w-[40%] flex m-auto" alt={title} />
       <h3 className="text-azulado font-roboto text-center text-2xl font-bold">
