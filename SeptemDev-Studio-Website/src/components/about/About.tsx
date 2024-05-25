@@ -72,11 +72,11 @@ function About() {
       </div>
 
       <div
-        className="xl:hidden flex flex-col gap-4 items-start w-[90%] h-full my-0 mx-auto"
+        className="xl:hidden flex flex-col gap-4 items-start justify-evenly w-[90%] h-full my-0 mx-auto"
         data-aos="fade-up"
       >
-        <div className="w-full h-full flex gap-4" data-aos="fade-up">
-          <UsCardVertical
+        <div className="w-full h-[50%] flex flex-col items-center gap-4 mb-4" data-aos="fade-up">
+        <UsCardHorizontal
             title="Cómo Empezamos?"
             content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir
         juntos el éxito que merecés. Descubrí cómo podemos convertir tus
@@ -87,7 +87,7 @@ function About() {
             data_aos_duration="1600"
             data_aos_delay="200"
           />
-          <UsCardVertical
+          <UsCardHorizontal
             title="En qué tipo de cliente nos enfocamos?"
             content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir
         juntos el éxito que merecés. Descubrí cómo podemos convertir tus
@@ -98,8 +98,6 @@ function About() {
             data_aos_duration="1600"
             data_aos_delay="400"
           />
-        </div>
-        <div className="w-full h-[50%] flex items-center" data-aos="fade-up">
           <UsCardHorizontal
             title="Qué es SAAS?"
             content=" Descubrí cómo podemos convertir tus objetivos en realidad y construir

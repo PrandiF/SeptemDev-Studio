@@ -42,7 +42,7 @@ function SwiperServices() {
             prevEl: '.swiper-button-prev-serv',
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
-          className="h-full w-screen relative flex items-center justify-center m-auto"
+          className="h-full w-screen relative flex items-center justify-center m-auto mt-4"
           data-aos="fade-up"
           data-aos-delay="400"
         >

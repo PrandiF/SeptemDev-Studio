@@ -29,9 +29,9 @@ function Home() {
       />
 
       <div className="flex flex-col z-10 gap-4 mb-auto">
-        <div className="relative flex items-center justify-center mt-48">
+        <div className="relative flex  flex-col items-center justify-center xl:mt-48 mt-28 px-2">
           <h1
-            className="hidden text-azulado z-10 xl:text-4xl text-2xl text-center font-extrabold xl:flex m-auto font-fugaz-one"
+            className="text-azulado z-10 xl:text-4xl text-2xl text-center font-extrabold flex m-auto font-fugaz-one"
             data-aos="fade-up"
             data-aos-duration="1600"
             data-aos-delay="400"
@@ -40,7 +40,7 @@ function Home() {
             ¿QUERES LLEVAR TU NEGOCIO AL SIGUIENTE NIVEL?
           </h1>
           <h2
-            className="text-beige z-10 text-lg absolute top-[90%] right-[2%] font-extrabold xl:flex ml-auto font-fugaz-one hidden"
+            className="text-beige z-10 text-lg xl:absolute xl:top-[90%] xl:right-[2%] font-extrabold flex xl:ml-auto font-fugaz-one "
             data-aos="fade-up"
             data-aos-duration="1600"
             data-aos-delay="400"
@@ -49,14 +49,6 @@ function Home() {
             ¡DISEÑAMOS TU PAGINA WEB!
           </h2>
         </div>
-        <h1
-          className="xl:hidden text-azulado z-10 xl:text-4xl text-2xl text-end font-extrabold flex m-auto mt-32 drop-shadow-3xl font-roboto"
-          data-aos="fade-up"
-          data-aos-duration="1600"
-          data-aos-delay="400"
-        >
-          Llevá tu negocio al siguiente nivel
-        </h1>
         <div className="w-full h-full px-4">
           <h4
             className="flex items-center justify-center m-auto z-10 text-[#55627E] text-center mt-10 font-medium"
