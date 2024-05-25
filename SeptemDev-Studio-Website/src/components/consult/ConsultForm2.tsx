@@ -78,7 +78,7 @@ function ConsultForm2() {
         <div>
           <button
             type="submit"
-            className="bg-beige hover:bg-beigeHover hover:scale-105 transform duration-100 px-8 py-2 rounded-3xl text-sm shadow-xl flex my-0 mx-auto"
+            className="w-24 h-10 bg-beige-image hover:scale-[1.02] transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer mx-auto"
           >
             Enviar
           </button>

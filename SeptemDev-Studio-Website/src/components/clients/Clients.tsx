@@ -1,11 +1,11 @@
 import ActiveSlider from './ActiveSlider';
+import { useEffect } from 'react';
+import Title from '../Title';
+import SwiperClientsResponsive from './SwiperClientsResponsive';
 
 //AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
-import Title from '../Title';
-import SwiperClientsResponsive from './SwiperClientsResponsive';
 
 function Clients() {
   useEffect(() => {
@@ -20,7 +20,6 @@ function Clients() {
       >
         <Title title="CLIENTES" comment="Ellos confiaron en nosotros" />
       </div>
-
       <ActiveSlider />
       <SwiperClientsResponsive />
     </div>

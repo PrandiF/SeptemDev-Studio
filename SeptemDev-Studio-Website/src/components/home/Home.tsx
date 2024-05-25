@@ -1,20 +1,19 @@
-import imgBackground from '../../assets/fondoHome.png';
-import { useEffect } from 'react';
-
-import donBasilio from '../../assets/Copia de favicon.png';
-import bresh from '../../assets/bresh.jpeg';
-import motorville from '../../assets/motorville_sa_logo.jpeg';
-import bsasCars from '../../assets/bsasCars.jpg';
-import septemDev from '../../assets/Captura de pantalla 2024-04-12 a la(s) 17.51.08.png';
-import laMala from '../../assets/laMala.png';
-import salvadori from '../../assets/Copia de fav.png';
-import tacuara from '../../assets/tacuara.jpeg';
+import imgBackground from "../../assets/fondoHome.png";
+import { useEffect } from "react";
+import donBasilio from "../../assets/Copia de favicon.png";
+import bresh from "../../assets/bresh.jpeg";
+import motorville from "../../assets/motorville_sa_logo.jpeg";
+import bsasCars from "../../assets/bsasCars.jpg";
+import septemDev from "../../assets/Captura de pantalla 2024-04-12 a la(s) 17.51.08.png";
+import laMala from "../../assets/laMala.png";
+import salvadori from "../../assets/Copia de fav.png";
+import tacuara from "../../assets/tacuara.jpeg";
+import { Link } from "react-scroll";
+import LogoCarousel from "../about/LogosCarrousel";
 
 //AOS
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { Link } from 'react-scroll';
-import LogoCarousel from '../about/LogosCarrousel';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
   useEffect(() => {
@@ -36,7 +35,6 @@ function Home() {
             data-aos-duration="1600"
             data-aos-delay="400"
           >
-            {/* ¿Querés llevar tu negocio al siguiente nivel? */}
             ¿QUERES LLEVAR TU NEGOCIO AL SIGUIENTE NIVEL?
           </h1>
           <h2
@@ -45,7 +43,6 @@ function Home() {
             data-aos-duration="1600"
             data-aos-delay="400"
           >
-            {/* ¡Diseñamos tu éxito digital! */}
             ¡DISEÑAMOS TU PAGINA WEB!
           </h2>
         </div>
@@ -56,8 +53,8 @@ function Home() {
             data-aos-duration="1600"
             data-aos-delay="700"
           >
-            Descubrí como podemos convertir tus objetivos en realidad y construir juntos el éxito
-            que merecés.
+            Descubrí como podemos convertir tus objetivos en realidad y
+            construir juntos el éxito que merecés.
           </h4>
         </div>
 
