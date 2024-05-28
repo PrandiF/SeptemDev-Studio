@@ -26,12 +26,12 @@ function App() {
         <div id="HOME">
           <Home />
         </div>
-        <div id="ABOUT">
-          <About />
-        </div>
-        <ClientsCarrouselSection />
         <div id="SERVICES">
           <Servicios />
+        </div>
+        <ClientsCarrouselSection />
+        <div id="ABOUT">
+          <About />
         </div>
         <div id="CLIENTS">
           <Clients />

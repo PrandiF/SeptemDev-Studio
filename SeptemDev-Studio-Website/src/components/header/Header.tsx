@@ -27,15 +27,6 @@ function header() {
         </div>
         <div className="xl:flex hidden gap-10">
           <Link
-            to="ABOUT"
-            spy={true}
-            smooth={true}
-            duration={700}
-            className="text-azulado font-roboto hover:text-azuladoHover cursor-pointer"
-          >
-            Nosotros
-          </Link>
-          <Link
             to="SERVICES"
             spy={true}
             smooth={true}
@@ -43,6 +34,15 @@ function header() {
             className="text-azulado font-roboto hover:text-azuladoHover cursor-pointer"
           >
             Servicios
+          </Link>
+          <Link
+            to="ABOUT"
+            spy={true}
+            smooth={true}
+            duration={700}
+            className="text-azulado font-roboto hover:text-azuladoHover cursor-pointer"
+          >
+            Nosotros
           </Link>
           <Link
             to="CLIENTS"

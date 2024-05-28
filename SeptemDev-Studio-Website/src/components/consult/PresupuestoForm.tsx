@@ -4,7 +4,8 @@ import "aos/dist/aos.css";
 import { useEffect, useRef, useState } from "react";
 
 import emailjs from "@emailjs/browser";
-import { Alert } from "react-bootstrap";
+import { ToastContainer, Zoom, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function PresupuestoForm() {
   const [formData, setFormData] = useState({
@@ -35,19 +36,22 @@ function PresupuestoForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
     if (!isChecked) {
-      alert("Debe aceptar las políticas de privacidad para continuar.");
+      toast.warn("Debes aceptar las políticas de privacidad.");
+      return;
+    }
+    if (!formData.user_email || !formData.user_lastname || !formData.user_name || !formData.user_project || !formData.user_service) {
+      toast.warn("Debes completar todos los campos");
       return;
     }
 
     if (form.current) {
       emailjs
-        .sendForm("service_r3afnih", "template_presupuesto", form.current, {
-          publicKey: "9kRGZGhqg18Wok6_4",
-        })
+        .sendForm("service_SeptemDev", "template_presupuesto", form.current, "pzZxYDQSS2VBcbJQW")
         .then(
           () => {
-            console.log("Mensaje enviado!");
+            toast.success("Mensaje enviado correctamente.");
             setTimeout(() => {
               setMailSent(true);
               setFormData({
@@ -62,6 +66,7 @@ function PresupuestoForm() {
           (error) => {
             console.log("FAILED...", error.text);
             setMailSent(false);
+            toast.error("No se ha podido enviar el mensaje");
             setFormData({
               user_name: "",
               user_lastname: "",
@@ -73,9 +78,9 @@ function PresupuestoForm() {
         );
     }
   };
+
   return (
     <div className="flex xl:w-[30%] flex-col gap-2 xl:gap-4">
-      {/* <div className="absolute flex flex-col w-[30%] h-[40%] items-center justify-center m-auto" data-aos="fade-up" data-aos-duration="1600"> */}
       <h2
         className="text-center text-azulado xl:text-xl text-lg font-fugaz-one"
         data-aos="fade"
@@ -84,7 +89,7 @@ function PresupuestoForm() {
       >
         PRESUPUESTO
       </h2>
-      <form className="z-10 flex gap-6 flex-col w-full" onSubmit={handleSubmit}>
+      <form ref={form} className="z-10 flex gap-6 flex-col w-full" onSubmit={handleSubmit}>
         <input
           name="user_name"
           value={formData.user_name}
@@ -107,7 +112,6 @@ function PresupuestoForm() {
           data-aos-duration="1600"
           data-aos-delay="250"
         />
-
         <input
           name="user_email"
           value={formData.user_email}
@@ -129,11 +133,13 @@ function PresupuestoForm() {
           data-aos-duration="1600"
           data-aos-delay="350"
         >
-          <option value=""  disabled selected  >-Elegí el servicio-</option>
-          <option value="diseño" >Diseño Web</option>
-          <option value="mantenimiento" >Mantenimiento</option>
+          <option value="" disabled selected>
+            -Elegí el servicio-
+          </option>
+          <option value="diseño">Diseño Web</option>
+          <option value="mantenimiento">Mantenimiento</option>
           <option value="arreglo">Arreglo</option>
-          <option value="redesSociales" >Redes Sociales</option>
+          <option value="redesSociales">Redes Sociales</option>
         </select>
         <textarea
           name="user_project"
@@ -169,14 +175,13 @@ function PresupuestoForm() {
           >
             Enviar
           </button>
-          {mailSent ? (
-          <Alert variant="success">Mensaje enviado con éxito</Alert>
-        ) : (
-          ""
-        )}
+          <ToastContainer
+            position="top-right"
+            transition={Zoom}
+            autoClose={2000}
+          />
         </div>
       </form>
-      {/* </div> */}
     </div>
   );
 }
