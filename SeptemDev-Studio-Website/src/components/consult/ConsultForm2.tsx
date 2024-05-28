@@ -1,13 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, Zoom, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 //AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function ConsultForm2() {
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_lastname: "",
+    user_email: "",
+    user_consult: "",
+  });
+  const [mailSent, setMailSent] = useState(false);
+  const form = useRef<HTMLFormElement>(null);
+
   useEffect(() => {
     AOS.init();
   }, []);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const [isChecked, setIsChecked] = useState(false);
 
@@ -16,14 +34,43 @@ function ConsultForm2() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
     if (!isChecked) {
-      e.preventDefault();
-      alert("Debe aceptar las políticas de privacidad para continuar.");
+      toast.warn("Debes aceptar las políticas de privacidad.");
+      return;
+    }
+    if (!formData.user_email || !formData.user_lastname || !formData.user_name || !formData.user_consult) {
+      toast.warn("Debes completar todos los campos");
+      return;
+    }
+
+    if (form.current) {
+      emailjs
+        .sendForm("service_SeptemDev", "template_consulta", form.current, "pzZxYDQSS2VBcbJQW")
+        .then(
+          () => {
+            toast.success("Consulta enviada correctamente.");
+            setTimeout(() => {
+              setMailSent(true);
+              setFormData({
+                user_name: "",
+                user_lastname: "",
+                user_email: "",
+                user_consult: "",
+              });
+            }, 2000);
+          },
+          (error) => {
+            toast.error("No se ha podido enviar la consulta");
+            setMailSent(false);
+          }
+        );
     }
   };
+
   return (
     <div className="flex xl:w-[30%] flex-col gap-2 xl:gap-4">
-      {/* <div className="absolute flex flex-col w-[30%] h-[40%] items-center justify-center m-auto" data-aos="fade-up" data-aos-duration="1600"> */}
       <h2
         className="text-center text-azulado xl:text-xl text-lg font-fugaz-one"
         data-aos="fade"
@@ -32,9 +79,12 @@ function ConsultForm2() {
       >
         CONSULTA
       </h2>
-      <form className="z-10 flex gap-6 flex-col w-full" onSubmit={handleSubmit}>
+      <form ref={form} className="z-10 flex gap-6 flex-col w-full" onSubmit={handleSubmit}>
         <input
+          name="user_name"
+          value={formData.user_name}
           placeholder="Nombre"
+          onChange={handleChange}
           className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 text-azulado shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: "none" }}
           data-aos="fade-up"
@@ -43,15 +93,20 @@ function ConsultForm2() {
         />
         <input
           placeholder="Apellido"
+          name="user_lastname"
+          value={formData.user_lastname}
+          onChange={handleChange}
           className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm  placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 text-azulado shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay="250"
         />
-
         <input
           placeholder="Email"
+          name="user_email"
+          value={formData.user_email}
+          onChange={handleChange}
           className="w-full h-10 rounded-xl flex  border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 text-azulado shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: "none" }}
           data-aos="fade-up"
@@ -60,6 +115,9 @@ function ConsultForm2() {
         />
         <textarea
           placeholder="Dejanos tu consulta..."
+          name="user_consult"
+          value={formData.user_consult}
+          onChange={handleChange}
           className="w-full max-h-[170px] min-h-[150px] resize-none rounded-xl flex items-center justify-center border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 pt-2 text-azulado shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: "none" }}
           data-aos="fade-up"
@@ -89,9 +147,13 @@ function ConsultForm2() {
           >
             Enviar
           </button>
+          <ToastContainer
+            position="top-right"
+            transition={Zoom}
+            autoClose={2000}
+          />
         </div>
       </form>
-      {/* </div> */}
     </div>
   );
 }

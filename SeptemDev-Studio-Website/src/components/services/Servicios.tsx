@@ -15,11 +15,12 @@ function Servicios() {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
-    <div className="w-screen min-h-screen justify-evenly bg-gray-100 relative flex flex-col rounded-t-3xl rounded-b-3xl mt-[-20px] mb-[-20px] pb-[30px] z-30">
+    <div className="w-screen h-screen flex flex-col justify-evenly bg-gray-100 relative rounded-t-3xl rounded-b-3xl mt-[-20px] mb-[-20px] pb-[30px] z-30">
       <Title title="SERVICIOS" comment="Que hacemos por vos?" />
       <p
-        className="text-azulado w-[75%] flex mx-auto text-center xl:font-medium xl:text-lg text-sm"
+        className="text-azulado w-[75%] mx-auto text-center xl:font-medium xl:text-lg text-sm"
         data-aos="fade"
         data-aos-duration="1600"
         data-aos-delay="300"
@@ -30,26 +31,24 @@ function Servicios() {
         Estamos comprometidos en proporcionar soluciones integrales y personalizadas que satisfagan
         tus necesidades específicas y mejoren la experiencia de tus usuarios.
       </p>
-      <div className="w-full h-[50%] xl:flex justify-evenly hidden">
+      <div className="w-full h-[46%] xl:flex justify-evenly hidden">
         <ServiceCard
           title="Diseño"
-          description="
-          La creación y diseño de páginas web es un servicio clave que ofrece nuestra agencia. Desarrollamos diseños personalizados, optimizamos la navegación, aseguramos la compatibilidad móvil y mejoramos la velocidad de carga."
+          description="La creación y diseño de páginas web es un servicio clave que ofrece nuestra agencia. Desarrollamos diseños personalizados, optimizamos la navegación, aseguramos la compatibilidad móvil y mejoramos la velocidad de carga."
           img={diseñoWeb}
           data_aos="fade-right"
           data_aos_delay="700"
         />
         <ServiceCard
           title="Mantenimiento"
-          description="
-          El mantenimiento de páginas web es un servicio esencial que ofrece nuestra agencia. Actualizamos el contenido, corregimos errores, mejoramos la seguridad y realizamos ajustes técnicos. La experiencia de tus usuarios es nuestra prioridad."
+          description="El mantenimiento de páginas web es un servicio esencial que ofrece nuestra agencia. Actualizamos el contenido, corregimos errores, mejoramos la seguridad y realizamos ajustes técnicos. La experiencia de tus usuarios es nuestra prioridad."
           img={mantenimientoWeb}
           data_aos="fade-right"
           data_aos_delay="400"
         />
         <ServiceCard
           title="Redes Sociales"
-          description="Creamos y gestionamos contenido atractivo en distintas plataformas, interactuamos con tus seguidores y planificamos estrategias personalizadas.  La visibilidad de tu marca y la imagen de tu marca es nuestra prioridad."
+          description="Creamos y gestionamos contenido atractivo en distintas plataformas, interactuamos con tus seguidores y planificamos estrategias personalizadas. La visibilidad de tu marca y la imagen de tu marca es nuestra prioridad."
           img={redesSociales}
           data_aos="fade-left"
           data_aos_delay="500"

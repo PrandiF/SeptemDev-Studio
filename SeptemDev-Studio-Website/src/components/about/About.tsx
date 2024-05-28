@@ -1,14 +1,5 @@
-import LogoCarousel from "./LogosCarrousel";
 import UsCardHorizontal from "./UsCardHorizontal";
 // import UsCardVertical from "./UsCardVertical";
-import donBasilio from "../../assets/Copia de favicon.png";
-import bresh from "../../assets/bresh.jpeg";
-import motorville from "../../assets/motorville_sa_logo.jpeg";
-import bsasCars from "../../assets/bsasCars.jpg";
-import septemDev from "../../assets/Captura de pantalla 2024-04-12 a la(s) 17.51.08.png";
-import laMala from "../../assets/laMala.png";
-import salvadori from "../../assets/Copia de fav.png";
-import tacuara from "../../assets/tacuara.jpeg";
 import { useEffect } from "react";
 
 //AOS
@@ -23,8 +14,6 @@ function About() {
 
   return (
     <div className="w-screen min-h-screen flex items-center flex-col relative bg-gray-100 pb-[35px] rounded-3xl my-[-20px] pt-[20px] z-10">
-      {/* <div className="bg-gradient-to-t from-transparent to-logo flex w-full items-end h-8 z-10 absolute"></div> */}
-
       <Title title="NOSOTROS" comment="Descubrí como trabajamos" />
 
       <div
@@ -89,34 +78,6 @@ function About() {
           />
         </div>
       </div>
-
-      {/* <div
-        className="xl:flex hidden"
-        data-aos="fade"
-        data-aos-duration="1800"
-        data-aos-delay="200"
-      >
-        <LogoCarousel
-          logos={[
-            donBasilio,
-            bresh,
-            motorville,
-            bsasCars,
-            septemDev,
-            laMala,
-            tacuara,
-            salvadori,
-            donBasilio,
-            bresh,
-            motorville,
-            bsasCars,
-            septemDev,
-            laMala,
-            tacuara,
-            salvadori,
-          ]}
-        />
-      </div> */}
     </div>
   );
 }

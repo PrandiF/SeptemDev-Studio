@@ -12,6 +12,7 @@ html {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  overflow-x: hidden;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -26,7 +27,7 @@ html {
 
 /* Estilo para el scrollbar */
 ::-webkit-scrollbar {
-  width: 10px; /* Ancho del scrollbar */
+  width: 0px; /* Ancho del scrollbar */
   background-color: white;
 }
 
