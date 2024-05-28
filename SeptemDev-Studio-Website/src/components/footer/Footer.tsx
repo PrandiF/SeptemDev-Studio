@@ -4,7 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="flex flex-col xl:flex-row items-center justify-around xl:justify-evenly w-screen xl:h-[15rem] bg-[#D6D2D2] z-20">
+    <div className="flex flex-col xl:flex-row items-center justify-around xl:justify-evenly w-screen xl:h-[15rem] bg-[#D6D2D2] z-20 rounded-t-3xl mt-[-20px]">
       {/* MOBILE */}
       <div className="flex xl:hidden p-4">
         {/* LOGO */}

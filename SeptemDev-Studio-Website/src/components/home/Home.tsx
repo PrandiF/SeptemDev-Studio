@@ -1,30 +1,35 @@
 import imgBackground from "../../assets/fondoHome.png";
 import { useEffect } from "react";
-import donBasilio from "../../assets/Copia de favicon.png";
-import bresh from "../../assets/bresh.jpeg";
-import motorville from "../../assets/motorville_sa_logo.jpeg";
-import bsasCars from "../../assets/bsasCars.jpg";
-import septemDev from "../../assets/Captura de pantalla 2024-04-12 a la(s) 17.51.08.png";
-import laMala from "../../assets/laMala.png";
-import salvadori from "../../assets/Copia de fav.png";
-import tacuara from "../../assets/tacuara.jpeg";
 import { Link } from "react-scroll";
-import LogoCarousel from "../about/LogosCarrousel";
+import { useEstado } from "../consult/EstadoContext";
 
 //AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Home() {
+  const { setShowConsult, setShowPresupuesto } = useEstado();
+
+  const handlePresupuestoClick = () => {
+    setShowConsult(false);
+    setShowPresupuesto(true);
+  };
+
+  const handleConsultClick = () => {
+    setShowPresupuesto(false);
+    setShowConsult(true);
+  };
+
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-    <div className="w-screen h-screen relative flex flex-col items-center justify-center">
+    // <div className="w-screen h-screen bg-gradient-to-r from-beigeFondo to-white">
+    <div className=" h-screen relative flex flex-col items-center justify-center ">
       <img
         src={imgBackground}
         alt="fondo"
-        className="fixed w-screen h-screen z-0 bg-gradient-to-b from-transparent to-[#f6e1ce] object-cover"
+        className="fixed w-full h-screen z-0 bg-gradient-to-b from-transparent to-[#f6e1ce] object-cover "
       />
 
       <div className="flex flex-col z-10 gap-4 mb-auto">
@@ -69,45 +74,26 @@ function Home() {
             spy={true}
             smooth={true}
             duration={700}
-            className="w-24 h-10 bg-beige-image hover:scale-[1.02] transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
+            onClick={handleConsultClick}
+            className="w-40 h-10 bg-beige-image hover:scale-[1.02] transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
           >
-            Consulta
+            Realizar Consulta
           </Link>
           <Link
-            to=""
+            to="CONSULT"
             spy={true}
             smooth={true}
             duration={700}
-            className="w-24 h-10 bg-gray-image hover:scale-[1.02] transform duration-300 text-azulado rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
+            onClick={handlePresupuestoClick}
+            className="w-40 h-10 bg-gray-image hover:scale-[1.02] transform duration-300 text-azulado rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
           >
-            Reunión
+            Pedir Presupuesto
           </Link>
         </div>
       </div>
-      <div className="relative xl:hidden">
-        <LogoCarousel
-          logos={[
-            donBasilio,
-            bresh,
-            motorville,
-            bsasCars,
-            septemDev,
-            laMala,
-            tacuara,
-            salvadori,
-            donBasilio,
-            bresh,
-            motorville,
-            bsasCars,
-            septemDev,
-            laMala,
-            tacuara,
-            salvadori,
-          ]}
-        />
-      </div>
-      <div className="bg-gradient-to-b from-transparent to-logo flex w-full items-end h-8 z-10"></div>
+      {/* <div className="bg-gradient-to-b from-transparent to-logo flex w-full items-end h-8 z-10"></div> */}
     </div>
+    //  </div>
   );
 }
 
