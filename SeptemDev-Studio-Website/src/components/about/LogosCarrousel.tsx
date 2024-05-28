@@ -40,8 +40,8 @@ function LogoCarousel({ logos }: LogoCarouselProps) {
   return (
     <div
       ref={containerRef}
-      className="flex relative overflow-hidden z-10 xl:px-4 xl:py-3 xl:gap-8 py-2 gap-4 shadow-2xl"
-      style={{ boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.3)' }}
+      className="w-screen flex relative overflow-hidden z-10 xl:py-3 xl:gap-8 py-2 gap-4 "
+      // style={{ boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.3)' }}
     >
       {logos.map((logo, index) => (
         <img

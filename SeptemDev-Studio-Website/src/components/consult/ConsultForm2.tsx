@@ -22,13 +22,20 @@ function ConsultForm2() {
     }
   };
   return (
-    <div className="flex xl:w-[30%]">
+    <div className="flex xl:w-[30%] flex-col gap-2 xl:gap-4">
       {/* <div className="absolute flex flex-col w-[30%] h-[40%] items-center justify-center m-auto" data-aos="fade-up" data-aos-duration="1600"> */}
-
+      <h2
+        className="text-center text-azulado xl:text-xl text-lg font-fugaz-one"
+        data-aos="fade"
+        data-aos-duration="1600"
+        data-aos-delay="200"
+      >
+        CONSULTA
+      </h2>
       <form className="z-10 flex gap-6 flex-col w-full" onSubmit={handleSubmit}>
         <input
           placeholder="Nombre"
-          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 text-azulado shadow-xl"
+          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 text-azulado shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
@@ -36,7 +43,7 @@ function ConsultForm2() {
         />
         <input
           placeholder="Apellido"
-          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm  placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 text-azulado shadow-xl"
+          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm  placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 text-azulado shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
@@ -45,7 +52,7 @@ function ConsultForm2() {
 
         <input
           placeholder="Email"
-          className="w-full h-10 rounded-xl flex  border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 text-azulado shadow-xl"
+          className="w-full h-10 rounded-xl flex  border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 text-azulado shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
@@ -53,7 +60,7 @@ function ConsultForm2() {
         />
         <textarea
           placeholder="Dejanos tu consulta..."
-          className="w-full max-h-[170px] min-h-[150px] resize-none rounded-xl flex items-center justify-center border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 pt-2 text-azulado shadow-xl"
+          className="w-full max-h-[170px] min-h-[150px] resize-none rounded-xl flex items-center justify-center border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-azulado hover:scale-105 transform duration-300 pl-4 pt-2 text-azulado shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"

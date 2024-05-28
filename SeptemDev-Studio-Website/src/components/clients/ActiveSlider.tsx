@@ -24,7 +24,7 @@ function ActiveSlider() {
   }, []);
   return (
     <div className="hidden xl:flex xl:flex-col xl:w-screen">
-      <div className="w-full overflow-hidden relative">
+      <div className="w-screen overflow-hidden relative">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}

@@ -16,7 +16,7 @@ function Servicios() {
     AOS.init();
   }, []);
   return (
-    <div className="w-screen min-h-screen justify-evenly bg-gray-100 relative flex flex-col">
+    <div className="w-screen min-h-screen justify-evenly bg-gray-100 relative flex flex-col rounded-t-3xl rounded-b-3xl mt-[-20px] mb-[-20px] pb-[30px] z-30">
       <Title title="SERVICIOS" comment="Que hacemos por vos?" />
       <p
         className="text-azulado w-[75%] flex mx-auto text-center xl:font-medium xl:text-lg text-sm"

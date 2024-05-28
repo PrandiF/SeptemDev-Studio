@@ -15,12 +15,11 @@ function Title({ title, comment, className }: TitleProps) {
   }, []);
   return (
     <div
-    
       className={`relative flex justify-center xl:pb-0 ${className}`}
       data-aos="fade"
       data-aos-duration="1600"
     >
-      <h3 className="text-azulado font-fugaz-one font-extrabold xl:text-[8rem] text-[3.5rem] opacity-15 tracking-widest drop-shadow-3xl">
+      <h3 className="text-azulado font-fugaz-one font-extrabold xl:text-[8rem] text-[3rem] opacity-15 tracking-widest drop-shadow-3xl">
         {title}
       </h3>
       <p className="absolute xl:top-[48%] top-[42%] xl:text-4xl text-lg  text-azulado font-semibold z-10 italic">

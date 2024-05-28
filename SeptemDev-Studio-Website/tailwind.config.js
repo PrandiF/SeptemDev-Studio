@@ -20,6 +20,7 @@ export default {
         logo: "rgba(214, 210, 209, 0.7)",
         beige: "#C99677",
         beigeHover: "#B98362",
+        beigeFondo: "#e4c1a9",
         azulado: "#55627E",
         azuladoHover: "#737F99",
         gris: "#E8E8E8",
