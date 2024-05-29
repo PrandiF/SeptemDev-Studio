@@ -13,7 +13,7 @@ function Footer() {
         </div>
         <div className="border border-azulado flex justify-center items-center h-[6.5rem] my-auto" />
         <div className="flex justify-center items-center xl:order-last text-black w-[50%] gap-3">
-          <a href="" target="_blank">
+          <a href="https://www.instagram.com/septemdevstudio/" target="_blank">
             <FaInstagramSquare style={{ fontSize: "200%" }} />
           </a>
           <a
@@ -28,7 +28,7 @@ function Footer() {
       {/* ICONOS */}
       {/* DESKTOP */}
       <div className="hidden xl:flex justify-center items-center xl:order-last text-black">
-        <a className="text-black" href="" target="_blank">
+        <a className="text-black" href="https://www.instagram.com/septemdevstudio/" target="_blank">
           <FaInstagramSquare style={{ fontSize: "270%" }} />
         </a>
         <a

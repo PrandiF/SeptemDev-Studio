@@ -47,7 +47,7 @@ function ConsultForm2() {
 
     if (form.current) {
       emailjs
-        .sendForm("service_SeptemDev", "template_consulta", form.current, "pzZxYDQSS2VBcbJQW")
+        .sendForm("service_SeptemDev", "template_consult", form.current, "pzZxYDQSS2VBcbJQW")
         .then(
           () => {
             toast.success("Consulta enviada correctamente.");
