@@ -18,8 +18,8 @@ function UsCardVertical({ title, content }: CardVertical) {
   }, []);
   return (
     <div className="xl:w-full w-[50%] xl:min-h-full rounded-lg z-10 p-4 bg-[#78767635] backdrop-filter backdrop-blur shadow-2xl">
-      <h2 className="z-10 font-roboto font-extrabold text-beige text-xl">{title}</h2>
-      <p className="z-10 font-roboto mt-5 xl:text-base text-sm">{content}</p>
+      <h2 className="z-10 font-roboto font-extrabold text-logoTypography text-xl">{title}</h2>
+      <p className="z-10 font-roboto mt-5 xl:text-base text-sm text-logoTypography">{content}</p>
     </div>
   );
 }
