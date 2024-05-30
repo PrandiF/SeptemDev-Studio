@@ -19,9 +19,9 @@ function Team() {
   return (
     <div className="xl:w-screen xl:h-screen w-full min-h-screen flex flex-col pb-12 xl:mb-16 xl:relative">
       {/* <div className="bg-gradient-to-t from-transparent to-gray-100 flex w-full items-end h-8 z-10 absolute pt-5"></div> */}
-      <Title title="STAFF" comment="Ellos lo harán realidad..." className='mt-12'/>
+      <Title title="STAFF" comment="Ellos lo harán realidad..." className="mt-12" />
       <p
-        className="text-azulado xl:font-medium xl:text-base text-sm  text-center m-auto w-[90%] xl:w-[65%] mb-2"
+        className="text-logoTypography xl:font-medium xl:text-base text-sm  text-center m-auto w-[90%] xl:w-[65%] mb-2"
         data-aos="fade"
         data-aos-duration="1600"
         data-aos-delay="300"
@@ -41,7 +41,7 @@ function Team() {
           position="Co-Founder"
           description="Desarrollador FullStack"
           picture={franPic}
-          portfolio='https://mi-portfolio-fp.netlify.app/'
+          portfolio="https://mi-portfolio-fp.netlify.app/"
           data_aos="fade-up"
           data_aos_duration="1700"
           data_aos_delay="400"
@@ -73,7 +73,7 @@ function Team() {
           position="Co-Founder"
           description="Desarrollador FullStack"
           picture={franPic}
-          portfolio='https://mi-portfolio-fp.netlify.app/'
+          portfolio="https://mi-portfolio-fp.netlify.app/"
           data_aos="fade-right"
           data_aos_duration="1700"
           data_aos_delay="400"

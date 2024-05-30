@@ -1,11 +1,11 @@
-import logoHeader from "../../assets/logoHeader.jpg";
-import { Link } from "react-scroll";
-import { IoIosMenu } from "react-icons/io";
+import logoHeader from '../../assets/logoHeader.jpg';
+import { Link } from 'react-scroll';
+import { IoIosMenu } from 'react-icons/io';
 
 //AOS
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function header() {
   useEffect(() => {
@@ -31,7 +31,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-azulado font-roboto hover:text-azuladoHover cursor-pointer"
+            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Servicios
           </Link>
@@ -40,7 +40,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-azulado font-roboto hover:text-azuladoHover cursor-pointer"
+            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Nosotros
           </Link>
@@ -49,7 +49,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-azulado font-roboto hover:text-azuladoHover cursor-pointer"
+            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Clientes
           </Link>
@@ -58,7 +58,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-azulado font-roboto hover:text-azuladoHover cursor-pointer"
+            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Consulta
           </Link>
@@ -67,12 +67,12 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-azulado font-roboto hover:text-azuladoHover cursor-pointer"
+            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Staff
           </Link>
         </div>
-        <button className="xl:hidden flex text-azulado items-center text-3xl">
+        <button className="xl:hidden flex text-logoTypography items-center text-3xl">
           <IoIosMenu />
         </button>
       </div>

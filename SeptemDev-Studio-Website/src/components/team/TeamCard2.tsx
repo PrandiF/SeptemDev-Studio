@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 //AOS
-import AOS from "aos";
-import "aos/dist/aos.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 type CardProps = {
   name: string;
@@ -27,7 +27,6 @@ function TeamCard2({
   portfolio,
 }: // ModalComponent
 CardProps) {
-
   useEffect(() => {
     AOS.init();
   }, []);
@@ -40,15 +39,19 @@ CardProps) {
       data-aos-duration={data_aos_duration}
       data-aos-delay={data_aos_delay}
     >
-      <img src={imageUrl} className="w-28 h-28 mt-8 rounded-full border-4 border-slate-50 z-10 group-hover:scale-125 group-hover:-translate-y-6 transition-all duration-500" />
-      <div className="z-10  group-hover:-translate-y-4 transition-all duration-500 text-azulado group-hover:text-slate-50">
+      <img
+        src={imageUrl}
+        className="w-28 h-28 mt-8 rounded-full border-4 border-slate-50 z-10 group-hover:scale-125 group-hover:-translate-y-6 transition-all duration-500"
+      />
+      <div className="z-10  group-hover:-translate-y-4 transition-all duration-500 text-logoTypography group-hover:text-slate-50">
         <span className="text-2xl font-bold">{name}</span>
         <p className="font-semibold">{position}</p>
         <p>{description}</p>
       </div>
       <a
-        className="w-32 h-8 bg-gray-image hover:scale-[1.02] transform duration-300 text-azulado rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
-        href={portfolio} target="e_blank"
+        className="w-32 h-8 bg-gray-image hover:scale-[1.02] font-semibold transform duration-300 text-logoTypography rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
+        href={portfolio}
+        target="e_blank"
       >
         Portfolio
       </a>

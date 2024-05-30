@@ -10,7 +10,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
-
 function Servicios() {
   useEffect(() => {
     AOS.init();
@@ -20,7 +19,7 @@ function Servicios() {
     <div className="w-screen h-screen flex flex-col justify-evenly bg-gray-100 relative rounded-t-3xl rounded-b-3xl mt-[-20px] mb-[-20px] pb-[30px] z-30">
       <Title title="SERVICIOS" comment="Que hacemos por vos?" />
       <p
-        className="text-azulado w-[75%] mx-auto text-center xl:font-medium xl:text-lg text-sm"
+        className="text-logoTypography w-[75%] mx-auto text-center xl:font-medium xl:text-lg text-sm"
         data-aos="fade"
         data-aos-duration="1600"
         data-aos-delay="300"

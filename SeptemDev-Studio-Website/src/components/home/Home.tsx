@@ -1,11 +1,11 @@
-import imgBackground from "../../assets/fondoHome.png";
-import { useEffect } from "react";
-import { Link } from "react-scroll";
-import { useEstado } from "../consult/EstadoContext";
+import imgBackground from '../../assets/fondoHome.png';
+import { useEffect } from 'react';
+import { Link } from 'react-scroll';
+import { useEstado } from '../consult/EstadoContext';
 
 //AOS
-import AOS from "aos";
-import "aos/dist/aos.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home() {
   const { setShowConsult, setShowPresupuesto } = useEstado();
@@ -24,18 +24,16 @@ function Home() {
     AOS.init();
   }, []);
   return (
-    // <div className="w-screen h-screen bg-gradient-to-r from-beigeFondo to-white">
     <div className=" h-screen relative flex flex-col items-center justify-center ">
       <img
         src={imgBackground}
         alt="fondo"
         className="fixed w-full h-screen z-0 bg-gradient-to-b from-transparent to-[#f6e1ce] object-cover "
       />
-
       <div className="flex flex-col z-10 gap-4 mb-auto">
         <div className="relative flex  flex-col items-center justify-center xl:mt-48 mt-28 px-2">
           <h1
-            className="text-azulado z-10 xl:text-4xl text-2xl text-center font-extrabold flex m-auto font-fugaz-one"
+            className="text-logoTypography z-10 xl:text-4xl text-2xl text-center font-extrabold flex m-auto font-fugaz-one"
             data-aos="fade-up"
             data-aos-duration="1600"
             data-aos-delay="400"
@@ -53,13 +51,13 @@ function Home() {
         </div>
         <div className="w-full h-full px-4">
           <h4
-            className="flex items-center justify-center m-auto z-10 text-[#55627E] text-center mt-10 font-medium"
+            className="flex items-center justify-center m-auto z-10 text-logoTypography text-center mt-10 font-medium"
             data-aos="fade-up"
             data-aos-duration="1600"
             data-aos-delay="700"
           >
-            Descubrí como podemos convertir tus objetivos en realidad y
-            construir juntos el éxito que merecés.
+            Descubrí como podemos convertir tus objetivos en realidad y construir juntos el éxito
+            que merecés.
           </h4>
         </div>
 
@@ -75,7 +73,7 @@ function Home() {
             smooth={true}
             duration={700}
             onClick={handleConsultClick}
-            className="w-40 h-10 bg-beige-image hover:scale-[1.02] transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
+            className="w-40 h-10 bg-beige-image hover:scale-[1.02] transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center font-semibold cursor-pointer"
           >
             Realizar Consulta
           </Link>
@@ -85,15 +83,13 @@ function Home() {
             smooth={true}
             duration={700}
             onClick={handlePresupuestoClick}
-            className="w-40 h-10 bg-gray-image hover:scale-[1.02] transform duration-300 text-azulado rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
+            className="w-40 h-10 bg-gray-image hover:scale-[1.02] transform duration-300 text-logoTypography rounded-3xl text-sm shadow-xl flex items-center font-semibold justify-center cursor-pointer"
           >
             Pedir Presupuesto
           </Link>
         </div>
       </div>
-      {/* <div className="bg-gradient-to-b from-transparent to-logo flex w-full items-end h-8 z-10"></div> */}
     </div>
-    //  </div>
   );
 }
 
