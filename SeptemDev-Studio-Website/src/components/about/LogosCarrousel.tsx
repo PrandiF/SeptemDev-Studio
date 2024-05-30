@@ -1,7 +1,12 @@
-import { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from 'react';
+
+interface Logo {
+  src: string;
+  rounded: boolean;
+}
 
 interface LogoCarouselProps {
-  logos: string[];
+  logos: Logo[];
 }
 
 function LogoCarousel({ logos }: LogoCarouselProps) {
@@ -40,23 +45,22 @@ function LogoCarousel({ logos }: LogoCarouselProps) {
   return (
     <div
       ref={containerRef}
-      className="w-screen flex relative overflow-hidden z-10 xl:py-3 xl:gap-8 py-2 gap-4 "
-      // style={{ boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.3)' }}
+      className="w-screen flex relative overflow-hidden z-10 xl:py-3 xl:gap-8 py-2 gap-4"
     >
       {logos.map((logo, index) => (
         <img
           key={index}
-          src={logo}
+          src={logo.src}
           alt={`Logo ${index}`}
-          className="xl:w-[83px] w-[60px] h-[60px] xl:h-[83px] rounded-full flex"
+          className={`xl:w-[85px] w-[60px] h-[60px] xl:h-[83px] ${logo.rounded ? 'rounded-full' : 'rounded-none'} flex`}
         />
       ))}
       {logos.map((logo, index) => (
         <img
           key={index + logos.length}
-          src={logo}
+          src={logo.src}
           alt={`Logo ${index}`}
-          className="xl:w-[83px] w-[60px] h-[60px] xl:h-[83px] rounded-full flex"
+          className={`xl:w-[85px] w-[60px] h-[60px] xl:h-[83px] ${logo.rounded ? 'rounded-full' : 'rounded-none'} flex`}
         />
       ))}
     </div>

@@ -1,10 +1,11 @@
 import donBasilio from "../../assets/donBasilioWeb.png";
-import salvadori from "../../assets/estudioSalvadori.png";
+import skyMovie from "../../assets/skyMovie.png"
 import fastDelivery from "../../assets/fastDelivery.png";
 import houseOfDev from "../../assets/houseOfDev.png";
 import miTurnoWeb from "../../assets/miTurnoWeb.png";
 import odontologia from "../../assets/odontologia.png"
-import bresh from "../../assets/bresh.jpeg"
+import tmp from "../../assets/TheMovieParty.png"
+
 
 
 export const ClientsData = [
@@ -35,13 +36,13 @@ export const ClientsData = [
   },
   
   {
-    title: "Estudio Salvadori",
-    img: salvadori,
-    url: "https://estudiosalvadori.vercel.app/",
+    title: "Sky Movie",
+    img: skyMovie,
+    url: "",
   },
   {
-    title: "Bresh",
-    img: bresh,
-    url: "https://www.fiestabresh.com/",
+    title: "The Movie Party",
+    img: tmp,
+    url: "",
   },
 ];

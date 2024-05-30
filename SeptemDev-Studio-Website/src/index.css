@@ -1,9 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body,
-html {
-}
+
 :root {
   padding: 0;
   margin: 0;
@@ -28,7 +26,12 @@ html {
 /* Estilo para el scrollbar */
 ::-webkit-scrollbar {
   width: 0px; /* Ancho del scrollbar */
-  background-color: white;
+  background-color: transparent;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
 }
 
 /* Estilo para la barra de desplazamiento */
