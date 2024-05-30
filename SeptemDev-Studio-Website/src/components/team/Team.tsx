@@ -1,8 +1,9 @@
-import TeamCard from './TeamCard';
+
 import TeamCard2 from './TeamCard2';
 import franPic from '../../assets/fran.jpg';
 import lucasPic from '../../assets/lucas.png';
 import camilaPic from '../../assets/cami.png';
+import martiPic from '../../assets/marti.jpg'
 import Title from '../Title';
 import { useEffect } from 'react';
 import ReactDOM from 'react-dom';
@@ -10,7 +11,7 @@ import ReactDOM from 'react-dom';
 //AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import ModalFran from './Fran/ModalFran';
+// import ModalFran from './Fran/ModalFran';
 
 function Team() {
   useEffect(() => {
@@ -39,7 +40,7 @@ function Team() {
         <TeamCard2
           name="Franco Prandi"
           position="Co-Founder"
-          description="Desarrollador FullStack"
+          description="Desarrollador Frontend"
           picture={franPic}
           portfolio="https://mi-portfolio-fp.netlify.app/"
           data_aos="fade-up"
@@ -49,7 +50,7 @@ function Team() {
         <TeamCard2
           name="Lucas Glave"
           position="Co-Founder"
-          description="Un poco menos capo que el de al lado"
+          description="Desarrollador Frontend"
           picture={lucasPic}
           data_aos="fade-up"
           data_aos_duration="1700"
@@ -58,8 +59,16 @@ function Team() {
         <TeamCard2
           name="Camila Rojas"
           position="Comunity Manager"
-          description="Se mando unos logos medio pelo"
           picture={camilaPic}
+          data_aos="fade-up"
+          data_aos_duration="1700"
+          data_aos_delay="400"
+        />
+        <TeamCard2
+          name="Martiniano Izquierdo"
+          position="Diseñador Gráfico"
+          picture={martiPic}
+          portfolio=""
           data_aos="fade-up"
           data_aos_duration="1700"
           data_aos_delay="400"
@@ -71,7 +80,7 @@ function Team() {
         <TeamCard2
           name="Franco Prandi"
           position="Co-Founder"
-          description="Desarrollador FullStack"
+          description="Desarrollador Fontend"
           picture={franPic}
           portfolio="https://mi-portfolio-fp.netlify.app/"
           data_aos="fade-right"
@@ -81,17 +90,25 @@ function Team() {
         <TeamCard2
           name="Lucas Glave"
           position="Co-Founder"
-          description="Un poco menos capo que el de al lado"
+          description="Desarrollador Frontend"
           picture={lucasPic}
+          data_aos="fade-up"
+          data_aos_duration="1700"
+          data_aos_delay="550"
+        />
+        <TeamCard2
+          name="Camila Rojas"
+          position="Comunity Manager"
+          picture={camilaPic}
           data_aos="fade-up"
           data_aos_duration="1700"
           data_aos_delay="700"
         />
         <TeamCard2
-          name="Camila Rojas"
-          position="Comunity Manager"
-          description="Se mando unos logos medio pelo"
-          picture={camilaPic}
+          name="Martiniano Izquierdo"
+          position="Diseñador Gráfico"
+          picture={martiPic}
+          portfolio=""
           data_aos="fade-left"
           data_aos_duration="1700"
           data_aos_delay="400"
