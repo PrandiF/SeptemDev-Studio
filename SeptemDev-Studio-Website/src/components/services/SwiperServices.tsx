@@ -47,7 +47,7 @@ function SwiperServices() {
           data-aos-delay="400"
         >
           <div className="swiper-button-prev-serv absolute left-5 transform z-10">
-            <BsFillArrowLeftSquareFill className="w-8 h-8 text-azulado cursor-pointer" />
+            <BsFillArrowLeftSquareFill className="w-8 h-8 text-logoTypography cursor-pointer" />
           </div>
           <SwiperSlide className="w-[80%] h-full relative flex justify-center">
             <ServiceCard
@@ -86,7 +86,7 @@ function SwiperServices() {
             />
           </SwiperSlide>
           <div className="swiper-button-next-serv absolute right-5 transform  z-10">
-            <BsFillArrowRightSquareFill className="w-8 h-8 text-azulado cursor-pointer" />
+            <BsFillArrowRightSquareFill className="w-8 h-8 text-logoTypography cursor-pointer" />
           </div>
         </Swiper>
         {/* <div className="swiper-pagination-serv w-full flex items-center justify-center mt-4"></div> */}
