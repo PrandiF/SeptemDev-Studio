@@ -40,7 +40,7 @@ function Team() {
         <TeamCard2
           name="Franco Prandi"
           position="Co-Founder"
-          description="Desarrollador Frontend"
+          description="Desarrollador Full Stack"
           picture={franPic}
           portfolio="https://mi-portfolio-fp.netlify.app/"
           data_aos="fade-up"
@@ -50,7 +50,7 @@ function Team() {
         <TeamCard2
           name="Lucas Glave"
           position="Co-Founder"
-          description="Desarrollador Frontend"
+          description="Desarrollador Full Stack"
           picture={lucasPic}
           data_aos="fade-up"
           data_aos_duration="1700"
@@ -80,7 +80,7 @@ function Team() {
         <TeamCard2
           name="Franco Prandi"
           position="Co-Founder"
-          description="Desarrollador Fontend"
+          description="Desarrollador Full Stack"
           picture={franPic}
           portfolio="https://mi-portfolio-fp.netlify.app/"
           data_aos="fade-right"
@@ -90,7 +90,7 @@ function Team() {
         <TeamCard2
           name="Lucas Glave"
           position="Co-Founder"
-          description="Desarrollador Frontend"
+          description="Desarrollador Full Stack"
           picture={lucasPic}
           data_aos="fade-up"
           data_aos_duration="1700"
@@ -98,7 +98,8 @@ function Team() {
         />
         <TeamCard2
           name="Camila Rojas"
-          position="Comunity Manager"
+          position="Community Manager"
+          description='Ingeniera en sistemas'
           picture={camilaPic}
           data_aos="fade-up"
           data_aos_duration="1700"
