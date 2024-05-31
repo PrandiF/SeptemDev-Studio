@@ -25,7 +25,7 @@ function header() {
   useEffect(() => {
     if (isOpen) {
       gsap.to(contentRef.current, {
-        height: "8rem",
+        height: "10rem",
         duration: 0.2,
         ease: "power3.inOut",
       });
@@ -110,7 +110,7 @@ function header() {
         >
           <div
             ref={contentRef}
-            className="text-logoTypography h-0 text-center mt-[3.5rem] flex flex-col w-full overflow-hidden"
+            className="text-logoTypography h-0 text-center mt-[3.5rem] flex flex-col gap-2 w-full overflow-hidden"
           >
             <Link
               to="SERVICES"

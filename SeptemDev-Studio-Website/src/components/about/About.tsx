@@ -1,11 +1,13 @@
 import UsCardHorizontal from "./UsCardHorizontal";
 // import UsCardVertical from "./UsCardVertical";
 import { useEffect } from "react";
+import logoPng from "../../assets/logoPng.png";
 
 //AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../Title";
+import MobileSection from "./MobileSection";
 
 function About() {
   useEffect(() => {
@@ -20,12 +22,15 @@ function About() {
         className="hidden xl:flex flex-col gap-4 items-start w-[80%] mx-auto pb-24 pt-12"
         data-aos="fade-up"
       >
-
         <div
           className="w-full h-full items-end p-8 flex flex-col gap-4"
           data-aos="fade-up"
         >
-          <div className="h-1/3 w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur" data-aos="fade" data-aos-duration="1600">
+          <div
+            className="h-1/3 w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur"
+            data-aos="fade"
+            data-aos-duration="1600"
+          >
             <h2 className="z-10 font-roboto font-extrabold text-xl">
               ¿Cómo Empezamos?
             </h2>
@@ -42,8 +47,19 @@ function About() {
             </p>
           </div>
           <div className="flex flex-row h-1/3 justify-between gap-4">
-            <img src={logoPng} className="rounded-lg w-1/3" data-aos="fade-right" data-aos-duration="1600" data-aos-delay='300'/>
-            <div className="w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur" data-aos="fade-left" data-aos-duration="1600" data-aos-delay='300'>
+            <img
+              src={logoPng}
+              className="rounded-lg w-1/3"
+              data-aos="fade-right"
+              data-aos-duration="1600"
+              data-aos-delay="300"
+            />
+            <div
+              className="w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur"
+              data-aos="fade-left"
+              data-aos-duration="1600"
+              data-aos-delay="300"
+            >
               <h2 className="z-10 font-roboto font-extrabold text-xl">
                 ¿Qué es SAAS?
               </h2>
@@ -59,7 +75,12 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="h-1/3 w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur" data-aos="fade" data-aos-duration="1600" data-aos-delay='400'>
+          <div
+            className="h-1/3 w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur"
+            data-aos="fade"
+            data-aos-duration="1600"
+            data-aos-delay="400"
+          >
             <h2 className="z-10 font-roboto font-extrabold text-xl">
               ¿En que tipo de cliente nos enfocamos?
             </h2>
@@ -73,6 +94,7 @@ function About() {
             </p>
           </div>
         </div>
+        <MobileSection />
       </div>
 
       <div
@@ -105,6 +127,7 @@ function About() {
             data_aos_delay="300"
           />
         </div>
+        <MobileSection />
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ function MobileSection() {
     AOS.init();
   }, []);
   return (
-    <div className="flex xl:flex-row flex-col xl:items-center justify-evenly gap-12">
+    <div className="flex xl:flex-row flex-col xl:items-start justify-evenly gap-12 xl:mt-24 mt-12">
       <div className="xl:w-[50%] h-full xl:p-4 flex flex-col gap-5 rounded-xl bg-transparent justify-start text-center xl:text-start" data-aos="fade-right" data-aos-duration="1600" data-aos-delay="300">
         <h2 className="z-10 font-roboto font-extrabold text-xl" >
           Estamos en todos los dispositivos
@@ -29,8 +29,8 @@ function MobileSection() {
           encuentren.
         </p>
       </div>
-      <div className="xl:w-[35%] w-[80%] h-full flex xl:items-start m-auto justify-center" data-aos="fade-left" data-aos-duration="1600" data-aos-delay="300">
-        <img src={mobileWeb} className="animate-float"/>
+      <div className="xl:w-[30%] w-[80%] h-full flex xl:items-center m-auto justify-center" data-aos="fade-left" data-aos-duration="1600" data-aos-delay="300">
+        <img src={mobileWeb} className="xl:animate-float animate-float2"/>
       </div>
     </div>
   );
