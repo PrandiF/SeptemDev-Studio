@@ -62,7 +62,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Servicios
           </Link>
@@ -71,7 +71,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Nosotros
           </Link>
@@ -80,7 +80,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Clientes
           </Link>
@@ -89,7 +89,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Consulta
           </Link>
@@ -98,11 +98,12 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Staff
           </Link>
         </div>
+
         <div
           className="absolute top-0 flex overflow-hidden transition-all duration-75 ease-out flex-col items-center gap-7 backdrop-blur-xl shadow-2xl z-[-10] w-full rounded-2xl"
           style={isOpen && !isBorder ? { borderRadius: "80px" } : !isOpen && !isBorder ? { borderRadius: "9999px" } : {}}

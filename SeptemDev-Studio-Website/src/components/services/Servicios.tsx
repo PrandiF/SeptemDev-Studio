@@ -1,14 +1,14 @@
-import ServiceCard from './ServiceCard';
-import mantenimientoWeb from '../../assets/mantenimientoWeb2.png';
-import redesSociales from '../../assets/redesSociales.png';
-import diseñoWeb from '../../assets/desarrolloWeb.png';
-import Title from '../Title';
-import SwiperServices from './SwiperServices';
+import ServiceCard from "./ServiceCard";
+import mantenimientoWeb from "../../assets/mantenimientoWeb2.png";
+import redesSociales from "../../assets/redesSociales.png";
+import diseñoWeb from "../../assets/desarrolloWeb.png";
+import Title from "../Title";
+import SwiperServices from "./SwiperServices";
 
 //AOS
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function Servicios() {
   useEffect(() => {
@@ -19,16 +19,18 @@ function Servicios() {
     <div className="w-screen min-h-screen flex flex-col justify-between bg-gray-100 relative rounded-t-3xl rounded-b-3xl mt-[-20px] mb-[-20px] pb-[60px] pt-[30px] z-30">
       <Title title="SERVICIOS" comment="Que hacemos por vos?" />
       <p
-        className="text-logoTypography w-[75%] mx-auto text-center xl:font-medium xl:text-lg text-sm"
+        className="w-[75%] mx-auto text-center xl:font-medium xl:text-lg text-sm"
         data-aos="fade"
         data-aos-duration="1600"
         data-aos-delay="300"
       >
-        SeptemDev Studio ofrece una gama completa de servicios digitales diseñados para potenciar tu
-        presencia en línea y asegurar el éxito de tu negocio. Entre nuestros servicios se incluyen
-        el Diseño Web, Mantenimiento de sitios, Gestión de Redes Sociales y Arreglo de Páginas Web.
-        Estamos comprometidos en proporcionar soluciones integrales y personalizadas que satisfagan
-        tus necesidades específicas y mejoren la experiencia de tus usuarios.
+        SeptemDev Studio ofrece una gama completa de servicios digitales
+        diseñados para potenciar tu presencia en línea y asegurar el éxito de tu
+        negocio. Entre nuestros servicios se incluyen el Diseño Web,
+        Mantenimiento de sitios, Gestión de Redes Sociales y Arreglo de Páginas
+        Web. Estamos comprometidos en proporcionar soluciones integrales y
+        personalizadas que satisfagan tus necesidades específicas y mejoren la
+        experiencia de tus usuarios.
       </p>
       <div className="w-full h-[46%] xl:flex justify-evenly hidden">
         <ServiceCard

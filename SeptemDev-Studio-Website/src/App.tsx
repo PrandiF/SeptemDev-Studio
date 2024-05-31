@@ -21,7 +21,7 @@ function App() {
 
   return (
     <EstadoProvider>
-      <div className="min-h-screen w-screen">
+      <div className="min-h-screen w-screen text-logoTypography">
         <Header />
         <div id="HOME">
           <Home />

@@ -75,7 +75,7 @@ function ConsultForm2() {
   return (
     <div className="flex xl:w-[30%] flex-col gap-2 xl:gap-4">
       <h2
-        className="text-center text-logoTypography xl:text-xl text-lg font-fugaz-one"
+        className="text-center  xl:text-xl text-lg font-fugaz-one"
         data-aos="fade"
         data-aos-duration="1600"
         data-aos-delay="200"
@@ -88,7 +88,7 @@ function ConsultForm2() {
           value={formData.user_name}
           placeholder="Nombre"
           onChange={handleChange}
-          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-logoTypography hover:scale-105 transform duration-300 pl-4 text-logoTypography shadow-xl placeholder:font-normal font-semibold"
+          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm placeholder: hover:scale-105 transform duration-300 pl-4  shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: 'none' }}
           data-aos="fade-up"
           data-aos-duration="1600"
@@ -99,7 +99,7 @@ function ConsultForm2() {
           name="user_lastname"
           value={formData.user_lastname}
           onChange={handleChange}
-          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm  placeholder:text-logoTypography hover:scale-105 transform duration-300 pl-4 text-logoTypography shadow-xl placeholder:font-normal font-semibold"
+          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm  placeholder: hover:scale-105 transform duration-300 pl-4  shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: 'none' }}
           data-aos="fade-up"
           data-aos-duration="1600"
@@ -110,7 +110,7 @@ function ConsultForm2() {
           name="user_email"
           value={formData.user_email}
           onChange={handleChange}
-          className="w-full h-10 rounded-xl flex  border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-logoTypography hover:scale-105 transform duration-300 pl-4 text-logoTypography shadow-xl placeholder:font-normal font-semibold"
+          className="w-full h-10 rounded-xl flex  border border-azulado z-10 bg-transparent placeholder:text-sm placeholder: hover:scale-105 transform duration-300 pl-4  shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: 'none' }}
           data-aos="fade-up"
           data-aos-duration="1600"
@@ -121,7 +121,7 @@ function ConsultForm2() {
           name="user_consult"
           value={formData.user_consult}
           onChange={handleChange}
-          className="w-full max-h-[170px] min-h-[150px] resize-none rounded-xl flex items-center justify-center border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-logoTypography hover:scale-105 transform duration-300 pl-4 pt-2 text-logoTypography shadow-xl placeholder:font-normal font-semibold"
+          className="w-full max-h-[170px] min-h-[150px] resize-none rounded-xl flex items-center justify-center border border-azulado z-10 bg-transparent placeholder:text-sm placeholder: hover:scale-105 transform duration-300 pl-4 pt-2  shadow-xl placeholder:font-normal font-semibold"
           style={{ outline: 'none' }}
           data-aos="fade-up"
           data-aos-duration="1600"
@@ -135,7 +135,7 @@ function ConsultForm2() {
             checked={isChecked}
             onChange={handleCheckboxChange}
           />
-          <label htmlFor="aceptarPoliticas" className="text-logoTypography text-sm">
+          <label htmlFor="aceptarPoliticas" className=" text-sm">
             He leído y acepto las{' '}
             <a href="" target="_blank" className="text-beige hover:underline">
               políticas de privacidad
@@ -146,7 +146,7 @@ function ConsultForm2() {
         <div>
           <button
             type="submit"
-            className="w-24 h-10 bg-beige-image hover:scale-[1.02] font-semibold transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer mx-auto"
+            className="w-24 h-10 bg-beige-image text-white hover:scale-[1.02] font-semibold transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer mx-auto"
           >
             Enviar
           </button>

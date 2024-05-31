@@ -14,7 +14,7 @@ export default {
       },
       backgroundImage: {
         'beige-image': 'linear-gradient(180deg, #cbab97 0%, #C99677 30%, #C99677 70%, #986444 100%)',
-        'gray-image': 'linear-gradient(180deg, #dfdfdf 0%, #d6d2d1 30%, #d6d2d1 70%, #bbbbbb 100%)',
+        'gray-image': 'linear-gradient(180deg, #b3b3b3 0%, #c5c3c2 30%, #c0bebe 70%, #939393 100%)',
       },
       colors: {
         logo: "#d6d2d1",
@@ -33,6 +33,16 @@ export default {
         blur: "blur(15px)",
       },
       translate: ['hover', 'focus'],
+      keyframes: {
+        float: {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        float: 'float 3s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
