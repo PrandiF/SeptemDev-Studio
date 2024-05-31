@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../Title";
+import MobileSection from "./MobileSection";
 
 function About() {
   useEffect(() => {
@@ -17,7 +18,7 @@ function About() {
       <Title title="NOSOTROS" comment="Descubrí como trabajamos" />
 
       <div
-        className="hidden xl:flex flex-col gap-4 items-start w-[80%] mx-auto pb-12 pt-12"
+        className="hidden xl:flex flex-col gap-14 items-start w-[80%] mx-auto pb-12 pt-12"
         data-aos="fade-up"
       >
         <div
@@ -72,10 +73,11 @@ function About() {
             </p>
           </div>
         </div>
+        <MobileSection />
       </div>
 
       <div
-        className="xl:hidden flex flex-col gap-4 items-start justify-evenly w-[90%] h-full my-0 mx-auto"
+        className="xl:hidden flex flex-col gap-12 items-start justify-evenly w-[90%] h-full my-0 mx-auto"
         data-aos="fade-up"
       >
         <div
@@ -104,6 +106,7 @@ function About() {
             data_aos_delay="400"
           />
         </div>
+        <MobileSection />
       </div>
     </div>
   );
