@@ -28,7 +28,7 @@ function ClientsCarrouselSection() {
     { src: miTurnoWeb, rounded: false },
   ];
   return (
-    <div className="w-screen flex flex-col justify-center gap-10 items-center relative bg-logo py-[45px]">
+    <div className="w-screen flex flex-col justify-center gap-10 items-center relative bg-logoOpacity py-[45px]">
       <LogoCarousel logos={logos} />
     </div>
   );

@@ -17,7 +17,7 @@ function UsCardHorizontal({ title, content }: CardHorizontal) {
     AOS.init();
   }, []);
   return (
-    <div className="min-h-full w-full rounded-lg z-10 p-4 bg-[#78767635] backdrop-filter backdrop-blur shadow-2xl">
+    <div className="min-h-full w-full rounded-lg z-10 p-4 bg-[#78767635] backdrop-filter backdrop-blur ">
       <h2 className="z-10 font-roboto font-extrabold text-logoTypography text-xl">{title}</h2>
       <p className="z-10 font-roboto mt-5 xl:text-base xl:font-medium text-sm text-logoTypography">{content}</p>
     </div>
