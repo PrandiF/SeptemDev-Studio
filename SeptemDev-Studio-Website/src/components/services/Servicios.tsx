@@ -16,7 +16,7 @@ function Servicios() {
   }, []);
 
   return (
-    <div className="w-screen h-screen flex flex-col justify-evenly bg-gray-100 relative rounded-t-3xl rounded-b-3xl mt-[-20px] mb-[-20px] pb-[30px] z-30">
+    <div className="w-screen min-h-screen flex flex-col justify-between bg-gray-100 relative rounded-t-3xl rounded-b-3xl mt-[-20px] mb-[-20px] pb-[60px] pt-[30px] z-30">
       <Title title="SERVICIOS" comment="Que hacemos por vos?" />
       <p
         className="w-[75%] mx-auto text-center xl:font-medium xl:text-lg text-sm"

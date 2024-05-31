@@ -9,11 +9,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 function PresupuestoForm() {
   const [formData, setFormData] = useState({
-    user_name: "",
-    user_lastname: "",
-    user_email: "",
-    user_service: "",
-    user_project: "",
+    user_name: '',
+    user_email: '',
+    user_service: '',
+    user_project: '',
   });
   const [mailSent, setMailSent] = useState(false);
   const form = useRef<HTMLFormElement>(null);
@@ -45,7 +44,6 @@ function PresupuestoForm() {
     }
     if (
       !formData.user_email ||
-      !formData.user_lastname ||
       !formData.user_name ||
       !formData.user_project ||
       !formData.user_service
@@ -68,11 +66,10 @@ function PresupuestoForm() {
             setTimeout(() => {
               setMailSent(true);
               setFormData({
-                user_name: "",
-                user_lastname: "",
-                user_email: "",
-                user_service: "",
-                user_project: "",
+                user_name: '',
+                user_email: '',
+                user_service: '',
+                user_project: '',
               });
             }, 2000);
           },
@@ -81,11 +78,10 @@ function PresupuestoForm() {
             setMailSent(false);
             toast.error("No se ha podido enviar el mensaje");
             setFormData({
-              user_name: "",
-              user_lastname: "",
-              user_email: "",
-              user_service: "",
-              user_project: "",
+              user_name: '',
+              user_email: '',
+              user_service: '',
+              user_project: '',
             });
           }
         );
@@ -110,43 +106,43 @@ function PresupuestoForm() {
         <input
           name="user_name"
           value={formData.user_name}
-          placeholder="Nombre"
+          placeholder="Nombre de empresa"
           onChange={handleChange}
-          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:  pl-4  shadow-xl placeholder:font-normal font-semibold"
-          style={{ outline: "none" }}
-          data-aos="fade-up"
+          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-logoTypography  pl-4 text-logoTypography shadow-xl placeholder:font-normal font-semibold"
+          style={{ outline: 'none' }}
+          data-aos="fade"
           data-aos-duration="1600"
           data-aos-delay="200"
-        />
-        <input
-          name="user_lastname"
-          value={formData.user_lastname}
-          placeholder="Apellido"
-          onChange={handleChange}
-          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm  placeholder:  pl-4  shadow-xl placeholder:font-normal font-semibold"
-          style={{ outline: "none" }}
-          data-aos="fade-up"
-          data-aos-duration="1600"
-          data-aos-delay="250"
         />
         <input
           name="user_email"
           value={formData.user_email}
           placeholder="Email"
           onChange={handleChange}
-          className="w-full h-10 rounded-xl flex  border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:  pl-4  shadow-xl placeholder:font-normal font-semibold"
-          style={{ outline: "none" }}
-          data-aos="fade-up"
+          className="w-full h-10 rounded-xl flex  border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-logoTypography  pl-4 text-logoTypography shadow-xl placeholder:font-normal font-semibold"
+          style={{ outline: 'none' }}
+          data-aos="fade"
           data-aos-duration="1600"
           data-aos-delay="300"
         />
-        <select
+        <input
+          name="user_email"
+          value={formData.user_email}
+          placeholder="Años de antiguedad"
+          onChange={handleChange}
+          className="w-full h-10 rounded-xl flex  border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-logoTypography  pl-4 text-logoTypography shadow-xl placeholder:font-normal font-semibold"
+          style={{ outline: 'none' }}
+          data-aos="fade"
+          data-aos-duration="1600"
+          data-aos-delay="300"
+        />
+        {/* <select
           name="user_service"
           value={formData.user_service}
           onChange={handleChange}
-          style={{ outline: "none" }}
-          className="w-full h-10 appearance-auto rounded-xl flex  border border-azulado z-10 bg-transparent cursor-pointer pl-4  shadow-xl font-semibold"
-          data-aos="fade-up"
+          style={{ outline: 'none' }}
+          className="w-full h-10 appearance-auto rounded-xl flex  border border-azulado z-10 bg-transparent cursor-pointer pl-4 text-logoTypography shadow-xl font-semibold"
+          data-aos="fade"
           data-aos-duration="1600"
           data-aos-delay="350"
         >
@@ -157,15 +153,15 @@ function PresupuestoForm() {
           <option value="mantenimiento">Mantenimiento</option>
           <option value="arreglo">Arreglo</option>
           <option value="redesSociales">Redes Sociales</option>
-        </select>
+        </select> */}
         <textarea
           name="user_project"
           value={formData.user_project}
           placeholder="Contanos de que se trata tu proyecto..."
           onChange={handleChange}
-          className="w-full max-h-[170px] min-h-[150px] resize-none rounded-xl flex items-center justify-center border border-azulado  z-10 bg-transparent placeholder:text-sm placeholder: pl-4 pt-2  placeholder:font-normal font-semibold shadow-xl"
-          style={{ outline: "none" }}
-          data-aos="fade-up"
+          className="w-full max-h-[170px] min-h-[150px] resize-none rounded-xl flex items-center justify-center border border-azulado  z-10 bg-transparent placeholder:text-sm placeholder:text-logoTypography pl-4 pt-2 text-logoTypography placeholder:font-normal font-semibold shadow-xl"
+          style={{ outline: 'none' }}
+          data-aos="fade"
           data-aos-duration="1600"
           data-aos-delay="400"
         />
