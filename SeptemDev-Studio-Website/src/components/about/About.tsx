@@ -25,11 +25,11 @@ function About() {
           className="w-full h-full items-end p-8 flex flex-col gap-4"
           data-aos="fade-up"
         >
-          <div className="h-1/3 w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur">
-            <h2 className="z-10 font-roboto font-extrabold text-logoTypography text-xl">
+          <div className="h-1/3 w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur" data-aos="fade" data-aos-duration="1600">
+            <h2 className="z-10 font-roboto font-extrabold text-xl">
               ¿Cómo Empezamos?
             </h2>
-            <p className="z-10 font-roboto mt-5 text-logoTypography xl:text-base xl:font-medium text-sm">
+            <p className="z-10 font-roboto mt-5 xl:text-base xl:font-medium text-sm">
               SeptemDev Studio comenzó como un sueño compartido entre dos
               amigos, graduados del Bootcamp de JavaScript de Plataforma5. Desde
               el primer día, nos unió la pasión por la programación y la
@@ -42,12 +42,12 @@ function About() {
             </p>
           </div>
           <div className="flex flex-row h-1/3 justify-between gap-4">
-            <img src={logoPng} className="rounded-lg w-1/3" />
-            <div className="w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur">
-              <h2 className="z-10 font-roboto font-extrabold text-logoTypography text-xl">
+            <img src={logoPng} className="rounded-lg w-1/3" data-aos="fade-right" data-aos-duration="1600" data-aos-delay='300'/>
+            <div className="w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur" data-aos="fade-left" data-aos-duration="1600" data-aos-delay='300'>
+              <h2 className="z-10 font-roboto font-extrabold text-xl">
                 ¿Qué es SAAS?
               </h2>
-              <p className="z-10 font-roboto mt-5 text-logoTypography xl:text-base xl:font-medium text-sm">
+              <p className="z-10 font-roboto mt-5 xl:text-base xl:font-medium text-sm">
                 El software como servicio (SaaS) es un modelo de entrega de
                 software basado en la nube donde el proveedor desarrolla,
                 mantiene y actualiza el software, poniéndolo a disposición de
@@ -59,11 +59,11 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="h-1/3 w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur">
-            <h2 className="z-10 font-roboto font-extrabold text-logoTypography text-xl">
+          <div className="h-1/3 w-full rounded-lg z-10 p-4 bg-logoOpacity backdrop-filter backdrop-blur" data-aos="fade" data-aos-duration="1600" data-aos-delay='400'>
+            <h2 className="z-10 font-roboto font-extrabold text-xl">
               ¿En que tipo de cliente nos enfocamos?
             </h2>
-            <p className="z-10 font-roboto mt-5 xl:text-base xl:font-medium text-sm text-logoTypography">
+            <p className="z-10 font-roboto mt-5 xl:text-base xl:font-medium text-sm">
               Lo que ofrece la agencia es una membresia a un valor fijo mensual
               para trabajar partner con el cliente. Esta membresia incluye el
               diseño y desarrollo de la pagina web desde 0 y luego un

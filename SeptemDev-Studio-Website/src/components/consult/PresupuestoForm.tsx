@@ -1,19 +1,19 @@
 //AOS
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect, useRef, useState } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect, useRef, useState } from "react";
 
-import emailjs from '@emailjs/browser';
-import { ToastContainer, Zoom, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import emailjs from "@emailjs/browser";
+import { ToastContainer, Zoom, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function PresupuestoForm() {
   const [formData, setFormData] = useState({
-    user_name: '',
-    user_lastname: '',
-    user_email: '',
-    user_service: '',
-    user_project: '',
+    user_name: "",
+    user_lastname: "",
+    user_email: "",
+    user_service: "",
+    user_project: "",
   });
   const [mailSent, setMailSent] = useState(false);
   const form = useRef<HTMLFormElement>(null);
@@ -23,7 +23,9 @@ function PresupuestoForm() {
   }, []);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -38,7 +40,7 @@ function PresupuestoForm() {
     e.preventDefault();
 
     if (!isChecked) {
-      toast.warn('Debes aceptar las políticas de privacidad.');
+      toast.warn("Debes aceptar las políticas de privacidad.");
       return;
     }
     if (
@@ -48,37 +50,42 @@ function PresupuestoForm() {
       !formData.user_project ||
       !formData.user_service
     ) {
-      toast.warn('Debes completar todos los campos');
+      toast.warn("Debes completar todos los campos");
       return;
     }
 
     if (form.current) {
       emailjs
-        .sendForm('service_SeptemDev', 'template_presupuesto', form.current, 'pzZxYDQSS2VBcbJQW')
+        .sendForm(
+          "service_SeptemDev",
+          "template_presupuesto",
+          form.current,
+          "pzZxYDQSS2VBcbJQW"
+        )
         .then(
           () => {
-            toast.success('Mensaje enviado correctamente.');
+            toast.success("Mensaje enviado correctamente.");
             setTimeout(() => {
               setMailSent(true);
               setFormData({
-                user_name: '',
-                user_lastname: '',
-                user_email: '',
-                user_service: '',
-                user_project: '',
+                user_name: "",
+                user_lastname: "",
+                user_email: "",
+                user_service: "",
+                user_project: "",
               });
             }, 2000);
           },
           (error) => {
-            console.log('FAILED...', error.text);
+            console.log("FAILED...", error.text);
             setMailSent(false);
-            toast.error('No se ha podido enviar el mensaje');
+            toast.error("No se ha podido enviar el mensaje");
             setFormData({
-              user_name: '',
-              user_lastname: '',
-              user_email: '',
-              user_service: '',
-              user_project: '',
+              user_name: "",
+              user_lastname: "",
+              user_email: "",
+              user_service: "",
+              user_project: "",
             });
           }
         );
@@ -88,21 +95,25 @@ function PresupuestoForm() {
   return (
     <div className="flex xl:w-[30%] flex-col gap-2 xl:gap-4">
       <h2
-        className="text-center text-logoTypography xl:text-xl text-lg font-fugaz-one"
+        className="text-center  xl:text-xl text-lg font-fugaz-one"
         data-aos="fade"
         data-aos-duration="1600"
         data-aos-delay="200"
       >
         PRESUPUESTO
       </h2>
-      <form ref={form} className="z-10 flex gap-6 flex-col w-full" onSubmit={handleSubmit}>
+      <form
+        ref={form}
+        className="z-10 flex gap-6 flex-col w-full"
+        onSubmit={handleSubmit}
+      >
         <input
           name="user_name"
           value={formData.user_name}
           placeholder="Nombre"
           onChange={handleChange}
-          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-logoTypography  pl-4 text-logoTypography shadow-xl placeholder:font-normal font-semibold"
-          style={{ outline: 'none' }}
+          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:  pl-4  shadow-xl placeholder:font-normal font-semibold"
+          style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay="200"
@@ -112,8 +123,8 @@ function PresupuestoForm() {
           value={formData.user_lastname}
           placeholder="Apellido"
           onChange={handleChange}
-          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm  placeholder:text-logoTypography  pl-4 text-logoTypography shadow-xl placeholder:font-normal font-semibold"
-          style={{ outline: 'none' }}
+          className="w-full h-10 rounded-xl border border-azulado z-10 bg-transparent placeholder:text-sm  placeholder:  pl-4  shadow-xl placeholder:font-normal font-semibold"
+          style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay="250"
@@ -123,8 +134,8 @@ function PresupuestoForm() {
           value={formData.user_email}
           placeholder="Email"
           onChange={handleChange}
-          className="w-full h-10 rounded-xl flex  border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:text-logoTypography  pl-4 text-logoTypography shadow-xl placeholder:font-normal font-semibold"
-          style={{ outline: 'none' }}
+          className="w-full h-10 rounded-xl flex  border border-azulado z-10 bg-transparent placeholder:text-sm placeholder:  pl-4  shadow-xl placeholder:font-normal font-semibold"
+          style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay="300"
@@ -133,8 +144,8 @@ function PresupuestoForm() {
           name="user_service"
           value={formData.user_service}
           onChange={handleChange}
-          style={{ outline: 'none' }}
-          className="w-full h-10 appearance-auto rounded-xl flex  border border-azulado z-10 bg-transparent cursor-pointer pl-4 text-logoTypography shadow-xl font-semibold"
+          style={{ outline: "none" }}
+          className="w-full h-10 appearance-auto rounded-xl flex  border border-azulado z-10 bg-transparent cursor-pointer pl-4  shadow-xl font-semibold"
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay="350"
@@ -152,8 +163,8 @@ function PresupuestoForm() {
           value={formData.user_project}
           placeholder="Contanos de que se trata tu proyecto..."
           onChange={handleChange}
-          className="w-full max-h-[170px] min-h-[150px] resize-none rounded-xl flex items-center justify-center border border-azulado  z-10 bg-transparent placeholder:text-sm placeholder:text-logoTypography pl-4 pt-2 text-logoTypography placeholder:font-normal font-semibold shadow-xl"
-          style={{ outline: 'none' }}
+          className="w-full max-h-[170px] min-h-[150px] resize-none rounded-xl flex items-center justify-center border border-azulado  z-10 bg-transparent placeholder:text-sm placeholder: pl-4 pt-2  placeholder:font-normal font-semibold shadow-xl"
+          style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay="400"
@@ -166,8 +177,8 @@ function PresupuestoForm() {
             checked={isChecked}
             onChange={handleCheckboxChange}
           />
-          <label htmlFor="aceptarPoliticas" className="text-logoTypography text-sm">
-            He leído y acepto las{' '}
+          <label htmlFor="aceptarPoliticas" className=" text-sm">
+            He leído y acepto las{" "}
             <a href="" target="_blank" className="text-beige hover:underline">
               políticas de privacidad
             </a>
@@ -177,11 +188,15 @@ function PresupuestoForm() {
         <div>
           <button
             type="submit"
-            className="w-24 h-10 bg-beige-image hover:scale-[1.02] transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer mx-auto"
+            className="w-24 h-10 bg-beige-image text-white hover:scale-[1.02] transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer mx-auto"
           >
             Enviar
           </button>
-          <ToastContainer position="top-right" transition={Zoom} autoClose={2000} />
+          <ToastContainer
+            position="top-right"
+            transition={Zoom}
+            autoClose={2000}
+          />
         </div>
       </form>
     </div>

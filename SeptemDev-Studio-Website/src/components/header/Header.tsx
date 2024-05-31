@@ -17,7 +17,7 @@ function header() {
       data-aos="fade-down"
     >
       <div className="flex xl:w-[60%] w-[80%] h-[3.5rem] bg-slate-100 rounded-full mt-3 items-center justify-between shadow-xl xl:pr-24 pr-6">
-        <div>
+        <div> 
           <Link to="HOME" spy={true} smooth={true} duration={700}>
             <img
               src={logoHeader}
@@ -31,7 +31,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Servicios
           </Link>
@@ -40,7 +40,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Nosotros
           </Link>
@@ -49,7 +49,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Clientes
           </Link>
@@ -58,7 +58,7 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Consulta
           </Link>
@@ -67,12 +67,12 @@ function header() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
             Staff
           </Link>
         </div>
-        <button className="xl:hidden flex text-logoTypography items-center text-3xl">
+        <button className="xl:hidden flex items-center text-3xl">
           <IoIosMenu />
         </button>
       </div>

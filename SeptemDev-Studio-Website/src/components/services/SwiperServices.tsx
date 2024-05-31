@@ -1,19 +1,22 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import 'swiper/css/effect-coverflow';
-import mantenimientoWeb from '../../assets/mantenimientoWeb2.png';
-import redesSociales from '../../assets/redesSociales.png';
-import diseñoWeb from '../../assets/desarrolloWeb.png';
-import ServiceCard from './ServiceCard';
-import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from 'react-icons/bs';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
+import mantenimientoWeb from "../../assets/mantenimientoWeb2.png";
+import redesSociales from "../../assets/redesSociales.png";
+import diseñoWeb from "../../assets/desarrolloWeb.png";
+import ServiceCard from "./ServiceCard";
+import {
+  BsFillArrowLeftSquareFill,
+  BsFillArrowRightSquareFill,
+} from "react-icons/bs";
 
 //AOS
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function SwiperServices() {
   useEffect(() => {
@@ -24,7 +27,7 @@ function SwiperServices() {
     <div className="flex flex-col w-screen relative">
       <div className="w-full overflow-hidden relative">
         <Swiper
-          effect={'coverflow'}
+          effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           loop={true}
@@ -36,10 +39,10 @@ function SwiperServices() {
             modifier: 2,
             slideShadows: false,
           }}
-          pagination={{ el: '.swiper-pagination-serv', clickable: true }}
+          pagination={{ el: ".swiper-pagination-serv", clickable: true }}
           navigation={{
-            nextEl: '.swiper-button-next-serv',
-            prevEl: '.swiper-button-prev-serv',
+            nextEl: ".swiper-button-next-serv",
+            prevEl: ".swiper-button-prev-serv",
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
           className="h-full w-screen relative flex items-center justify-center m-auto mt-4"
@@ -47,7 +50,7 @@ function SwiperServices() {
           data-aos-delay="400"
         >
           <div className="swiper-button-prev-serv absolute left-5 transform z-10">
-            <BsFillArrowLeftSquareFill className="w-8 h-8 text-logoTypography cursor-pointer" />
+            <BsFillArrowLeftSquareFill className="w-8 h-8 cursor-pointer" />
           </div>
           <SwiperSlide className="w-[80%] h-full relative flex justify-center">
             <ServiceCard
@@ -86,7 +89,7 @@ function SwiperServices() {
             />
           </SwiperSlide>
           <div className="swiper-button-next-serv absolute right-5 transform  z-10">
-            <BsFillArrowRightSquareFill className="w-8 h-8 text-logoTypography cursor-pointer" />
+            <BsFillArrowRightSquareFill className="w-8 h-8 cursor-pointer" />
           </div>
         </Swiper>
         {/* <div className="swiper-pagination-serv w-full flex items-center justify-center mt-4"></div> */}

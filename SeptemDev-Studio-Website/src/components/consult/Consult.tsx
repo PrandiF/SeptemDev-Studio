@@ -18,7 +18,7 @@ function Consult() {
         <div className="flex flex-col xl:w-[50%] xl:gap-4 xl:items-start items-center">
           <div className="relative flex items-center justify-center my-8">
             <h1
-              className="text-logoTypography z-10 xl:text-4xl text-2xl text-center font-extrabold xl:flex m-auto font-fugaz-one"
+              className=" z-10 xl:text-4xl text-2xl text-center font-extrabold xl:flex m-auto font-fugaz-one"
               data-aos="fade-up"
               data-aos-duration="1600"
               data-aos-delay="400"
@@ -35,7 +35,7 @@ function Consult() {
             </h2>
           </div>
           <p
-            className="text-logoTypography xl:font-medium xl:text-base text-sm xl:text-start text-center w-[90%] mb-2"
+            className=" xl:font-medium xl:text-base text-sm xl:text-start text-center w-[90%] mb-2"
             data-aos="fade"
             data-aos-duration="1600"
             data-aos-delay="400"
@@ -50,7 +50,7 @@ function Consult() {
             {showConsult ? (
               <button
                 onClick={handleFormChangeButton}
-                className="w-40 h-10 bg-beige-image hover:scale-[1.02] transform duration-300 rounded-3xl text-sm font-semibold shadow-xl flex items-center justify-center cursor-pointer mx-auto mb-8"
+                className="w-40 h-10 bg-beige-image text-white hover:scale-[1.02] transform duration-300 rounded-3xl text-sm font-semibold shadow-xl flex items-center justify-center cursor-pointer mx-auto mb-8"
                 data-aos="fade"
                 data-aos-duration="1600"
                 data-aos-delay="500"
@@ -60,7 +60,7 @@ function Consult() {
             ) : showPresupuesto ? (
               <button
                 onClick={handleFormChangeButton}
-                className="w-40 h-10 bg-beige-image hover:scale-[1.02] transform duration-300 rounded-3xl text-sm font-semibold shadow-xl flex items-center justify-center cursor-pointer mx-auto mb-8"
+                className="w-40 h-10 bg-beige-image text-white hover:scale-[1.02] transform duration-300 rounded-3xl text-sm font-semibold shadow-xl flex items-center justify-center cursor-pointer mx-auto mb-8"
                 data-aos="fade"
                 data-aos-duration="1600"
                 data-aos-delay="500"

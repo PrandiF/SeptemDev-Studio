@@ -41,7 +41,7 @@ function Footer() {
 
       {/* Div para el copyright */}
       <div className="text-center mt-4 xl:mt-0 text-sm xl:text-base pb-3">
-        <p className="font-roboto text-logoTypography">
+        <p className="font-roboto">
           Copyright © SeptemDev Studio |{' '}
           <a target="e_blank" className="text-beige cursor-pointer hover:underline">
             Políticas de Privacidad

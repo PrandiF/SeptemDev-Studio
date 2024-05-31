@@ -1,14 +1,21 @@
-import React from "react";
+import { useEffect } from "react";
+
+//AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
 import mobileWeb from "../../assets/mobileWeb.png";
 
 function MobileSection() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="flex xl:flex-row flex-col xl:items-center justify-evenly gap-12">
-      <div className="xl:w-[50%] h-full xl:p-4 flex flex-col gap-5 rounded-xl bg-transparent justify-start text-center xl:text-start">
-        <h2 className="z-10 font-roboto font-extrabold text-logoTypography text-xl">
+      <div className="xl:w-[50%] h-full xl:p-4 flex flex-col gap-5 rounded-xl bg-transparent justify-start text-center xl:text-start" data-aos="fade-right" data-aos-duration="1600" data-aos-delay="300">
+        <h2 className="z-10 font-roboto font-extrabold text-xl" >
           Estamos en todos los dispositivos
         </h2>
-        <p className="z-10 font-roboto mt-5 text-logoTypography xl:text-base xl:font-medium text-sm">
+        <p className="z-10 font-roboto mt-5 xl:text-base xl:font-medium text-sm" >
           Nuestra web está diseñada para adaptarse perfectamente a todos los
           dispositivos, ya sea un ordenador, una tablet o un móvil. Gracias a un
           diseño responsive, garantizamos que la experiencia del usuario sea
@@ -22,8 +29,8 @@ function MobileSection() {
           encuentren.
         </p>
       </div>
-      <div className="xl:w-[35%] w-[80%] h-full flex xl:items-start m-auto justify-center">
-        <img src={mobileWeb} />
+      <div className="xl:w-[35%] w-[80%] h-full flex xl:items-start m-auto justify-center" data-aos="fade-left" data-aos-duration="1600" data-aos-delay="300">
+        <img src={mobileWeb} className="animate-float"/>
       </div>
     </div>
   );
