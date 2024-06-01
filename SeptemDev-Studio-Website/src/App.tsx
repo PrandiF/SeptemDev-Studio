@@ -7,47 +7,55 @@ import Team from "./components/team/Team";
 import Header from "./components/header/Header";
 import { useEffect } from "react";
 import "./index.css";
-import { EstadoProvider } from "./components/consult/EstadoContext";
-//AOS
+import { EstadoProvider, useEstado } from "./components/consult/EstadoContext";
+// AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Servicios from "./components/services/Servicios";
 import ClientsCarrouselSection from "./components/about/ClientsCarrouselSection";
 
-function App() {
+const AppContent: React.FC = () => {
+  const { darkMode } = useEstado();
+
   useEffect(() => {
     AOS.init({ duration: 1600 });
   }, []);
 
   return (
-    <EstadoProvider>
-      <div className="min-h-screen w-screen text-logoTypography">
-        <Header />
-        <div id="HOME">
-          <Home />
-        </div>
-        <div id="SERVICES">
-          <Servicios />
-        </div>
-        <ClientsCarrouselSection />
-        <div id="ABOUT">
-          <About />
-        </div>
-        <div id="CLIENTS">
-          <Clients />
-        </div>
-        <div id="CONSULT">
-          <Consult />
-        </div>
-        <div id="TEAM">
-          <Team />
-        </div>
-        <div className="flex items-end">
-          <Footer />
-        </div>
+    <div className={`min-h-screen w-screen ${darkMode ? 'dark' : ''} ${darkMode ? 'text-white' : 'text-logoTypography'}`}>
+      <Header />
+      <div id="HOME">
+        <Home />
       </div>
+      <div id="SERVICES">
+        <Servicios />
+      </div>
+      <ClientsCarrouselSection />
+      <div id="ABOUT">
+        <About />
+      </div>
+      <div id="CLIENTS">
+        <Clients />
+      </div>
+      <div id="CONSULT">
+        <Consult />
+      </div>
+      <div id="TEAM">
+        <Team />
+      </div>
+      <div className="flex items-end">
+        <Footer />
+      </div>
+    </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <EstadoProvider>
+      <AppContent />
     </EstadoProvider>
   );
-}
+};
 
 export default App;

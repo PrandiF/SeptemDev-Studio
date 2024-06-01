@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 
 interface EstadoContextProps {
@@ -6,7 +6,9 @@ interface EstadoContextProps {
   showPresupuesto: boolean;
   setShowConsult: (value: boolean) => void;
   setShowPresupuesto: (value: boolean) => void;
-  handleFormChangeButton: () => void;
+  handleFormChangeButton: (form: 'consult' | 'presupuesto') => void;
+  darkMode: boolean;
+  toggleDarkMode: () => void;
 }
 
 const EstadoContext = createContext<EstadoContextProps | undefined>(undefined);
@@ -27,14 +29,45 @@ export const EstadoProvider: React.FC<EstadoProviderProps> = ({ children }) => {
   const [showConsult, setShowConsult] = useState(true);
   const [showPresupuesto, setShowPresupuesto] = useState(false);
 
-  const handleFormChangeButton = () => {
-    setShowConsult((prev) => !prev);
-    setShowPresupuesto((prev) => !prev);
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    return savedMode === 'true';
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('darkMode', darkMode.toString());
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  const handleFormChangeButton = (form: 'consult' | 'presupuesto') => {
+    if (form === 'consult') {
+      setShowConsult(true);
+      setShowPresupuesto(false);
+    } else if (form === 'presupuesto') {
+      setShowConsult(false);
+      setShowPresupuesto(true);
+    }
   };
 
   return (
     <EstadoContext.Provider
-      value={{ showConsult, showPresupuesto, setShowConsult, setShowPresupuesto, handleFormChangeButton }}
+      value={{
+        showConsult,
+        showPresupuesto,
+        setShowConsult,
+        setShowPresupuesto,
+        handleFormChangeButton,
+        darkMode,
+        toggleDarkMode,
+      }}
     >
       {children}
     </EstadoContext.Provider>
