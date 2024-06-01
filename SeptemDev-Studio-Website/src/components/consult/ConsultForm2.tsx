@@ -137,7 +137,7 @@ function ConsultForm2() {
           />
           <label htmlFor="aceptarPoliticas" className=" text-sm">
             He leído y acepto las{' '}
-            <a href="" target="_blank" className="text-beige hover:underline">
+            <a href="" target="_blank" className="text-azulado hover:underline">
               políticas de privacidad
             </a>
             .
