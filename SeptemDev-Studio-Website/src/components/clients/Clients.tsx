@@ -12,7 +12,7 @@ function Clients() {
     AOS.init();
   }, []);
   return (
-    <div className="w-screen flex flex-col justify-start gap-10 items-center relative bg-logoOpacity pt-[50px] pb-[50px]">
+    <div className="w-screen flex flex-col justify-start gap-10 items-center relative bg-transparent pt-[50px] pb-[50px]">
       <div
         className="flex flex-col justify-center items-center z-10 relative"
         data-aos="fade"

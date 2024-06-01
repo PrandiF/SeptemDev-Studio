@@ -1,10 +1,10 @@
-import logoFooter from '../../assets/logoFooter.jpg';
+import logoFooter from '../../assets/logoPng.png';
 import { FaInstagramSquare } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <div className="flex flex-col xl:flex-row items-center justify-around xl:justify-evenly w-screen xl:h-[15rem] bg-[#D6D2D2] z-20 rounded-t-3xl mt-[-20px]">
+    <div className="flex flex-col xl:flex-row items-center justify-around xl:justify-evenly w-screen xl:h-[15rem] bg-[#f3f4f6] z-20 rounded-t-3xl mt-[-20px]">
       {/* MOBILE */}
       <div className="flex xl:hidden p-4">
         {/* LOGO */}
@@ -43,7 +43,7 @@ function Footer() {
       <div className="text-center mt-4 xl:mt-0 text-sm xl:text-base pb-3">
         <p className="font-roboto">
           Copyright © SeptemDev Studio |{' '}
-          <a target="e_blank" className="text-beige cursor-pointer hover:underline">
+          <a target="e_blank" className="text-azulado cursor-pointer hover:underline">
             Políticas de Privacidad
           </a>
         </p>

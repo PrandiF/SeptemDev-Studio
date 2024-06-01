@@ -26,7 +26,7 @@ function Consult() {
               PONETE EN CONTACTO...
             </h1>
             <h2
-              className="text-beige z-10 text-lg absolute top-[75%] xl:left-[0%] font-extrabold xl:flex ml-auto font-fugaz-one"
+              className="text-azulado z-10 text-lg absolute top-[75%] xl:left-[0%] font-extrabold xl:flex ml-auto font-fugaz-one"
               data-aos="fade-up"
               data-aos-duration="1600"
               data-aos-delay="400"
