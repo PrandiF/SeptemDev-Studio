@@ -46,32 +46,38 @@ function About() {
               tecnológicos.
             </p>
           </div>
-          <div className="flex flex-row h-1/3 justify-between gap-4">
+          <div className="flex flex-row h-1/4 justify-between gap-4">
             <img
               src={logoPng}
-              className="rounded-lg w-1/3 dark:invert"
+              className="rounded-lg w-[20%] dark:invert"
               data-aos="fade-right"
               data-aos-duration="1600"
               data-aos-delay="300"
             />
             <div
-              className="w-full rounded-lg z-10 p-4 bg-logoOpacity dark:bg-[#78767635] backdrop-filter backdrop-blur"
+              className="w-3/4 rounded-lg z-10 p-4 bg-logoOpacity dark:bg-[#78767635] backdrop-filter backdrop-blur"
               data-aos="fade-left"
               data-aos-duration="1600"
               data-aos-delay="300"
             >
               <h2 className="z-10 font-roboto font-extrabold text-xl">
-                ¿Qué es SAAS?
+              ¿Cuál es nuestro sistema de pagos?
               </h2>
               <p className="z-10 font-roboto mt-5 xl:text-base xl:font-medium text-sm">
-                El software como servicio (SaaS) es un modelo de entrega de
-                software basado en la nube donde el proveedor desarrolla,
-                mantiene y actualiza el software, poniéndolo a disposición de
-                los clientes a través de Internet con un sistema de pago por
-                uso. El proveedor administra todo el hardware, software y
-                seguridad, permitiendo a los clientes reducir costos y mejorar
-                la implementación y actualización de soluciones empresariales
-                más rápidamente que con sistemas locales.
+                Nuestra agencia ofrece una membresía a un valor fijo. Esta membresía incluye el diseño y
+                desarrollo de una página web desde cero, adaptada a las
+                necesidades y deseos específicos de cada cliente. Una vez que la
+                página está en funcionamiento, proporcionamos un mantenimiento
+                continuo para asegurar que todo funcione correctamente y para
+                realizar cualquier ajuste o mejora que el cliente desee con el
+                tiempo.<br />
+                Ofrecemos dos opciones de membresía: mensual o
+                anual, según la preferencia del cliente. No hay un pago inicial.
+                Nuestro enfoque garantiza que la página web no solo se lance con
+                éxito, sino que también se mantenga actualizada, segura y
+                eficiente, permitiendo a nuestros clientes enfocarse en su
+                negocio sin preocuparse por los aspectos técnicos de su
+                presencia en línea.
               </p>
             </div>
           </div>
@@ -82,15 +88,17 @@ function About() {
             data-aos-delay="400"
           >
             <h2 className="z-10 font-roboto font-extrabold text-xl">
-              ¿En que tipo de cliente nos enfocamos?
+              ¿En qué tipo de cliente nos enfocamos?
             </h2>
             <p className="z-10 font-roboto mt-5 xl:text-base xl:font-medium text-sm">
-              Lo que ofrece la agencia es una membresia a un valor fijo mensual
-              para trabajar partner con el cliente. Esta membresia incluye el
-              diseño y desarrollo de la pagina web desde 0 y luego un
-              mantenimiento mensual de esta misma, con el fin de corregir
-              errores que se pueden ir generando con el tiempo y/o agregar lo
-              que el cliente desee.
+              Nos enfocamos en clientes que desean una página web estética y
+              priorizan la experiencia del usuario. Buscamos trabajar con
+              aquellos que valoran un diseño atractivo y funcional, que buscan
+              destacar en su mercado y proporcionar una navegación intuitiva y
+              agradable para sus visitantes. Nuestros clientes son empresas y
+              emprendedores que entienden la importancia de una primera
+              impresión positiva y quieren ofrecer una experiencia online que
+              refleje profesionalismo y atención al detalle.
             </p>
           </div>
         </div>

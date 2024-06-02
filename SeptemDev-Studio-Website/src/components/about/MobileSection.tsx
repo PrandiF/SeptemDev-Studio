@@ -24,7 +24,7 @@ function MobileSection() {
           Estamos en todos los dispositivos
         </h2>
         <p className="z-10 font-roboto mt-5 xl:text-base xl:font-medium text-sm">
-          Nuestra web está diseñada para adaptarse perfectamente a todos los
+          Nuestras webs están diseñadas para adaptarse perfectamente a todos los
           dispositivos, ya sea un ordenador, una tablet o un móvil. Gracias a un
           diseño responsive, garantizamos que la experiencia del usuario sea
           óptima, independientemente del tamaño de la pantalla o el tipo de

@@ -62,7 +62,7 @@ function ActiveSlider() {
                 alt="slide_image"
                 className="w-[30rem] h-[18rem] rounded-xl object-cover"
               />
-              <div className="absolute inset-0 bg-black opacity-10 transition-opacity duration-300 group-hover:opacity-50 swiper-slide-active:opacity-50 rounded-xl">
+              {/* <div className="absolute inset-0 bg-black opacity-10 transition-opacity duration-300 group-hover:opacity-50 swiper-slide-active:opacity-50 rounded-xl">
                 <div className="w-full h-full flex flex-col gap-1 items-center justify-end opacity-0 transition-opacity duration-300 group-hover:opacity-100 swiper-slide-active:opacity-100">
                   <h2 className="w-full p-1 text-center">{item.title}</h2>
                   <button
@@ -72,7 +72,7 @@ function ActiveSlider() {
                     Visitar Sitio
                   </button>
                 </div>
-              </div>
+              </div> */}
             </SwiperSlide>
           ))}
         </Swiper>
