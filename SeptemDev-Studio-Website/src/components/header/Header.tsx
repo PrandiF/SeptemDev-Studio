@@ -21,7 +21,7 @@ function header() {
   const handleOpen = () => {
     setIsOpen(!isOpen);
     setTimeout(() => {
-      setIsBorder(!isBorder)
+      setIsBorder(!isBorder);
     }, 100);
   };
 
@@ -50,7 +50,7 @@ function header() {
       className="w-screen h-auto xl:fixed absolute flex items-start justify-center z-50"
       data-aos="fade-down"
     >
-      <div className="flex relative xl:w-[60%] w-[80%] h-[3.5rem] rounded-full bg-slate-100 z-10 mt-3 m-auto items-center justify-between shadow-xl xl:pr-24 pr-6">
+      <div className="flex relative xl:w-[60%] w-[80%] h-[3.5rem] rounded-full bg-slate-100 dark:bg-footer-dark z-10 mt-3 m-auto items-center justify-between shadow-xl xl:pr-24 pr-6">
         <div>
           <Link to="HOME" spy={true} smooth={true} duration={700}>
             <img
@@ -108,19 +108,25 @@ function header() {
         </div>
 
         <div
-          className="absolute top-0 flex overflow-hidden transition-all duration-75 ease-out flex-col items-center gap-7 backdrop-blur-xl shadow-2xl z-[-10] w-full rounded-2xl"
-          style={isOpen && !isBorder ? { borderRadius: "80px" } : !isOpen && !isBorder ? { borderRadius: "9999px" } : {}}
+          className="absolute top-0 flex overflow-hidden transition-all duration-75 ease-out flex-col items-center gap-7 dark:bg-footer-dark backdrop-blur-xl shadow-2xl z-[-10] w-full rounded-2xl"
+          style={
+            isOpen && !isBorder
+              ? { borderRadius: "80px" }
+              : !isOpen && !isBorder
+              ? { borderRadius: "9999px" }
+              : {}
+          }
         >
           <div
             ref={contentRef}
-            className="text-logoTypography h-0 text-center mt-[3.5rem] flex flex-col gap-2 w-full overflow-hidden"
+            className=" h-0 text-center mt-[3.5rem] flex flex-col gap-2 w-full overflow-hidden"
           >
             <Link
               to="SERVICES"
               spy={true}
               smooth={true}
               duration={700}
-              className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+              className="font-roboto hover:text-logoTypographyHover cursor-pointer"
             >
               Servicios
             </Link>
@@ -129,7 +135,7 @@ function header() {
               spy={true}
               smooth={true}
               duration={700}
-              className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+              className="font-roboto hover:text-logoTypographyHover cursor-pointer"
             >
               Nosotros
             </Link>
@@ -138,7 +144,7 @@ function header() {
               spy={true}
               smooth={true}
               duration={700}
-              className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+              className="font-roboto hover:text-logoTypographyHover cursor-pointer"
             >
               Clientes
             </Link>
@@ -147,7 +153,7 @@ function header() {
               spy={true}
               smooth={true}
               duration={700}
-              className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+              className="font-roboto hover:text-logoTypographyHover cursor-pointer"
             >
               Consulta
             </Link>
@@ -156,7 +162,7 @@ function header() {
               spy={true}
               smooth={true}
               duration={700}
-              className="text-logoTypography font-roboto hover:text-logoTypographyHover cursor-pointer"
+              className="font-roboto hover:text-logoTypographyHover cursor-pointer"
             >
               Staff
             </Link>
@@ -165,7 +171,7 @@ function header() {
         <button
           ref={buttonRef}
           onClick={handleOpen}
-          className="xl:hidden flex text-logoTypography items-center text-3xl"
+          className="xl:hidden flex items-center text-3xl"
         >
           <IoIosMenu />
         </button>

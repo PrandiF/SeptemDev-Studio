@@ -43,7 +43,7 @@ CardProps) {
         src={imageUrl}
         className="w-28 h-28 mt-8 rounded-full border-4 border-slate-50 z-10 group-hover:scale-125 group-hover:-translate-y-6 transition-all duration-500"
       />
-      <div className="z-10  group-hover:-translate-y-4 transition-all duration-500">
+      <div className="z-10  group-hover:-translate-y-4 transition-all duration-500 text-logoTypography">
         <span className="text-2xl font-bold">{name}</span>
         <p className="font-semibold">{position}</p>
         <p>{description}</p>

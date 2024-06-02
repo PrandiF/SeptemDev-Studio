@@ -22,7 +22,7 @@ function Title({ title, comment, className }: TitleProps) {
       <h3 className="font-fugaz-one font-extrabold xl:text-[8rem] text-[3rem] opacity-15 tracking-widest drop-shadow-3xl">
         {title}
       </h3>
-      <p className="absolute text-azulado xl:top-[48%] top-[42%] xl:text-4xl text-lg font-semibold z-10 italic">
+      <p className="absolute text-azulado dark:text-white xl:top-[48%] top-[42%] xl:text-4xl text-lg font-semibold z-10 italic">
         {comment}
       </p>
     </div>
