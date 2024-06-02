@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 interface Logo {
   src: string;
@@ -45,7 +45,7 @@ function LogoCarousel({ logos }: LogoCarouselProps) {
   return (
     <div
       ref={containerRef}
-      className="w-screen flex relative overflow-hidden z-10 xl:py-3 xl:gap-8 py-2 gap-4"
+      className="w-full flex relative overflow-hidden z-10 xl:py-3 xl:gap-8 py-2 gap-4"
     >
       {logos.map((logo, index) => (
         <img

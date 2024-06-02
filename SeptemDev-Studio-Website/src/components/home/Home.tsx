@@ -30,7 +30,7 @@ function Home() {
         alt="fondo"
         className="fixed w-screen h-screen z-0 bg-gradient-to-b from-transparent to-[#f6e1ce] object-cover"
       />
-      <div className="flex flex-col items-center scale-110 justify-center h-ful p-4 z-10 xl:gap-4">
+      <div className="flex flex-col items-center xl:scale-110 justify-center h-ful p-4 z-10 xl:gap-4">
         <div className="relative h-full flex flex-col items-center justify-center px-2">
           <h1
             className="z-10 xl:text-4xl text-2xl text-center font-extrabold flex m-auto font-fugaz-one xl:mt-0 "
