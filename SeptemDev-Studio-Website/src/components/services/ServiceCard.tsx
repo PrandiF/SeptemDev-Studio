@@ -29,7 +29,7 @@ function ServiceCard({
       data-aos-duration="1600"
       data-aos-delay={data_aos_delay}
     >
-      <div className="w-full h-full p-4 bg-beigeCards bg-opacity-20 backdrop-blur-sm rounded-xl shadow-xl xl:hover:-translate-y-2 xl:hover:shadow-2xl transform duration-300 flex flex-col items-center">
+      <div className="w-full h-full p-4 bg-beigeCards dark:bg-[#78767635] bg-opacity-20 backdrop-blur-sm rounded-xl shadow-xl xl:hover:-translate-y-2 xl:hover:shadow-2xl transform duration-300 flex flex-col items-center">
         <img
           src={img}
           className="w-[40%] max-h-40 object-contain"

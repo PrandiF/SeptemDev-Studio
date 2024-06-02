@@ -1,4 +1,5 @@
 import imgBackground from '../../assets/fondoAux.jpg';
+import fondoDark from "../../assets/fondoDark.jpg"
 import { useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { useEstado } from '../consult/EstadoContext';
@@ -8,7 +9,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function Home() {
-  const { setShowConsult, setShowPresupuesto } = useEstado();
+  const { setShowConsult, setShowPresupuesto, darkMode } = useEstado();
 
   const handlePresupuestoClick = () => {
     setShowConsult(false);
@@ -26,7 +27,7 @@ function Home() {
   return (
     <div className="h-screen relative flex flex-col items-center justify-center ">
       <img
-        src={imgBackground}
+        src={`${darkMode ? fondoDark : imgBackground}`}
         alt="fondo"
         className="fixed w-screen h-screen z-0 bg-gradient-to-b from-transparent to-[#f6e1ce] object-cover"
       />
@@ -41,7 +42,7 @@ function Home() {
             ¿QUERES LLEVAR TU NEGOCIO AL SIGUIENTE NIVEL?
           </h1>
           <h2
-            className="text-[#3d5a80] z-10 text-lg xl:absolute xl:top-[90%] xl:right-[2%] font-extrabold flex xl:ml-auto font-fugaz-one "
+            className="text-[#3d5a80] dark:text-logo z-10 text-lg xl:absolute xl:top-[90%] xl:right-[2%] font-extrabold flex xl:ml-auto font-fugaz-one "
             data-aos="fade-up"
             data-aos-duration="1600"
             data-aos-delay="400"
@@ -73,7 +74,7 @@ function Home() {
             smooth={true}
             duration={700}
             onClick={handleConsultClick}
-            className="w-40 h-10 bg-beige-image hover:scale-[1.02] text-white transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center font-semibold cursor-pointer"
+            className="w-40 h-10 bg-beige-image dark:bg-button-light dark:text-logoTypography hover:scale-[1.02] text-white transform duration-300 rounded-3xl text-sm shadow-xl flex items-center font-semibold justify-center cursor-pointer"
           >
             Realizar Consulta
           </Link>
@@ -83,7 +84,7 @@ function Home() {
             smooth={true}
             duration={700}
             onClick={handlePresupuestoClick}
-            className="w-40 h-10 bg-gray-image hover:scale-[1.02] text-white transform duration-300 rounded-3xl text-sm shadow-xl flex items-center font-semibold justify-center cursor-pointer"
+            className="w-40 h-10 bg-gray-image dark:bg-footer-dark hover:scale-[1.02] text-white transform duration-300 rounded-3xl text-sm shadow-xl flex items-center font-semibold justify-center cursor-pointer"
           >
             Pedir Presupuesto
           </Link>

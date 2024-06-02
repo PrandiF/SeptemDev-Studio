@@ -49,7 +49,7 @@ function About() {
           <div className="flex flex-row h-1/3 justify-between gap-4">
             <img
               src={logoPng}
-              className="rounded-lg w-1/3"
+              className="rounded-lg w-1/3 dark:invert"
               data-aos="fade-right"
               data-aos-duration="1600"
               data-aos-delay="300"
