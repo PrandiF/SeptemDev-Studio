@@ -50,7 +50,7 @@ function header() {
       className="w-screen h-auto xl:fixed absolute flex items-start justify-center z-50"
       data-aos="fade-down"
     >
-      <div className="flex relative xl:w-[60%] w-[80%] h-[3.5rem] rounded-full bg-slate-100 dark:bg-footer-dark z-10 mt-3 m-auto items-center justify-between shadow-xl xl:pr-24 pr-6">
+      <div className={`flex relative xl:w-[60%] w-[80%] h-[3.5rem] ${!isBorder && isOpen && 'overflow-hidden'} rounded-full bg-white dark:bg-footer-dark z-10 mt-3 m-auto items-center justify-between shadow-xl xl:pr-24 pr-6`}>
         <div>
           <Link to="HOME" spy={true} smooth={true} duration={700}>
             <img
@@ -108,13 +108,13 @@ function header() {
         </div>
 
         <div
-          className="absolute top-0 flex overflow-hidden transition-all duration-75 ease-out flex-col items-center gap-7 dark:bg-footer-dark backdrop-blur-xl shadow-2xl z-[-10] w-full rounded-2xl"
+          className="absolute top-0 flex overflow-hidden transition-all duration-75 ease-out flex-col items-center gap-7 dark:bg-footer-dark bg-white shadow-2xl z-[-10] w-full rounded-[2rem]"
           style={
             isOpen && !isBorder
               ? { borderRadius: "80px" }
               : !isOpen && !isBorder
               ? { borderRadius: "9999px" }
-              : {}
+              : {borderRadius: "30px"}
           }
         >
           <div
