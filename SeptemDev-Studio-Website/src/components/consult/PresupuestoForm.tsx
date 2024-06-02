@@ -188,7 +188,7 @@ function PresupuestoForm() {
         <div>
           <button
             type="submit"
-            className="w-24 h-10 bg-beige-image text-white hover:scale-[1.02] transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer mx-auto"
+            className="w-24 h-10 bg-beige-image dark:bg-button-light text-white dark:text-logoTypography hover:scale-[1.02] transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer mx-auto"
           >
             Enviar
           </button>

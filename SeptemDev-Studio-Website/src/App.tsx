@@ -22,7 +22,7 @@ const AppContent: React.FC = () => {
   }, []);
 
   return (
-    <div className={`min-h-screen w-screen ${darkMode ? 'dark' : ''} ${darkMode ? 'text-white' : 'text-logoTypography'}`}>
+    <div className={`min-h-screen w-screen ${darkMode ? 'dark' : ''} ${darkMode ? 'text-logo' : 'text-logoTypography'}`}>
       <Header />
       <div id="HOME">
         <Home />

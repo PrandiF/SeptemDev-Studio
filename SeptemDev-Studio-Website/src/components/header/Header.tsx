@@ -166,6 +166,25 @@ function header() {
             >
               Staff
             </Link>
+            <div className="absolute xl:hidden right-14 top-[1.1rem] xl:top-6 xl:right-5">
+              <button
+                onClick={toggleDarkMode}
+                className="rounded shadow-lg w-fit h-fit"
+                data-aos="fade"
+                data-aos-duration="1600"
+                data-aos-delay="1100"
+              >
+                {darkMode ? (
+                  <div className="flex justify-center items-center w-7 h-5 cursor-pointer rounded-md shadow-xl text-logoTypography font-semibold bg-gradient-to-r from-white via-white to-white hover:shadow-lg hover:shadow-azuladoHover hover:scale-105 duration-300 hover:from-slate-100 hover:to-slate-100">
+                    <MdOutlineLightMode />
+                  </div>
+                ) : (
+                  <div className="flex justify-center items-center w-7 h-5 cursor-pointer rounded-md shadow-xl text-white font-semibold bg-gradient-to-r from-azulado via-azulado to-azulado hover:shadow-lg hover:shadow-azulado hover:scale-105 duration-300 hover:from-azuladoHover hover:to-azuladoHover">
+                    <MdOutlineDarkMode />
+                  </div>
+                )}
+              </button>
+            </div>
           </div>
         </div>
         <button
@@ -176,7 +195,7 @@ function header() {
           <IoIosMenu />
         </button>
       </div>
-      <div className="absolute right-0 top-3 xl:top-6 xl:right-5">
+      <div className="absolute top-6 right-5 z-99">
         <button
           onClick={toggleDarkMode}
           className="rounded shadow-lg w-fit h-fit"
@@ -185,11 +204,11 @@ function header() {
           data-aos-delay="1100"
         >
           {darkMode ? (
-            <div className="flex justify-center items-center w-8 h-6 cursor-pointer rounded-md shadow-xl text-logoTypography font-semibold bg-gradient-to-r from-white via-white to-white hover:shadow-lg hover:shadow-azuladoHover hover:scale-105 duration-300 hover:from-slate-100 hover:to-slate-100">
+            <div className="xl:flex hidden justify-center items-center w-8 h-6 cursor-pointer rounded-md shadow-xl text-logoTypography font-semibold bg-logo hover:shadow-lg hover:shadow-azuladoHover hover:scale-105 duration-300 hover:bg-slate-100">
               <MdOutlineLightMode />
             </div>
           ) : (
-            <div className="flex justify-center items-center w-8 h-6 cursor-pointer rounded-md shadow-xl text-white font-semibold bg-gradient-to-r from-azulado via-azulado to-azulado hover:shadow-lg hover:shadow-azulado hover:scale-105 duration-300 hover:from-azuladoHover hover:to-azuladoHover">
+            <div className="xl:flex hidden justify-center items-center w-8 h-6 cursor-pointer rounded-md shadow-xl text-white font-semibold bg-footer-dark hover:shadow-lg hover:shadow-dark hover:scale-105 duration-300 hover:bg-logoTypography">
               <MdOutlineDarkMode />
             </div>
           )}

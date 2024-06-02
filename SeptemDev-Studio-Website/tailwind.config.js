@@ -19,8 +19,9 @@ export default {
         "gray-image":
           "linear-gradient(180deg, #c4c1c1 0%, #cac8c7 30%, #c5c3c2 70%, #a9a7a6 100%)",
         "fondo-dark":
-          "linear-gradient(to top, #3e3f3f 0%, #3d5a80 30%, #3d5a80 70%,  #3e3f3f 100%)",
-        "footer-dark": "linear-gradient(to top,  #3d5a80 ,  #3e3f3f )",
+          "linear-gradient(to top, #3e3f3f 0%, #202020 30%, #202020 70%,  #3e3f3f 100%)",
+        "footer-dark": "linear-gradient(to top,  #202020 ,  #3e3f3f )",
+        "button-light": "linear-gradient(to top,  #d6d2d1 ,  #d6d2d1 )",
       },
       colors: {
         logo: "#d6d2d1",
@@ -31,6 +32,7 @@ export default {
         beigeHover: "#B98362",
         beigeFondo: "#e4c1a9",
         azulado: "#3d5a80",
+        dark: "202020",
         azuladoHover: "#737F99",
         gris: "#E8E8E8",
         grisHover: "#DCDCDC",

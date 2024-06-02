@@ -43,7 +43,7 @@ function Footer() {
       <div className="hidden xl:flex ">
         <img
           src={logoFooter}
-          className="w-[8rem] h-[8rem] xl:w-[10rem] xl:h-[10rem]"
+          className="w-[8rem] h-[8rem] xl:w-[10rem] xl:h-[10rem] dark:invert"
         />
       </div>
       <div className="hidden border border-azulado dark:border-white xl:flex justify-center items-center h-[8rem] my-auto" />
