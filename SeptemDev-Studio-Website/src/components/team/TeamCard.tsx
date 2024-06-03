@@ -11,8 +11,9 @@ type CardProps = {
   picture?: HTMLImageElement | string;
   data_aos_duration?: string;
   data_aos_delay?: string;
-  portfolio?: string;
-  data_aos?: string
+  data_aos?: string;
+  portfolio?: string
+  // ModalComponent?: React.FC<{ isVisible: boolean, onClose: () => void, name: string, position: string, description?: string, portfolio?: string }>;
 };
 
 function TeamCard({
@@ -24,19 +25,22 @@ function TeamCard({
   data_aos_duration,
   data_aos_delay,
   portfolio,
+  // ModalComponent
 }: CardProps) {
   const [mostrarContenido, setMostrarContenido] = useState(false);
+  // const [modalVisible, setModalVisible] = useState(false);
 
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
-    <a href={portfolio} target="_blank">
+    <a href={portfolio} target="e_blank">
       <div
         className="xl:w-64 w-56 xl:h-96 h-72 rounded-lg z-10 flex relative overflow-hidden hover:cursor-pointer"
         onMouseEnter={() => setMostrarContenido(true)}
         onMouseLeave={() => setMostrarContenido(false)}
+        // onClick={() => setModalVisible(true)}
         style={{
           backgroundImage: `url(${picture})`,
           backgroundSize: "cover",

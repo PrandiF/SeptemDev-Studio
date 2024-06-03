@@ -1,36 +1,40 @@
-import imgBackground from "../../assets/fondoHome.png";
-import { useEffect } from "react";
-import donBasilio from "../../assets/Copia de favicon.png";
-import bresh from "../../assets/bresh.jpeg";
-import motorville from "../../assets/motorville_sa_logo.jpeg";
-import bsasCars from "../../assets/bsasCars.jpg";
-import septemDev from "../../assets/Captura de pantalla 2024-04-12 a la(s) 17.51.08.png";
-import laMala from "../../assets/laMala.png";
-import salvadori from "../../assets/Copia de fav.png";
-import tacuara from "../../assets/tacuara.jpeg";
-import { Link } from "react-scroll";
-import LogoCarousel from "../about/LogosCarrousel";
+import imgBackground from '../../assets/fondoAux.jpg';
+import fondoDark from "../../assets/fondoDark.jpg"
+import { useEffect } from 'react';
+import { Link } from 'react-scroll';
+import { useEstado } from '../consult/EstadoContext';
 
 //AOS
-import AOS from "aos";
-import "aos/dist/aos.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home() {
+  const { setShowConsult, setShowPresupuesto, darkMode } = useEstado();
+
+  const handlePresupuestoClick = () => {
+    setShowConsult(false);
+    setShowPresupuesto(true);
+  };
+
+  const handleConsultClick = () => {
+    setShowPresupuesto(false);
+    setShowConsult(true);
+  };
+
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-    <div className="w-screen h-screen relative flex flex-col items-center justify-center">
+    <div className="h-screen relative flex flex-col items-center justify-center ">
       <img
-        src={imgBackground}
+        src={`${darkMode ? fondoDark : imgBackground}`}
         alt="fondo"
         className="fixed w-screen h-screen z-0 bg-gradient-to-b from-transparent to-[#f6e1ce] object-cover"
       />
-
-      <div className="flex flex-col z-10 gap-4 mb-auto">
-        <div className="relative flex  flex-col items-center justify-center xl:mt-48 mt-28 px-2">
+      <div className="flex flex-col items-center xl:scale-110 justify-center h-ful p-4 z-10 xl:gap-4">
+        <div className="relative h-full flex flex-col items-center justify-center px-2">
           <h1
-            className="text-azulado z-10 xl:text-4xl text-2xl text-center font-extrabold flex m-auto font-fugaz-one"
+            className="z-10 xl:text-4xl text-2xl text-center font-extrabold flex m-auto font-fugaz-one xl:mt-0 "
             data-aos="fade-up"
             data-aos-duration="1600"
             data-aos-delay="400"
@@ -38,7 +42,7 @@ function Home() {
             ¿QUERES LLEVAR TU NEGOCIO AL SIGUIENTE NIVEL?
           </h1>
           <h2
-            className="text-beige z-10 text-lg xl:absolute xl:top-[90%] xl:right-[2%] font-extrabold flex xl:ml-auto font-fugaz-one "
+            className="text-[#3d5a80] dark:text-logo z-10 text-lg xl:absolute xl:top-[90%] xl:right-[2%] font-extrabold flex xl:ml-auto font-fugaz-one "
             data-aos="fade-up"
             data-aos-duration="1600"
             data-aos-delay="400"
@@ -46,20 +50,20 @@ function Home() {
             ¡DISEÑAMOS TU PAGINA WEB!
           </h2>
         </div>
-        <div className="w-full h-full px-4">
+        <div className="p-4">
           <h4
-            className="flex items-center justify-center m-auto z-10 text-[#55627E] text-center mt-10 font-medium"
+            className="flex items-center justify-center m-auto z-10 text-center xl:mt-10 mt-8 font-medium"
             data-aos="fade-up"
             data-aos-duration="1600"
             data-aos-delay="700"
           >
-            Descubrí como podemos convertir tus objetivos en realidad y
-            construir juntos el éxito que merecés.
+            Descubrí como podemos convertir tus objetivos en realidad y construir juntos el éxito
+            que merecés.
           </h4>
         </div>
 
         <div
-          className="z-10 w-full flex gap-5 justify-center mt-5"
+          className="z-10 w-full flex xl:flex-row flex-col items-center gap-5 justify-center mt-5"
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay="900"
@@ -69,44 +73,23 @@ function Home() {
             spy={true}
             smooth={true}
             duration={700}
-            className="w-24 h-10 bg-beige-image hover:scale-[1.02] transform duration-300 rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
+            onClick={handleConsultClick}
+            className="w-40 h-10 bg-beige-image dark:bg-button-light dark:text-logoTypography hover:scale-[1.02] text-white transform duration-300 rounded-3xl text-sm shadow-xl flex items-center font-semibold justify-center cursor-pointer"
           >
-            Consulta
+            Realizar Consulta
           </Link>
           <Link
-            to=""
+            to="CONSULT"
             spy={true}
             smooth={true}
             duration={700}
-            className="w-24 h-10 bg-gray-image hover:scale-[1.02] transform duration-300 text-azulado rounded-3xl text-sm shadow-xl flex items-center justify-center cursor-pointer"
+            onClick={handlePresupuestoClick}
+            className="w-40 h-10 bg-footer-dark hover:scale-[1.02] text-white transform duration-300 rounded-3xl text-sm shadow-xl flex items-center font-semibold justify-center cursor-pointer"
           >
-            Reunión
+            Pedir Presupuesto
           </Link>
         </div>
       </div>
-      <div className="relative xl:hidden">
-        <LogoCarousel
-          logos={[
-            donBasilio,
-            bresh,
-            motorville,
-            bsasCars,
-            septemDev,
-            laMala,
-            tacuara,
-            salvadori,
-            donBasilio,
-            bresh,
-            motorville,
-            bsasCars,
-            septemDev,
-            laMala,
-            tacuara,
-            salvadori,
-          ]}
-        />
-      </div>
-      <div className="bg-gradient-to-b from-transparent to-logo flex w-full items-end h-8 z-10"></div>
     </div>
   );
 }

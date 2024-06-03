@@ -11,26 +11,38 @@ type ServiceCardProps = {
   data_aos_delay?: string;
 };
 
-function ServiceCard({ title, description, img, data_aos, data_aos_delay }: ServiceCardProps) {
+function ServiceCard({
+  title,
+  description,
+  img,
+  data_aos,
+  data_aos_delay,
+}: ServiceCardProps) {
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
-    <div className="xl:w-[18%] xl:h-[85%] w-[65%] h-full " data-aos={data_aos} data-aos-duration="1600" data-aos-delay={data_aos_delay}>
-      <div
-      className="w-full h-full p-4 bg-slate-400 bg-opacity-20 backdrop-blur-sm  rounded-xl shadow-xl xl:hover:-translate-y-2 xl:hover:shadow-2xl transform duration-300"
+    <div
+      className="xl:w-[18%] w-[65%] h-full"
+      data-aos={data_aos}
+      data-aos-duration="1600"
+      data-aos-delay={data_aos_delay}
     >
-      <img src={img} className="w-[40%] flex m-auto" alt={title} />
-      <h3 className="text-azulado font-roboto text-center text-2xl font-bold">
-        {title}
-      </h3>
-      <p className="text-azulado mt-2 w-[90%] text-center flex m-auto text-sm xl:text-base">
-        {description}
-      </p>
+      <div className="w-full h-full p-4 bg-beigeCards dark:bg-[#78767635] bg-opacity-20 backdrop-blur-sm rounded-xl shadow-xl xl:hover:-translate-y-2 xl:hover:shadow-2xl transform duration-300 flex flex-col items-center">
+        <img
+          src={img}
+          className="w-[40%] max-h-40 object-contain"
+          alt={title}
+        />
+        <h3 className="font-roboto text-center text-2xl font-bold mt-4">
+          {title}
+        </h3>
+        <p className="mt-2 w-[90%] text-center text-sm xl:text-base flex-grow">
+          {description}
+        </p>
+      </div>
     </div>
-    </div>
-    
   );
 }
 

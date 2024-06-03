@@ -17,8 +17,8 @@ function UsCardVertical({ title, content }: CardVertical) {
     AOS.init();
   }, []);
   return (
-    <div className="xl:w-full w-[50%] xl:h-full rounded-lg z-10 p-4 bg-[#78767635] backdrop-filter backdrop-blur shadow-2xl">
-      <h2 className="z-10 font-roboto font-extrabold">{title}</h2>
+    <div className="xl:w-full w-[50%] xl:min-h-full rounded-lg z-10 p-4 bg-[#78767635] backdrop-filter backdrop-blur shadow-2xl">
+      <h2 className="z-10 font-roboto font-extrabold text-xl">{title}</h2>
       <p className="z-10 font-roboto mt-5 xl:text-base text-sm">{content}</p>
     </div>
   );

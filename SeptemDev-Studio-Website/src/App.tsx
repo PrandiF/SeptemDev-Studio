@@ -7,28 +7,32 @@ import Team from "./components/team/Team";
 import Header from "./components/header/Header";
 import { useEffect } from "react";
 import "./index.css";
-
-//AOS
+import { EstadoProvider, useEstado } from "./components/consult/EstadoContext";
+// AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Servicios from "./components/services/Servicios";
+import ClientsCarrouselSection from "./components/about/ClientsCarrouselSection";
 
-function App() {
+const AppContent: React.FC = () => {
+  const { darkMode } = useEstado();
+
   useEffect(() => {
     AOS.init({ duration: 1600 });
   }, []);
 
   return (
-    <div className="min-h-screen w-screen">
+    <div className={`min-h-screen w-screen ${darkMode ? 'dark' : ''} ${darkMode ? 'text-logo' : 'text-logoTypography'}`}>
       <Header />
       <div id="HOME">
         <Home />
       </div>
-      <div id="ABOUT">
-        <About />
-      </div>
       <div id="SERVICES">
         <Servicios />
+      </div>
+      <ClientsCarrouselSection />
+      <div id="ABOUT">
+        <About />
       </div>
       <div id="CLIENTS">
         <Clients />
@@ -44,6 +48,14 @@ function App() {
       </div>
     </div>
   );
-}
+};
+
+const App: React.FC = () => {
+  return (
+    <EstadoProvider>
+      <AppContent />
+    </EstadoProvider>
+  );
+};
 
 export default App;

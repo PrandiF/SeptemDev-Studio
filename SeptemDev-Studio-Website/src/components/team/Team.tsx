@@ -1,24 +1,27 @@
-import TeamCard from './TeamCard';
+import TeamCard2 from './TeamCard2';
 import franPic from '../../assets/fran.jpg';
-import lucasPic from '../../assets/lucas.jpg';
-import camilaPic from '../../assets/cami.jpg';
+import lucasPic from '../../assets/lucas.png';
+import camilaPic from '../../assets/cami.png';
+import martiPic from '../../assets/marti.jpg';
 import Title from '../Title';
 import { useEffect } from 'react';
+import ReactDOM from 'react-dom';
 
 //AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+// import ModalFran from './Fran/ModalFran';
 
 function Team() {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-    <div className="xl:w-screen xl:h-screen w-full min-h-screen flex flex-col pb-16 xl:relative">
-      <div className="bg-gradient-to-t from-transparent to-gray-100 flex w-full items-end h-8 z-10 absolute pt-5"></div>
-      <Title title="STAFF" comment="Ellos lo harán realidad..." className='mt-12'/>
+    <div className="xl:w-screen xl:h-screen w-full min-h-screen flex flex-col pb-12 xl:mb-16 xl:relative">
+      {/* <div className="bg-gradient-to-t from-transparent to-gray-100 flex w-full items-end h-8 z-10 absolute pt-5"></div> */}
+      <Title title="STAFF" comment="Ellos lo harán realidad..." className="mt-12" />
       <p
-        className="text-azulado xl:font-medium xl:text-base text-sm  text-center m-auto w-[90%] xl:w-[65%] mb-2"
+        className="xl:font-medium xl:text-base text-sm  text-center m-auto w-[90%] xl:w-[65%] mb-2"
         data-aos="fade"
         data-aos-duration="1600"
         data-aos-delay="300"
@@ -33,30 +36,39 @@ function Team() {
       </p>
       {/* DESKTOP */}
       <div className="xl:hidden w-full h-full flex items-start justify-center z-10 mt-20  flex-wrap gap-4 mx-auto">
-        <TeamCard
+        <TeamCard2
           name="Franco Prandi"
           position="Co-Founder"
-          description="Alto capo, juega re bien al basquet"
+          description="Desarrollador Full Stack"
           picture={franPic}
           portfolio="https://mi-portfolio-fp.netlify.app/"
           data_aos="fade-up"
           data_aos_duration="1700"
           data_aos_delay="400"
         />
-        <TeamCard
+        <TeamCard2
           name="Lucas Glave"
           position="Co-Founder"
-          description="Un poco menos capo que el de al lado"
+          description="Desarrollador Full Stack"
           picture={lucasPic}
           data_aos="fade-up"
           data_aos_duration="1700"
           data_aos_delay="700"
         />
-        <TeamCard
+        <TeamCard2
           name="Camila Rojas"
           position="Comunity Manager"
-          description="Se mando unos logos medio pelo"
           picture={camilaPic}
+          data_aos="fade-up"
+          data_aos_duration="1700"
+          data_aos_delay="400"
+        />
+        <TeamCard2
+          name="Martiniano Izquierdo"
+          position="Diseñador Gráfico"
+          description="Videographer"
+          picture={martiPic}
+          portfolio=""
           data_aos="fade-up"
           data_aos_duration="1700"
           data_aos_delay="400"
@@ -65,37 +77,49 @@ function Team() {
 
       {/* MOBILE */}
       <div className="hidden w-full h-full xl:flex items-start justify-center z-10  mt-12 flex-wrap gap-4 mx-auto">
-        <TeamCard
+        <TeamCard2
           name="Franco Prandi"
           position="Co-Founder"
-          description="Alto capo, juega re bien al basquet"
+          description="Full Stack Developer"
           picture={franPic}
           portfolio="https://mi-portfolio-fp.netlify.app/"
           data_aos="fade-right"
           data_aos_duration="1700"
-          data_aos_delay="400"
+          data_aos_delay="600"
         />
-        <TeamCard
+        <TeamCard2
           name="Lucas Glave"
           position="Co-Founder"
-          description="Un poco menos capo que el de al lado"
+          description="Full Stack Developer"
           picture={lucasPic}
-          data_aos="fade-up"
+          data_aos="fade-right"
           data_aos_duration="1700"
-          data_aos_delay="700"
+          data_aos_delay="400"
         />
-        <TeamCard
+        <TeamCard2
           name="Camila Rojas"
-          position="Comunity Manager"
-          description="Se mando unos logos medio pelo"
+          position="Community Manager"
+          description="Systems Engineer"
           picture={camilaPic}
           data_aos="fade-left"
           data_aos_duration="1700"
           data_aos_delay="400"
         />
+        <TeamCard2
+          name="Martiniano Izquierdo"
+          position="Diseñador Gráfico"
+          description="Videographer"
+          picture={martiPic}
+          portfolio=""
+          data_aos="fade-left"
+          data_aos_duration="1700"
+          data_aos_delay="600"
+        />
       </div>
     </div>
   );
 }
+
+ReactDOM.render(<Team />, document.getElementById('root'));
 
 export default Team;
