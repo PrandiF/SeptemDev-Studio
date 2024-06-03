@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import PresupuestoForm from "./PresupuestoForm";
 
 function Consult() {
-  const { darkMode } = useEstado();
+
 
   useEffect(() => {
     AOS.init();
@@ -21,7 +21,7 @@ function Consult() {
           <div className="relative flex items-center justify-center my-8">
             <h1
               className=" z-10 xl:text-4xl text-2xl text-center font-extrabold xl:flex m-auto font-fugaz-one"
-              data-aos="fade-up"
+              data-aos="fade"
               data-aos-duration="1600"
               data-aos-delay="400"
             >
@@ -29,7 +29,7 @@ function Consult() {
             </h1>
             <h2
               className="z-10 text-lg absolute top-[75%] xl:left-[0%] font-extrabold xl:flex ml-auto font-fugaz-one"
-              data-aos="fade-up"
+              data-aos="fade"
               data-aos-duration="1600"
               data-aos-delay="400"
             >

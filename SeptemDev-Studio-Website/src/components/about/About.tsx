@@ -61,23 +61,23 @@ function About() {
               data-aos-delay="300"
             >
               <h2 className="z-10 font-roboto font-extrabold text-xl">
-              ¿Cuál es nuestro sistema de pagos?
+                ¿Cuál es nuestro sistema de pagos?
               </h2>
               <p className="z-10 font-roboto mt-5 xl:text-base xl:font-medium text-sm">
-                Nuestra agencia ofrece una membresía a un valor fijo. Esta membresía incluye el diseño y
-                desarrollo de una página web desde cero, adaptada a las
-                necesidades y deseos específicos de cada cliente. Una vez que la
-                página está en funcionamiento, proporcionamos un mantenimiento
-                continuo para asegurar que todo funcione correctamente y para
-                realizar cualquier ajuste o mejora que el cliente desee con el
-                tiempo.<br />
-                Ofrecemos dos opciones de membresía: mensual o
-                anual, según la preferencia del cliente. No hay un pago inicial.
-                Nuestro enfoque garantiza que la página web no solo se lance con
-                éxito, sino que también se mantenga actualizada, segura y
-                eficiente, permitiendo a nuestros clientes enfocarse en su
-                negocio sin preocuparse por los aspectos técnicos de su
-                presencia en línea.
+                Nuestra agencia ofrece una membresía a un valor fijo. Esta
+                membresía incluye el diseño y desarrollo de una página web desde
+                cero, adaptada a las necesidades y deseos específicos de cada
+                cliente. Una vez que la página está en funcionamiento,
+                proporcionamos un mantenimiento continuo para asegurar que todo
+                funcione correctamente y para realizar cualquier ajuste o mejora
+                que el cliente desee con el tiempo.
+                <br />
+                Ofrecemos dos opciones de membresía: mensual o anual, según la
+                preferencia del cliente. No hay un pago inicial. Nuestro enfoque
+                garantiza que la página web no solo se lance con éxito, sino que
+                también se mantenga actualizada, segura y eficiente, permitiendo
+                a nuestros clientes enfocarse en su negocio sin preocuparse por
+                los aspectos técnicos de su presencia en línea.
               </p>
             </div>
           </div>
@@ -105,32 +105,54 @@ function About() {
         <MobileSection />
       </div>
 
-      <div
-        className="xl:hidden mt-[30px] flex flex-col gap-4 items-start justify-evenly w-[90%] h-full my-0 mx-auto"
-        data-aos="fade-up"
-      >
-        <div
-          className="w-full h-[50%] flex flex-col items-center gap-4 mb-4"
-          data-aos="fade-up"
-        >
+      <div className="xl:hidden mt-[30px] flex flex-col gap-4 items-start justify-evenly w-[90%] h-full my-0 mx-auto">
+        <div className="w-full h-[50%] flex flex-col items-center gap-4 mb-4">
           <UsCardHorizontal
-            title="Cómo Empezamos?"
-            content="SeptemDev Studio comenzó como un sueño compartido entre dos amigos, graduados del Bootcamp de JavaScript de Plataforma5. Desde el primer día, nos unió la pasión por la programación y la motivacion y deseo de crear soluciones tecnológicas que marcaran la diferencia. Así, entre largas noches de codificación y debates sobre mejores prácticas, nació la idea de SeptemDev Studio, con el objetivo de llevar nuestras ideas y conocimientos al mundo real, ayudando a empresas y personas a materializar sus proyectos tecnológicos."
-            data_aos="fade"
+            title="¿Cómo Empezamos?"
+            content="  SeptemDev Studio comenzó como un sueño compartido entre dos
+            amigos, graduados del Bootcamp de JavaScript de Plataforma5. Desde
+            el primer día, nos unió la pasión por la programación y la
+            motivacion y deseo de crear soluciones tecnológicas que marcaran
+            la diferencia. Así, entre largas noches de codificación y debates
+            sobre mejores prácticas, nació la idea de SeptemDev Studio, con el
+            objetivo de llevar nuestras ideas y conocimientos al mundo real,
+            ayudando a empresas y personas a materializar sus proyectos
+            tecnológicos."
+            data_aos="fade-right"
             data_aos_duration="1600"
             data_aos_delay="200"
           />
           <UsCardHorizontal
-            title="Productización de servicios"
-            content="Lo que ofrece la agencia es una membresia a un valor fijo mensual para trabajar partner con el cliente. Esta membresia incluye el diseño y desarrollo de la pagina web desde 0 y luego un mantenimiento mensual de esta misma, con el fin de corregir errores que se pueden ir generando con el tiempo y/o agregar lo que el cliente desee."
-            data_aos="fade"
+            title="¿Cuál es nuestro sistema de pagos?"
+            content="Nuestra agencia ofrece una membresía a un valor fijo. Esta membresía incluye el diseño y
+            desarrollo de una página web desde cero, adaptada a las
+            necesidades y deseos específicos de cada cliente. Una vez que la
+            página está en funcionamiento, proporcionamos un mantenimiento
+            continuo para asegurar que todo funcione correctamente y para
+            realizar cualquier ajuste o mejora que el cliente desee con el
+            tiempo.
+            Ofrecemos dos opciones de membresía: mensual o
+            anual, según la preferencia del cliente. No hay un pago inicial.
+            Nuestro enfoque garantiza que la página web no solo se lance con
+            éxito, sino que también se mantenga actualizada, segura y
+            eficiente, permitiendo a nuestros clientes enfocarse en su
+            negocio sin preocuparse por los aspectos técnicos de su
+            presencia en línea."
+            data_aos="fade-left"
             data_aos_duration="1600"
             data_aos_delay="400"
           />
           <UsCardHorizontal
-            title="Qué es SAAS?"
-            content="El software como servicio (SaaS) es un modelo de entrega de software basado en la nube donde el proveedor desarrolla, mantiene y actualiza el software, poniéndolo a disposición de los clientes a través de Internet con un sistema de pago por uso. El proveedor administra todo el hardware, software y seguridad, permitiendo a los clientes reducir costos y mejorar la implementación y actualización de soluciones empresariales más rápidamente que con sistemas locales."
-            data_aos="fade"
+            title="¿En qué tipo de cliente nos enfocamos?"
+            content=" Nos enfocamos en clientes que desean una página web estética y
+            priorizan la experiencia del usuario. Buscamos trabajar con
+            aquellos que valoran un diseño atractivo y funcional, que buscan
+            destacar en su mercado y proporcionar una navegación intuitiva y
+            agradable para sus visitantes. Nuestros clientes son empresas y
+            emprendedores que entienden la importancia de una primera
+            impresión positiva y quieren ofrecer una experiencia online que
+            refleje profesionalismo y atención al detalle."
+            data_aos="fade-right"
             data_aos_duration="1600"
             data_aos_delay="300"
           />
