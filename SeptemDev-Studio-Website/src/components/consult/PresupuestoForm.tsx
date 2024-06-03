@@ -9,10 +9,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 function PresupuestoForm() {
   const [formData, setFormData] = useState({
-    user_name: "",
-    user_email: "",
-    user_service: "",
-    user_project: "",
+    client_name: "",
+    client_email: "",
+    client_antiquity: "",
+    client_project: "",
   });
   // const [mailSent, setMailSent] = useState(false);
   const form = useRef<HTMLFormElement>(null);
@@ -43,10 +43,10 @@ function PresupuestoForm() {
       return;
     }
     if (
-      !formData.user_email ||
-      !formData.user_name ||
-      !formData.user_project ||
-      !formData.user_service
+      !formData.client_email ||
+      !formData.client_name ||
+      !formData.client_project ||
+      !formData.client_antiquity
     ) {
       toast.warn("Debes completar todos los campos");
       return;
@@ -66,10 +66,10 @@ function PresupuestoForm() {
             setTimeout(() => {
               // setMailSent(true);
               setFormData({
-                user_name: "",
-                user_email: "",
-                user_service: "",
-                user_project: "",
+                client_name: "",
+                client_email: "",
+                client_antiquity: "",
+                client_project: "",
               });
             }, 2000);
           },
@@ -78,10 +78,10 @@ function PresupuestoForm() {
             // setMailSent(false);
             toast.error("No se ha podido enviar el mensaje");
             setFormData({
-              user_name: "",
-              user_email: "",
-              user_service: "",
-              user_project: "",
+              client_name: "",
+              client_email: "",
+              client_antiquity: "",
+              client_project: "",
             });
           }
         );
@@ -104,8 +104,8 @@ function PresupuestoForm() {
         onSubmit={handleSubmit}
       >
         <input
-          name="user_name"
-          value={formData.user_name}
+          name="client_name"
+          value={formData.client_name}
           placeholder="Nombre de empresa"
           onChange={handleChange}
           className="w-full h-10 rounded-xl border border-azulado dark:border-white z-10 bg-transparent placeholder:text-sm  pl-4 shadow-xl placeholder:font-normal font-semibold"
@@ -115,8 +115,8 @@ function PresupuestoForm() {
           data-aos-delay="200"
         />
         <input
-          name="user_email"
-          value={formData.user_email}
+          name="client_email"
+          value={formData.client_email}
           placeholder="Email"
           onChange={handleChange}
           className="w-full h-10 rounded-xl flex  border border-azulado dark:border-white z-10 bg-transparent placeholder:text-sm pl-4 shadow-xl placeholder:font-normal font-semibold"
@@ -126,8 +126,8 @@ function PresupuestoForm() {
           data-aos-delay="300"
         />
         <input
-          name="user_email"
-          value={formData.user_email}
+          name="client_antiquity"
+          value={formData.client_antiquity}
           placeholder="Años de antiguedad"
           onChange={handleChange}
           className="w-full h-10 rounded-xl flex  border border-azulado dark:border-white z-10 bg-transparent placeholder:text-sm   pl-4  shadow-xl placeholder:font-normal font-semibold"
@@ -137,8 +137,8 @@ function PresupuestoForm() {
           data-aos-delay="300"
         />
         {/* <select
-          name="user_service"
-          value={formData.user_service}
+          name="client_antique"
+          value={formData.client_antique}
           onChange={handleChange}
           style={{ outline: 'none' }}
           className="w-full h-10 appearance-auto rounded-xl flex  border border-azulado z-10 bg-transparent cursor-pointer pl-4 text-logoTypography shadow-xl font-semibold"
@@ -155,8 +155,8 @@ function PresupuestoForm() {
           <option value="redesSociales">Redes Sociales</option>
         </select> */}
         <textarea
-          name="user_project"
-          value={formData.user_project}
+          name="client_project"
+          value={formData.client_project}
           placeholder="Contanos de que se trata tu proyecto..."
           onChange={handleChange}
           className="w-full max-h-[170px] min-h-[150px] resize-none rounded-xl flex items-center justify-center border border-azulado dark:border-white  z-10 bg-transparent placeholder:text-sm  pl-4 pt-2  placeholder:font-normal font-semibold shadow-xl"
