@@ -9,7 +9,7 @@ function Footer() {
       <div className="flex xl:hidden p-4">
         {/* LOGO */}
         <div className="xl:ml-0 w-[50%] flex items-center justify-center">
-          <img src={logoFooter} className="w-[70%] xl:w-[10rem] xl:h-[10rem]" />
+          <img src={logoFooter} className="w-[70%] xl:w-[10rem] xl:h-[10rem] dark:invert" />
         </div>
         <div className="border border-azulado dark:border-white flex justify-center items-center h-[6.5rem] my-auto" />
         <div className="flex justify-center items-center xl:order-last text-black dark:text-white w-[50%] gap-3">

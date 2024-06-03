@@ -53,7 +53,7 @@ function LogoCarousel({ logos }: LogoCarouselProps) {
           key={index}
           src={logo.src}
           alt={`Logo ${index}`}
-          className={`${logo.big ? "xl:w-[120px]" : "xl:w-[85px]"} ${logo.big ? "xl:h-[80px]" : "xl:h-[83px]"} w-[60px] h-[60px]  ${logo.rounded ? 'rounded-full' : 'rounded-none'} flex`}
+          className={`${logo.big ? "xl:w-[120px] xl:h-[80px] w-[90px] h-[60px] rounded-full" : "xl:w-[85px] xl:h-[83px] w-[60px] h-[60px]"} ${logo.rounded ? 'rounded-full' : 'rounded-none'} flex`}
         />
       ))}
       {logos.map((logo, index) => (
@@ -61,7 +61,7 @@ function LogoCarousel({ logos }: LogoCarouselProps) {
           key={index + logos.length}
           src={logo.src}
           alt={`Logo ${index}`}
-          className={`${logo.big ? "xl:w-[120px]" : "xl:w-[85px]"} ${logo.big ? "xl:h-[80px]" : "xl:h-[83px]"} w-[60px] h-[60px]  ${logo.rounded ? 'rounded-full' : 'rounded-none'} flex`}
+          className={`${logo.big ? "xl:w-[120px] xl:h-[80px] w-[90px] h-[60px] rounded-full" : "xl:w-[85px] xl:h-[83px] w-[60px] h-[60px]"}  ${logo.rounded ? 'rounded-full' : 'rounded-none'} flex`}
         />
       ))}
     </div>
