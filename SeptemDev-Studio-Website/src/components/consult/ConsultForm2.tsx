@@ -14,7 +14,7 @@ function ConsultForm2() {
     user_email: '',
     user_consult: '',
   });
-  const [mailSent, setMailSent] = useState(false);
+  // const [mailSent, setMailSent] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
@@ -55,7 +55,7 @@ function ConsultForm2() {
           () => {
             toast.success('Consulta enviada correctamente.');
             setTimeout(() => {
-              setMailSent(true);
+              // setMailSent(true);
               setFormData({
                 user_name: '',
                 user_lastname: '',
@@ -64,9 +64,9 @@ function ConsultForm2() {
               });
             }, 2000);
           },
-          (error) => {
+          () => {
             toast.error('No se ha podido enviar la consulta');
-            setMailSent(false);
+            // setMailSent(false);
           }
         );
     }
