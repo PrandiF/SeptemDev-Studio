@@ -14,7 +14,7 @@ export default {
         "3xl": "2px 2px 4px rgba(0, 0, 0, 0.5)",
       },
       backgroundImage: {
-        "beige-image":
+        "azul-image":
           "linear-gradient(180deg, #3d5a80 0%, #4a6b98 30%, #3d5a80 70%, #2b4362 100%)",
         "gray-image":
           "linear-gradient(180deg, #c4c1c1 0%, #cac8c7 30%, #c5c3c2 70%, #a9a7a6 100%)",
@@ -32,7 +32,7 @@ export default {
         beigeHover: "#B98362",
         beigeFondo: "#e4c1a9",
         azulado: "#3d5a80",
-        dark: "202020",
+        dark: "#202020",
         azuladoHover: "#737F99",
         gris: "#E8E8E8",
         grisHover: "#DCDCDC",
