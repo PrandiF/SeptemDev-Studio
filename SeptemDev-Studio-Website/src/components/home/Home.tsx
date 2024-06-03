@@ -84,7 +84,7 @@ function Home() {
             smooth={true}
             duration={700}
             onClick={handlePresupuestoClick}
-            className="w-40 h-10 bg-gray-image dark:bg-footer-dark hover:scale-[1.02] text-white transform duration-300 rounded-3xl text-sm shadow-xl flex items-center font-semibold justify-center cursor-pointer"
+            className="w-40 h-10 bg-footer-dark hover:scale-[1.02] text-white transform duration-300 rounded-3xl text-sm shadow-xl flex items-center font-semibold justify-center cursor-pointer"
           >
             Pedir Presupuesto
           </Link>

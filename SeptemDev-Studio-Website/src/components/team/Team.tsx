@@ -85,25 +85,25 @@ function Team() {
           portfolio="https://mi-portfolio-fp.netlify.app/"
           data_aos="fade-right"
           data_aos_duration="1700"
-          data_aos_delay="400"
+          data_aos_delay="600"
         />
         <TeamCard2
           name="Lucas Glave"
           position="Co-Founder"
           description="Full Stack Developer"
           picture={lucasPic}
-          data_aos="fade-up"
+          data_aos="fade-right"
           data_aos_duration="1700"
-          data_aos_delay="550"
+          data_aos_delay="400"
         />
         <TeamCard2
           name="Camila Rojas"
           position="Community Manager"
           description="Systems Engineer"
           picture={camilaPic}
-          data_aos="fade-up"
+          data_aos="fade-left"
           data_aos_duration="1700"
-          data_aos_delay="700"
+          data_aos_delay="400"
         />
         <TeamCard2
           name="Martiniano Izquierdo"
@@ -113,7 +113,7 @@ function Team() {
           portfolio=""
           data_aos="fade-left"
           data_aos_duration="1700"
-          data_aos_delay="400"
+          data_aos_delay="600"
         />
       </div>
     </div>
