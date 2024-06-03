@@ -67,6 +67,7 @@ function ConsultForm2() {
           (error) => {
             toast.error('No se ha podido enviar la consulta');
             setMailSent(false);
+            console.log(error)
           }
         );
     }
