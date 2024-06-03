@@ -1,27 +1,28 @@
-import React, { useEffect, useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { ToastContainer, Zoom, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, Zoom, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 //AOS
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function ConsultForm2() {
   const [formData, setFormData] = useState({
-    user_name: '',
-    user_lastname: '',
-    user_email: '',
-    user_consult: '',
+    user_name: "",
+    user_lastname: "",
+    user_email: "",
+    user_consult: "",
   });
-  const [mailSent, setMailSent] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -35,7 +36,7 @@ function ConsultForm2() {
     e.preventDefault();
 
     if (!isChecked) {
-      toast.warn('Debes aceptar las políticas de privacidad.');
+      toast.warn("Debes aceptar las políticas de privacidad.");
       return;
     }
     if (
@@ -44,30 +45,33 @@ function ConsultForm2() {
       !formData.user_name ||
       !formData.user_consult
     ) {
-      toast.warn('Debes completar todos los campos');
+      toast.warn("Debes completar todos los campos");
       return;
     }
 
     if (form.current) {
       emailjs
-        .sendForm('service_SeptemDev', 'template_consult', form.current, 'pzZxYDQSS2VBcbJQW')
+        .sendForm(
+          "service_SeptemDev",
+          "template_consult",
+          form.current,
+          "pzZxYDQSS2VBcbJQW"
+        )
         .then(
           () => {
-            toast.success('Consulta enviada correctamente.');
+            toast.success("Consulta enviada correctamente.");
             setTimeout(() => {
-              setMailSent(true);
               setFormData({
-                user_name: '',
-                user_lastname: '',
-                user_email: '',
-                user_consult: '',
+                user_name: "",
+                user_lastname: "",
+                user_email: "",
+                user_consult: "",
               });
             }, 2000);
           },
           (error) => {
-            toast.error('No se ha podido enviar la consulta');
-            setMailSent(false);
-            console.log(error)
+            toast.error("No se ha podido enviar la consulta");
+            console.log(error);
           }
         );
     }
@@ -83,14 +87,18 @@ function ConsultForm2() {
       >
         CONSULTA
       </h2>
-      <form ref={form} className="z-10 flex gap-6 flex-col w-full" onSubmit={handleSubmit}>
+      <form
+        ref={form}
+        className="z-10 flex gap-6 flex-col w-full"
+        onSubmit={handleSubmit}
+      >
         <input
           name="user_name"
           value={formData.user_name}
           placeholder="Nombre"
           onChange={handleChange}
           className="w-full h-10 rounded-xl border border-azulado dark:border-white z-10 bg-transparent placeholder:text-sm placeholder: hover:scale-105 transform duration-300 pl-4  shadow-xl placeholder:font-normal font-semibold"
-          style={{ outline: 'none' }}
+          style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay="200"
@@ -101,7 +109,7 @@ function ConsultForm2() {
           value={formData.user_lastname}
           onChange={handleChange}
           className="w-full h-10 rounded-xl border border-azulado dark:border-white z-10 bg-transparent placeholder:text-sm  placeholder: hover:scale-105 transform duration-300 pl-4  shadow-xl placeholder:font-normal font-semibold"
-          style={{ outline: 'none' }}
+          style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay="250"
@@ -112,7 +120,7 @@ function ConsultForm2() {
           value={formData.user_email}
           onChange={handleChange}
           className="w-full h-10 rounded-xl flex  border border-azulado dark:border-white z-10 bg-transparent placeholder:text-sm placeholder: hover:scale-105 transform duration-300 pl-4  shadow-xl placeholder:font-normal font-semibold"
-          style={{ outline: 'none' }}
+          style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay="300"
@@ -123,7 +131,7 @@ function ConsultForm2() {
           value={formData.user_consult}
           onChange={handleChange}
           className="w-full max-h-[170px] min-h-[150px] resize-none rounded-xl flex items-center justify-center border border-azulado dark:border-white z-10 bg-transparent placeholder:text-sm placeholder: hover:scale-105 transform duration-300 pl-4 pt-2  shadow-xl placeholder:font-normal font-semibold"
-          style={{ outline: 'none' }}
+          style={{ outline: "none" }}
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay="350"
@@ -137,8 +145,12 @@ function ConsultForm2() {
             onChange={handleCheckboxChange}
           />
           <label htmlFor="aceptarPoliticas" className=" text-sm">
-            He leído y acepto las{' '}
-            <a href="" target="_blank" className="text-azulado dark:text-white hover:underline">
+            He leído y acepto las{" "}
+            <a
+              href=""
+              target="_blank"
+              className="text-azulado dark:text-white hover:underline"
+            >
               políticas de privacidad
             </a>
             .
@@ -151,7 +163,11 @@ function ConsultForm2() {
           >
             Enviar
           </button>
-          <ToastContainer position="top-right" transition={Zoom} autoClose={2000} />
+          <ToastContainer
+            position="top-right"
+            transition={Zoom}
+            autoClose={2000}
+          />
         </div>
       </form>
     </div>

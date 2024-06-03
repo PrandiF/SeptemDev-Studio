@@ -14,7 +14,6 @@ function PresupuestoForm() {
     client_antiquity: "",
     client_project: "",
   });
-  const [mailSent, setMailSent] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
@@ -64,7 +63,6 @@ function PresupuestoForm() {
           () => {
             toast.success("Mensaje enviado correctamente.");
             setTimeout(() => {
-              setMailSent(true);
               setFormData({
                 client_name: "",
                 client_email: "",
@@ -75,7 +73,6 @@ function PresupuestoForm() {
           },
           (error) => {
             console.log("FAILED...", error.text);
-            setMailSent(false);
             toast.error("No se ha podido enviar el mensaje");
             setFormData({
               client_name: "",

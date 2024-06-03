@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { Modal, Row, Col } from "react-bootstrap";
 import { IoClose } from "react-icons/io5";
 import p5 from "./certificadoP5.png";
