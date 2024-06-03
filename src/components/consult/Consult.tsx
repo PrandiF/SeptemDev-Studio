@@ -6,8 +6,6 @@ import "aos/dist/aos.css";
 import PresupuestoForm from "./PresupuestoForm";
 
 function Consult() {
-
-
   useEffect(() => {
     AOS.init();
   }, []);
@@ -53,7 +51,7 @@ function Consult() {
             {showConsult ? (
               <button
                 onClick={() => handleFormChangeButton("presupuesto")}
-                className="w-40 h-10 bg-beige-image dark:bg-button-light text-white dark:text-logoTypography hover:scale-[1.02] transform duration-300 rounded-3xl text-sm font-semibold shadow-xl flex items-center justify-center cursor-pointer mx-auto mb-8"
+                className="w-40 h-10 bg-azul-image dark:bg-button-light text-white dark:text-logoTypography hover:scale-[1.02] transform duration-300 rounded-3xl text-sm font-semibold shadow-xl flex items-center justify-center cursor-pointer mx-auto mb-8"
                 data-aos="fade"
                 data-aos-duration="1600"
                 data-aos-delay="500"
@@ -63,7 +61,7 @@ function Consult() {
             ) : showPresupuesto ? (
               <button
                 onClick={() => handleFormChangeButton("consult")}
-                className="w-40 h-10 bg-beige-image dark:bg-button-light text-white dark:text-logoTypography hover:scale-[1.02] transform duration-300 rounded-3xl text-sm font-semibold shadow-xl flex items-center justify-center cursor-pointer mx-auto mb-8"
+                className="w-40 h-10 bg-azul-image dark:bg-button-light text-white dark:text-logoTypography hover:scale-[1.02] transform duration-300 rounded-3xl text-sm font-semibold shadow-xl flex items-center justify-center cursor-pointer mx-auto mb-8"
                 data-aos="fade"
                 data-aos-duration="1600"
                 data-aos-delay="500"

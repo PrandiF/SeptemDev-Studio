@@ -1,12 +1,12 @@
-import imgBackground from '../../assets/fondoAux.jpg';
-import fondoDark from "../../assets/fondoDark.jpg"
-import { useEffect } from 'react';
-import { Link } from 'react-scroll';
-import { useEstado } from '../consult/EstadoContext';
+import imgBackground from "../../assets/fondoAux.jpg";
+import fondoDark from "../../assets/fondoDark.jpg";
+import { useEffect } from "react";
+import { Link } from "react-scroll";
+import { useEstado } from "../consult/EstadoContext";
 
 //AOS
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
   const { setShowConsult, setShowPresupuesto, darkMode } = useEstado();
@@ -57,8 +57,8 @@ function Home() {
             data-aos-duration="1600"
             data-aos-delay="700"
           >
-            Descubrí como podemos convertir tus objetivos en realidad y construir juntos el éxito
-            que merecés.
+            Descubrí como podemos convertir tus objetivos en realidad y
+            construir juntos el éxito que merecés.
           </h4>
         </div>
 
@@ -74,7 +74,7 @@ function Home() {
             smooth={true}
             duration={700}
             onClick={handleConsultClick}
-            className="w-40 h-10 bg-beige-image dark:bg-button-light dark:text-logoTypography hover:scale-[1.02] text-white transform duration-300 rounded-3xl text-sm shadow-xl flex items-center font-semibold justify-center cursor-pointer"
+            className="w-40 h-10 bg-azul-image dark:bg-button-light dark:text-logoTypography hover:scale-[1.02] text-white transform duration-300 rounded-3xl text-sm shadow-xl flex items-center font-semibold justify-center cursor-pointer"
           >
             Realizar Consulta
           </Link>
