@@ -10,7 +10,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
-
 import { ClientsData } from "./ClientsData";
 
 //AOS
@@ -35,7 +34,6 @@ function ActiveSlider() {
             rotate: 15,
             stretch: 0,
             depth: 100,
-            // modifier: 1,
             modifier: 2,
             slideShadows: true,
           }}

@@ -9,7 +9,6 @@ import tacuara from "../../assets/tacuara.jpeg";
 function Logos() {
   return (
     <div className="flex items-center relative w-full h-[110px] border-y border-azulado z-10 px-4 py-3 gap-8 shadow-inner">
-      {/* <div className="w-full h-full flex gap-8 z-10"> */}
         <img
           src={donBasilio}
           className="w-[83px] h-[83px] rounded-full flex"
@@ -38,8 +37,6 @@ function Logos() {
         <img src={laMala} className=" w-[83px] h-[83px] rounded-full flex" />
         <img src={salvadori} className=" w-[83px] h-[83px] rounded-full flex" />
         <img src={tacuara} className=" w-[83px] h-[83px] rounded-full flex" />
-      {/* </div> */}
-
     </div>
   );
 }
