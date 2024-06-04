@@ -133,24 +133,6 @@ function PresupuestoForm() {
           data-aos-duration="1600"
           data-aos-delay="300"
         />
-        {/* <select
-          name="client_antique"
-          value={formData.client_antique}
-          onChange={handleChange}
-          style={{ outline: 'none' }}
-          className="w-full h-10 appearance-auto rounded-xl flex  border border-azulado z-10 bg-transparent cursor-pointer pl-4 text-logoTypography shadow-xl font-semibold"
-          data-aos="fade"
-          data-aos-duration="1600"
-          data-aos-delay="350"
-        >
-          <option value="" disabled selected>
-            -Elegí el servicio-
-          </option>
-          <option value="diseño">Diseño Web</option>
-          <option value="mantenimiento">Mantenimiento</option>
-          <option value="arreglo">Arreglo</option>
-          <option value="redesSociales">Redes Sociales</option>
-        </select> */}
         <textarea
           name="client_project"
           value={formData.client_project}

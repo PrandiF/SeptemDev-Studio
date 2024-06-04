@@ -1,5 +1,4 @@
 import UsCardHorizontal from "./UsCardHorizontal";
-// import UsCardVertical from "./UsCardVertical";
 import { useEffect } from "react";
 import logoPng from "../../assets/logoPng.png";
 

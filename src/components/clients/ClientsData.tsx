@@ -6,8 +6,6 @@ import miTurnoWeb from "../../assets/miTurnoWeb.png";
 import odontologia from "../../assets/odontologia.png"
 import tmp from "../../assets/TheMovieParty.png"
 
-
-
 export const ClientsData = [
   {
     title: "Don Basilio",
