@@ -1,3 +1,9 @@
+import { useEffect } from 'react';
+
+//AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 type CardHorizontal = {
   title: string;
   content: string;
@@ -5,13 +11,6 @@ type CardHorizontal = {
   data_aos_delay: string;
   data_aos: string;
 };
-
-import { useEffect } from 'react';
-
-//AOS
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 function UsCardHorizontal({ title, content, data_aos, data_aos_duration, data_aos_delay }: CardHorizontal) {
   useEffect(() => {
     AOS.init();

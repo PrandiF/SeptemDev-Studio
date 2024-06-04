@@ -81,7 +81,6 @@ function Consult() {
           ""
         )}
       </div>
-      {/* <div className="bg-gradient-to-b from-transparent to-gray-100 w-full h-8 absolute bottom-0"></div> */}
     </div>
   );
 }
