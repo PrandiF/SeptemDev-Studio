@@ -1,5 +1,5 @@
-import imgBackground from "../../assets/fondoAux.jpg";
-import fondoDark from "../../assets/fondoDark.jpg";
+import imgBackground from "../../assets/fondoAux.webp";
+import fondoDark from "../../assets/fondoDark.webp";
 import { useEffect } from "react";
 import { Link } from "react-scroll";
 import { useEstado } from "../consult/EstadoContext";
