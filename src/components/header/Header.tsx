@@ -1,4 +1,4 @@
-import logoHeader from "../../assets/logoHeader.jpg";
+import logoHeader from "../../assets/logoHeader.webp";
 import { Link } from "react-scroll";
 import { IoIosMenu } from "react-icons/io";
 import gsap from "gsap";
@@ -50,7 +50,11 @@ function header() {
       className="w-screen h-auto xl:fixed absolute flex items-start justify-center z-50"
       data-aos="fade-down"
     >
-      <div className={`flex relative xl:w-[60%] w-[80%] h-[3.5rem] ${!isBorder && isOpen && 'overflow-hidden'} rounded-full bg-white dark:bg-footer-dark z-10 mt-3 m-auto items-center justify-between shadow-xl xl:pr-24 pr-6`}>
+      <div
+        className={`flex relative xl:w-[60%] w-[80%] h-[3.5rem] ${
+          !isBorder && isOpen && "overflow-hidden"
+        } rounded-full bg-white dark:bg-footer-dark z-10 mt-3 m-auto items-center justify-between shadow-xl xl:pr-24 pr-6`}
+      >
         <div>
           <Link to="HOME" spy={true} smooth={true} duration={700}>
             <img
@@ -114,7 +118,7 @@ function header() {
               ? { borderRadius: "80px" }
               : !isOpen && !isBorder
               ? { borderRadius: "9999px" }
-              : {borderRadius: "30px"}
+              : { borderRadius: "30px" }
           }
         >
           <div
