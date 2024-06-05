@@ -30,7 +30,7 @@ function Team() {
         data-aos-delay="300"
       >
         Conocé al equipo que estará acompañandote en cada paso del camino.
-        Franco, Lucas y Camila son expertos apasionados que se dedican a
+        Franco, Lucas, Camila y Martiniano son expertos apasionados que se dedican a
         brindarte el mejor servicio y atención personalizada. Están acá para
         escucharte, entender tus necesidades y trabajar juntos para lograr tus
         objetivos.
