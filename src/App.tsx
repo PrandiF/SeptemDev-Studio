@@ -5,6 +5,8 @@ import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import Team from "./components/team/Team";
 import Header from "./components/header/Header";
+import imgBackground from "./assets/fondoAux.webp";
+import fondoDark from "./assets/fondoDark.webp";
 import { useEffect } from "react";
 import "./index.css";
 import { EstadoProvider, useEstado } from "./components/consult/EstadoContext";
@@ -22,7 +24,12 @@ const AppContent: React.FC = () => {
   }, []);
 
   return (
-    <div className={`min-h-screen w-screen ${darkMode ? 'dark' : ''} ${darkMode ? 'text-logo' : 'text-logoTypography'}`}>
+    <div className={`min-h-screen w-screen relative ${darkMode ? 'dark' : ''} ${darkMode ? 'text-logo' : 'text-logoTypography'}`}>
+       <img
+        src={`${darkMode ? fondoDark : imgBackground}`}
+        alt="fondo"
+        className="fixed w-screen h-screen z-0 bg-gradient-to-b from-transparent to-[#f6e1ce] object-cover"
+      />
       <Header />
       <div id="HOME">
         <Home />
