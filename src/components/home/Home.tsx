@@ -1,5 +1,4 @@
-import imgBackground from "../../assets/fondoAux.webp";
-import fondoDark from "../../assets/fondoDark.webp";
+
 import { useEffect } from "react";
 import { Link } from "react-scroll";
 import { useEstado } from "../consult/EstadoContext";
@@ -26,11 +25,7 @@ function Home() {
   }, []);
   return (
     <div className="h-screen relative flex flex-col items-center justify-center ">
-      <img
-        src={`${darkMode ? fondoDark : imgBackground}`}
-        alt="fondo"
-        className="fixed w-screen h-screen z-0 bg-gradient-to-b from-transparent to-[#f6e1ce] object-cover"
-      />
+     
       <div className="flex flex-col items-center xl:scale-110 justify-center h-ful p-4 z-10 xl:gap-4">
         <div className="relative h-full flex flex-col items-center justify-center px-2">
           <h1

@@ -1,10 +1,11 @@
-import donBasilio from "../../assets/donBasilioWeb.png";
-import skyMovie from "../../assets/skyMovie.png"
-import fastDelivery from "../../assets/fastDelivery.png";
-import houseOfDev from "../../assets/houseOfDev.png";
-import miTurnoWeb from "../../assets/miTurnoWeb.png";
-import odontologia from "../../assets/odontologia.png"
-import tmp from "../../assets/TheMovieParty.png"
+import donBasilio from "../../assets/donBasilioWeb.webp";
+import skyMovie from "../../assets/skyMovie.webp"
+import fastDelivery from "../../assets/fastDelivery.webp";
+import fastDelivery2 from "../../assets/fastDelivery2.webp"
+import box from "../../assets/box.webp";
+import miTurnoWeb from "../../assets/miTurnoWeb.webp";
+import miTurnoWeb2 from "../../assets/miTurnoWeb2.webp"
+import tmp from "../../assets/TheMovieParty.webp"
 
 export const ClientsData = [
   {
@@ -18,8 +19,8 @@ export const ClientsData = [
     url: "",
   },
   {
-    title: "House Of Dev",
-    img: houseOfDev,
+    title: "Box",
+    img: box,
     url: "",
   },
   {
@@ -28,8 +29,8 @@ export const ClientsData = [
     url: "https://mi-turno-web-blond.vercel.app/",
   },
   {
-    title: "Odontologia",
-    img: odontologia,
+    title: "Mi Turno Web",
+    img: miTurnoWeb2,
     url: "",
   },
   
