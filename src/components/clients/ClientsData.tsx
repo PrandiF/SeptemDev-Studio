@@ -1,7 +1,6 @@
 import donBasilio from "../../assets/donBasilioWeb.webp";
 import skyMovie from "../../assets/skyMovie.webp"
 import fastDelivery from "../../assets/fastDelivery.webp";
-import fastDelivery2 from "../../assets/fastDelivery2.webp"
 import box from "../../assets/box.webp";
 import miTurnoWeb from "../../assets/miTurnoWeb.webp";
 import miTurnoWeb2 from "../../assets/miTurnoWeb2.webp"

@@ -8,7 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Home() {
-  const { setShowConsult, setShowPresupuesto, darkMode } = useEstado();
+  const { setShowConsult, setShowPresupuesto} = useEstado();
 
   const handlePresupuestoClick = () => {
     setShowConsult(false);
