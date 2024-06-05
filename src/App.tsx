@@ -28,7 +28,7 @@ const AppContent: React.FC = () => {
        <img
         src={`${darkMode ? fondoDark : imgBackground}`}
         alt="fondo"
-        className="fixed w-screen h-screen z-0 bg-gradient-to-b from-transparent to-[#f6e1ce] object-cover"
+        className="fixed w-screen h-screen z-0 bg-white dark:bg-black  object-cover"
       />
       <Header />
       <div id="HOME">
