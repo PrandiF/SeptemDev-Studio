@@ -6,6 +6,7 @@ import SwiperClientsResponsive from './SwiperClientsResponsive';
 //AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import SwiperClinetsMd from './SwiperClientsMd';
 
 function Clients() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function Clients() {
         <Title title="CLIENTES" comment="Ellos confiaron en nosotros" />
       </div>
       <ActiveSlider />
+      <SwiperClinetsMd />
       <SwiperClientsResponsive />
     </div>
   );

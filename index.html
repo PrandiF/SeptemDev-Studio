@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/logoFooter.webp" />
+    <!-- <link rel="icon" type="image/svg+xml" href="./src/assets/logoPng.png" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -14,6 +14,27 @@
     />
     <link rel="stylesheet" href="ruta/a/tus/archivos/css/de/sf-compact.css" />
     <title>SeptemDev Studio</title>
+    <link
+      id="favicon"
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/assets/logoPng.png"
+    />
+    <script>
+      function setFavicon() {
+        const favicon = document.getElementById('favicon');
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          favicon.href = './src/assets/logoDark.png'; // Favicon para modo oscuro
+        } else {
+          favicon.href = './src/assets/logoPng.png'; // Favicon para modo claro
+        }
+      }
+
+      setFavicon();
+
+      // Escuchar cambios en el esquema de color
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
+    </script>
   </head>
   <body>
     <div id="root"></div>
