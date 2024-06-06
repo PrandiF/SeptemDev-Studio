@@ -38,7 +38,7 @@ function MobileSection() {
         </p>
       </div>
       <div
-        className="xl:w-[30%] w-[80%] h-full flex xl:items-center m-auto justify-center"
+        className="xl:w-[30%] md:w-[50%] w-[80%] h-full flex xl:items-center m-auto justify-center"
         data-aos="fade-left"
         data-aos-duration="2000"
         data-aos-delay="300"

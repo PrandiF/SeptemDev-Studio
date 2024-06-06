@@ -10,19 +10,19 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-function SwiperClientsResponsive() {
+function SwiperClinetsMd() {
   useEffect(() => {
     AOS.init({ duration: 1600 });
   }, []);
 
   return (
-    <div className="xl:hidden md:hidden flex flex-col w-screen relative">
+    <div className="xl:hidden hidden md:flex flex-col w-screen relative">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={1}
+        slidesPerView={3}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -32,19 +32,19 @@ function SwiperClientsResponsive() {
         }}
         pagination={{ dynamicBullets: true }}
         modules={[EffectCoverflow, Pagination]}
-        className="h-full w-[90%] relative flex items-center justify-center m-auto rounded-xl"
+        className="h-full w-[100%] relative flex items-center justify-center m-auto rounded-xl"
         data-aos="fade-up"
         data-aos-delay="400"
       >
         {ClientsData.map((item, index) => (
           <SwiperSlide
             key={`${index}-${item}`}
-            className="w-[90%] h-[16rem] relative group rounded-xl"
+            className="w-full h-[16rem] relative group rounded-xl"
           >
             <img
               src={item.img}
               alt="slide_image"
-              className="w-full h-[18rem] rounded-xl object-cover"
+              className="w-full h-[16rem] rounded-xl object-cover"
             />
             <div className="hidden xl:absolute inset-0 bg-black opacity-10 transition-opacity duration-300 group-hover:opacity-50 swiper-slide-active:opacity-50 rounded-xl">
               <div className="w-full h-full flex flex-col gap-1 items-center justify-end opacity-0 transition-opacity duration-300 group-hover:opacity-100 swiper-slide-active:opacity-100">
@@ -65,4 +65,4 @@ function SwiperClientsResponsive() {
   );
 }
 
-export default SwiperClientsResponsive;
+export default SwiperClinetsMd;
