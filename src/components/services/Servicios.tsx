@@ -9,6 +9,7 @@ import SwiperServices from "./SwiperServices";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import SwiperMd from "./SwipperMd";
 
 function Servicios() {
   useEffect(() => {
@@ -32,7 +33,7 @@ function Servicios() {
         personalizadas que satisfagan tus necesidades específicas y mejoren la
         experiencia de tus usuarios.
       </p>
-      <div className="w-full h-[46%] xl:flex justify-evenly hidden">
+      <div className="w-full h-[46%] xl:flex md:hidden justify-evenly hidden">
         <ServiceCard
           title="Diseño"
           description="La creación y diseño de páginas web es un servicio clave que ofrece nuestra agencia. Desarrollamos diseños personalizados, optimizamos la navegación, aseguramos la compatibilidad móvil y mejoramos la velocidad de carga."
@@ -62,7 +63,10 @@ function Servicios() {
           data_aos_delay="600"
         />
       </div>
-      <div className="w-full h-full flex xl:hidden mb-4">
+      <div className="md:w-full md:h-full xl:hidden hidden md:flex md:mb-4">
+        <SwiperMd />
+      </div>
+      <div className="w-full h-full flex xl:hidden md:hidden mb-4">
         <SwiperServices />
       </div>
     </div>

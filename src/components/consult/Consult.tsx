@@ -13,7 +13,7 @@ function Consult() {
   const { showConsult, showPresupuesto, handleFormChangeButton } = useEstado();
 
   return (
-    <div className="w-screen min-h-screen relative bg-gray-100 dark:bg-fondo-dark flex justify-center items-center rounded-3xl mt-[-20px] mb-[-20px] xl:pb-0 pb-8 overflow-hidden">
+    <div className="w-screen min-h-screen relative bg-gray-100 dark:bg-fondo-dark flex justify-center items-center rounded-3xl mt-[-20px] mb-[-20px] xl:pb-0 pb-8">
       <div className="flex xl:flex-row flex-col justify-evenly xl:items-start items-center w-full">
         <div className="flex flex-col xl:w-[50%] xl:gap-4 xl:items-start items-center">
           <div className="relative flex items-center justify-center my-8">

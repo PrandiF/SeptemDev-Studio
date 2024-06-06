@@ -24,7 +24,7 @@ function ServiceCard({
 
   return (
     <div
-      className="xl:w-[18%] w-[65%] h-full"
+      className="xl:w-[18%]  w-[65%] h-full"
       data-aos={data_aos}
       data-aos-duration="1600"
       data-aos-delay={data_aos_delay}
@@ -38,7 +38,7 @@ function ServiceCard({
         <h3 className="font-roboto text-center text-2xl font-bold mt-4">
           {title}
         </h3>
-        <p className="mt-2 w-[90%] text-center text-sm xl:text-base flex-grow">
+        <p className="mt-2 w-[90%] text-center md:pb-4 md:text-md text-sm xl:text-base flex-grow">
           {description}
         </p>
       </div>
