@@ -1,20 +1,20 @@
-import About from "./components/about/About";
-import Clients from "./components/clients/Clients";
-import Consult from "./components/consult/Consult";
-import Footer from "./components/footer/Footer";
-import Home from "./components/home/Home";
-import Team from "./components/team/Team";
-import Header from "./components/header/Header";
-import imgBackground from "./assets/fondoAux.webp";
-import fondoDark from "./assets/fondoDark.webp";
-import { useEffect } from "react";
-import "./index.css";
-import { EstadoProvider, useEstado } from "./components/consult/EstadoContext";
+import About from './components/about/About';
+import Clients from './components/clients/Clients';
+import Consult from './components/consult/Consult';
+import Footer from './components/footer/Footer';
+import Home from './components/home/Home';
+import Team from './components/team/Team';
+import Header from './components/header/Header';
+import imgBackground from './assets/fondoAux.webp';
+import fondoDark from './assets/fondoDark2.webp';
+import { useEffect } from 'react';
+import './index.css';
+import { EstadoProvider, useEstado } from './components/consult/EstadoContext';
 // AOS
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Servicios from "./components/services/Servicios";
-import ClientsCarrouselSection from "./components/about/ClientsCarrouselSection";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Servicios from './components/services/Servicios';
+import ClientsCarrouselSection from './components/about/ClientsCarrouselSection';
 
 const AppContent: React.FC = () => {
   const { darkMode } = useEstado();
@@ -24,11 +24,15 @@ const AppContent: React.FC = () => {
   }, []);
 
   return (
-    <div className={`min-h-screen w-screen relative ${darkMode ? 'dark' : ''} ${darkMode ? 'text-logo' : 'text-logoTypography'}`}>
-       <img
+    <div
+      className={`min-h-screen bg-white dark:bg-[#000000] w-screen relative ${
+        darkMode ? 'dark' : ''
+      } ${darkMode ? 'text-logo' : 'text-logoTypography'}`}
+    >
+      <img
         src={`${darkMode ? fondoDark : imgBackground}`}
         alt="fondo"
-        className="fixed w-screen h-screen z-0 bg-white dark:bg-black  object-cover"
+        className="fixed w-screen h-screen z-0 bg-white dark:bg-[#000000] dark:grayscale object-cover"
       />
       <Header />
       <div id="HOME">
