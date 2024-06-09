@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import ConsultForm2 from "./ConsultForm2";
-import { useEstado } from "./EstadoContext";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import PresupuestoForm from "./PresupuestoForm";
+import { useEffect } from 'react';
+import ConsultForm2 from './ConsultForm2';
+import { useEstado } from './EstadoContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import PresupuestoForm from './PresupuestoForm';
 
 function Consult() {
   useEffect(() => {
@@ -26,7 +26,7 @@ function Consult() {
               PONETE EN CONTACTO...
             </h1>
             <h2
-              className="z-10 text-lg absolute top-[75%] xl:left-[0%] font-extrabold xl:flex ml-auto font-fugaz-one"
+              className="z-10 text-lg text-azulado dark:text-logo absolute top-[75%] xl:left-[0%] font-extrabold xl:flex ml-auto font-fugaz-one"
               data-aos="fade"
               data-aos-duration="1600"
               data-aos-delay="400"
@@ -40,17 +40,16 @@ function Consult() {
             data-aos-duration="1600"
             data-aos-delay="400"
           >
-            Si estás listo para mejorar tu presencia en línea y alcanzar nuevos
-            objetivos, no dudes en ponerte en contacto con nosotros. Completá el
-            formulario a continuación y uno de nuestros expertos se comunicará
-            con vos para discutir cómo podemos colaborar. ¡Esperamos trabajar
-            juntos y hacer realidad tus ideas!
+            Si estás listo para mejorar tu presencia en línea y alcanzar nuevos objetivos, no dudes
+            en ponerte en contacto con nosotros. Completá el formulario a continuación y uno de
+            nuestros expertos se comunicará con vos para discutir cómo podemos colaborar. ¡Esperamos
+            trabajar juntos y hacer realidad tus ideas!
           </p>
 
           <div>
             {showConsult ? (
               <button
-                onClick={() => handleFormChangeButton("presupuesto")}
+                onClick={() => handleFormChangeButton('presupuesto')}
                 className="w-40 h-10 bg-azul-image dark:bg-button-light text-white dark:text-logoTypography hover:scale-[1.02] transform duration-300 rounded-3xl text-sm font-semibold shadow-xl flex items-center justify-center cursor-pointer mx-auto mb-8"
                 data-aos="fade"
                 data-aos-duration="1600"
@@ -60,7 +59,7 @@ function Consult() {
               </button>
             ) : showPresupuesto ? (
               <button
-                onClick={() => handleFormChangeButton("consult")}
+                onClick={() => handleFormChangeButton('consult')}
                 className="w-40 h-10 bg-azul-image dark:bg-button-light text-white dark:text-logoTypography hover:scale-[1.02] transform duration-300 rounded-3xl text-sm font-semibold shadow-xl flex items-center justify-center cursor-pointer mx-auto mb-8"
                 data-aos="fade"
                 data-aos-duration="1600"
@@ -69,17 +68,11 @@ function Consult() {
                 Realizar consulta
               </button>
             ) : (
-              ""
+              ''
             )}
           </div>
         </div>
-        {showConsult ? (
-          <ConsultForm2 />
-        ) : showPresupuesto ? (
-          <PresupuestoForm />
-        ) : (
-          ""
-        )}
+        {showConsult ? <ConsultForm2 /> : showPresupuesto ? <PresupuestoForm /> : ''}
       </div>
     </div>
   );
