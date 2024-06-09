@@ -1,14 +1,15 @@
-
-import { useEffect } from "react";
-import { Link } from "react-scroll";
-import { useEstado } from "../consult/EstadoContext";
-
-//AOS
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useEffect } from 'react';
+import { Link } from 'react-scroll';
+import { useEstado } from '../consult/EstadoContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import mockNotebook from '../../assets/mockNotebook.png';
+import darkMockNotebook from '../../assets/darkMockNotebook.png';
+import mockMobile from '../../assets/mockMobile.png';
+import darkMockMobile from '../../assets/darkMockMobile.png';
 
 function Home() {
-  const { setShowConsult, setShowPresupuesto} = useEstado();
+  const { setShowConsult, setShowPresupuesto } = useEstado();
 
   const handlePresupuestoClick = () => {
     setShowConsult(false);
@@ -25,8 +26,44 @@ function Home() {
   }, []);
   return (
     <div className="h-screen relative flex flex-col items-center justify-center ">
-     
-      <div className="flex flex-col items-center xl:scale-110 justify-center h-ful p-4 z-10 xl:gap-4">
+      <div className="-rotate-12 hidden xl:flex md:flex absolute top-[50%] w-[24rem] right-[70%]">
+        <img
+          src={mockNotebook}
+          alt="mockup notebook"
+          className="xl:animate-float animate-float2 dark:xl:hidden dark:md:hidden"
+          data-aos="fade-up"
+          data-aos-duration="1600"
+          data-aos-delay="400"
+        />
+        <img
+          src={darkMockNotebook}
+          alt="mockup notebook"
+          className="xl:animate-float animate-float2 hidden dark:flex"
+          data-aos="fade-up"
+          data-aos-duration="1600"
+          data-aos-delay="400"
+        />
+      </div>
+      <div className="absolute top-[50%] hidden xl:flex md:flex w-[32rem] rotate-12 left-[70%] ">
+        <img
+          src={mockMobile}
+          alt="mockup mobile"
+          className="xl:animate-float animate-float2 dark:xl:hidden dark:md:hidden"
+          data-aos="fade-up"
+          data-aos-duration="1600"
+          data-aos-delay="400"
+        />
+        <img
+          src={darkMockMobile}
+          alt="mockup notebook"
+          className="xl:animate-float animate-float2 hidden dark:flex"
+          data-aos="fade-up"
+          data-aos-duration="1600"
+          data-aos-delay="400"
+        />
+      </div>
+
+      <div className="flex flex-col items-center justify-center h-ful p-4 z-10 xl:gap-4">
         <div className="relative h-full flex flex-col items-center justify-center px-2">
           <h1
             className="z-10 xl:text-4xl text-2xl text-center font-extrabold flex m-auto font-fugaz-one xl:mt-0 "
@@ -52,8 +89,8 @@ function Home() {
             data-aos-duration="1600"
             data-aos-delay="700"
           >
-            Descubrí como podemos convertir tus objetivos en realidad y
-            construir juntos el éxito que merecés.
+            Descubrí como podemos convertir tus objetivos en realidad y construir juntos el éxito
+            que merecés.
           </h4>
         </div>
 
