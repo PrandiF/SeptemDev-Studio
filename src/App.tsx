@@ -27,7 +27,7 @@ const AppContent: React.FC = () => {
     <div
       className={`min-h-screen bg-white dark:bg-[#000000] w-screen relative ${
         darkMode ? 'dark' : ''
-      } ${darkMode ? 'text-logo' : 'text-logoTypography'}`}
+      } ${darkMode ? 'text-logo' : 'text-logoTypography'} scroll-smooth`}
     >
       <img
         src={`${darkMode ? fondoDark : imgBackground}`}

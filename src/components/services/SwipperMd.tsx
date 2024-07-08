@@ -94,7 +94,7 @@ function SwiperMd() {
         <div className="swiper-button-next-serv absolute right-5 top-[50%] transform  z-10">
             <BsFillArrowRightSquareFill className="w-8 h-8 cursor-pointer" />
           </div>
-        {/* <div className="swiper-pagination-serv w-full flex items-center justify-center mt-4"></div> */}
+        
       </div>
     </div>
   );
