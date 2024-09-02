@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-scroll";
 import { useEstado } from "../consult/EstadoContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import mockNotebook from "../../assets/mockNotebook.png";
-import darkMockNotebook from "../../assets/darkMockNotebook.png";
-import mockMobile from "../../assets/mockMobile.png";
-import darkMockMobile from "../../assets/darkMockMobile.png";
+
 
 function Home() {
   const { setShowConsult, setShowPresupuesto } = useEstado();
@@ -21,73 +18,12 @@ function Home() {
     setShowConsult(true);
   };
 
-  const [showOverlayImage, setShowOverlayImage] = useState(false);
-  const [scrollEnabled, setScrollEnabled] = useState(false);
-
   useEffect(() => {
     AOS.init();
-
-    const handleScroll = (event: Event) => {
-      if (!scrollEnabled) {
-        event.preventDefault();
-        window.scrollTo(0, 0);
-        setShowOverlayImage(true);
-        setTimeout(() => {
-          setScrollEnabled(true);
-        }, 3000);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: false });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrollEnabled]);
+  }, []);
 
   return (
     <div className="h-screen relative flex flex-col items-center justify-center ">
-      {showOverlayImage && (
-        <>
-          <div className="-rotate-12 hidden xl:flex md:flex absolute top-[50%] w-[24rem] right-[70%]">
-            <img
-              src={mockNotebook}
-              alt="mockup notebook"
-              className="xl:animate-float animate-float2 dark:xl:hidden dark:md:hidden"
-              data-aos="fade"
-              data-aos-duration="2200"
-              data-aos-delay="400"
-            />
-            <img
-              src={darkMockNotebook}
-              alt="mockup notebook"
-              className="xl:animate-float animate-float2 hidden dark:flex"
-              data-aos="fade"
-              data-aos-duration="2200"
-              data-aos-delay="400"
-            />
-          </div>
-          <div className="absolute top-[50%] hidden xl:flex md:flex w-[32rem] rotate-12 left-[70%] ">
-            <img
-              src={mockMobile}
-              alt="mockup mobile"
-              className="xl:animate-float animate-float2 dark:xl:hidden dark:md:hidden"
-              data-aos="fade-up"
-              data-aos-duration="2200"
-              data-aos-delay="400"
-            />
-            <img
-              src={darkMockMobile}
-              alt="mockup notebook"
-              className="xl:animate-float animate-float2 hidden dark:flex"
-              data-aos="fade-up"
-              data-aos-duration="2200"
-              data-aos-delay="400"
-            />
-          </div>
-        </>
-      )}
-
       <div className="flex flex-col items-center justify-center h-ful p-4 z-10 xl:gap-4">
         <div className="relative h-full flex flex-col items-center justify-center px-2">
           <h1

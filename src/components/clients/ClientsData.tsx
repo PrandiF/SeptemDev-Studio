@@ -5,6 +5,7 @@ import box from "../../assets/box.webp";
 import miTurnoWeb from "../../assets/miTurnoWeb.webp";
 import miTurnoWeb2 from "../../assets/miTurnoWeb2.webp"
 import tmp from "../../assets/TheMovieParty.webp"
+import virtualRisk from "../../assets/virtualRisk.png"
 
 export const ClientsData = [
   {
@@ -42,5 +43,10 @@ export const ClientsData = [
     title: "The Movie Party",
     img: tmp,
     url: "",
+  },
+  {
+    title: "Virtual Risk",
+    img: virtualRisk,
+    url: "https://virtual-risk-front.vercel.app/",
   },
 ];
